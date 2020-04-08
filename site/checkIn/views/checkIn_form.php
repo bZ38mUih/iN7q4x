@@ -8,7 +8,8 @@
 
 $captchaRes=$captcha->create();
 
-$appRJ->response['result'].= "<div class='checkIn-frame'>";
+$appRJ->response['result'].= "<div class='contentBlock-frame'>".
+    "<div class='contentBlock-center'><div class='contentBlock-wrap'><div class='checkIn-frame'>";
 
 $appRJ->response['result'].= "<strong>Вам будут доступны дополнительные ресурсы этого сайта</strong>";
 
@@ -110,5 +111,5 @@ $appRJ->response['result'].= "<div class='inputLine submit'>";
 $appRJ->response['result'].= "<input type='submit' value='Зарегистрироваться'>";
 $appRJ->response['result'].= "</div>";
 $appRJ->response['result'].= "</form>";
-$appRJ->response['result'].= "</div>";
+$appRJ->response['result'].= "</div></div></div></div>";
 ?>
