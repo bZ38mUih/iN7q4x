@@ -62,8 +62,8 @@ if($this->errors){
         "<h1>".$alertsArr[$errType]['h1']."</h1>".
         "<p>".$this->errors[$errType]['description']."</p>".
         "</div>".
-        "<div class='alertsMenu'>"/*.
-        "<h2>На этом сайте:</h2>".
+        "<div class='alertsMenu'>".
+        "<h2>На этом сайте:</h2>"./*
         "<a href='/blog' title='Все статьи'><img src='/site/blog/img/logo.png'>it-Блог</a>".
         "<h3>Заказчику</h3>".
         "<a href='/services' title='Расценки и заказ услуг'><img src='/site/services/img/logo.png'>Услуги</a>".
@@ -77,7 +77,8 @@ if($this->errors){
         "<h3>Еще</h3>".
         "<a href='/' title='на главную Райт Джойнт ру'><img src='/site/siteHeader/img/rightjoint-logo-400-2.png'>Главная</a>".
         "<a href='/donate' title='Пожертвования на развитие проекта'><img src='/site/donate/img/logo.png'>Помощь проекту</a>".
-        "<a href='/signIn' title='Авторизация'><img src='/site/signIn/img/logo.png'>Вход на сайт</a>"*/.
+*/
+        "<a href='/signIn' title='Авторизация'><img src='/site/signIn/img/logo.png'>Вход на сайт</a>".
         "</div>".
         "</div>".
         "</body>".
