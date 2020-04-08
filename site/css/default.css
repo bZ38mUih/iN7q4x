@@ -11,6 +11,13 @@ BODY {
     position: relative;
     min-height: 93.5vh;
     padding-bottom: 6.5vh;
+    background-image:
+    url(/source/img/background-top.png),
+    url(/source/img/background-bottom.png);
+    background-position:
+    left top, left bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 /*footer-->*/
 .contentBlock-frame.dark.ft{
@@ -19,7 +26,7 @@ BODY {
     bottom: 0;
 }
 footer{
-    background-color: rgba(25,25,50,1);
+    background-color: lightblue;
     color: #ffffff;
     padding: 0.2em 0;
 }
@@ -72,14 +79,17 @@ footer sup{
 .contentBlock-frame{
     width: 100%;
     display: inline-block;
+
 }
 .contentBlock-center{
+
     display: inline-block;
-    max-width: 1366px;
+    max-width: 1000px;
     width: 100%;
+    background-color: white;
 }
 .contentBlock-frame.dark{
-    background: rgba(25,25,50,1);
+    /*background: orange;*/
     color: #ffffff;
 }
 @media only screen and (max-width : 1024px)  and (orientation : portrait) {

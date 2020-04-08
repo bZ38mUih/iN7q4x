@@ -103,7 +103,7 @@ header{
 }
 .refPanel{
     width: 100%;
-    background-color: orange;
+    background-color: lightblue;
     text-align: left;
 }
 .refPanel a{
@@ -114,12 +114,14 @@ header{
     border-right: 2px solid white;
 }
 
-/*header-->
+
 header .headerCenter{
     width: 100%;
-    max-width: 1366px;
+    max-width: 1000px;
     display: inline-block;
+    background-color: white;
 }
+/*header-->
 header .menuBtn{
     width: 20%;
     max-width: 273px;
@@ -278,7 +280,7 @@ header .rightConn{
     color: limegreen;
 }
 .modal-line-text.lookFor span{
-    color: orange;
+    color: lightblue;
 }
 .modal.order .details a{
     display: inline-block;

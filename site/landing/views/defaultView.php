@@ -20,6 +20,9 @@ if($App['views']['social-block']){
 $appRJ->response['result'].= "</head><body>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/defaultView.php");
+$appRJ->response['result'].= "<div class='contentBlock-frame'>".
+    "<div class='contentBlock-center'><div class='contentBlock-wrap'>Сайт на реконструкции, администрация просит
+    извинения за предоставленные неудобства</div></div></div>";
 /*
 $slDevArt_qry="select * from art_dt where (artCat_id=3 OR artCat_id=1) and activeFlag is true ORDER BY pubDate DESC limit 4";
 $slDevArt_res = $DB->doQuery($slDevArt_qry);
