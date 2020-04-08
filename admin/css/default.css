@@ -1,0 +1,36 @@
+BODY{
+    width: 100%;
+    font-family: Cambria, Courier New, Calibri, Arial, MS Trebichet;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 25px;
+}
+.page-wrap{
+    position: relative;
+    min-height: 93.5vh;
+    padding-bottom: 6.5vh;
+}
+footer{
+    background-color: rgba(25,25,50,1);
+    color: #ffffff;
+}
+.contentBlock-frame{
+    text-align: center;
+    width: 100%;
+}
+.contentBlock-center{
+    display: inline-block;
+    max-width: 1366px;
+    width: 100%;
+}
+.contentBlock-frame.dark{
+    background: rgba(25,25,50,1);
+    color: #ffffff;
+}
+.contentBlock-frame.dark.ft{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

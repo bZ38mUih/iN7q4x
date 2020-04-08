@@ -1,0 +1,38 @@
+.ref-list a {
+    font-size: 1.2em;
+}
+.ref-control {
+    margin-top: 1em;
+    width: 100%;
+    display: inline-block;
+}
+.ref-control-left {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.ref-control-left img {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+.ref-control-left span {
+    cursor: pointer;
+    font-weight: bold;
+}
+.ref-control-left-input {
+    width: 80%;
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+.ref-control-left-input input {
+    width: 73%;
+    display: inline-block;
+    font-size: 1em;
+}
+.ref-control-right {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,0 +1,26 @@
+.accnt-title-txt{
+    width: 70%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.accnt-title-txt span{
+    font-size: 1.5em;
+    color: midnightblue;
+    font-weight: bold;
+}
+.accnt-info, .accnt-pr{
+    text-align: left;
+    margin-top: 1.5em;
+}
+h4{
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+}
+.accnt label{
+    font-weight: bold;
+    margin-right: 1em;
+}
+.accnt span{
+    font-size: 1.2em;
+    font-style: italic;
+}
