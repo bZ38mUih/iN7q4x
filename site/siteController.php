@@ -1,4 +1,5 @@
 <?php
+require_once($_SERVER["DOCUMENT_ROOT"]."/source/_conf/prodAge.php");
 if(isset($_SESSION['user_id']) or ($appRJ->server['reqUri_expl'][1]== "signIn" or $appRJ->server['reqUri_expl'][1]== "checkIn")){
     if (isset($_GET['mkAlias'])){
         $appRJ->response['format']='ajax';

@@ -13,6 +13,21 @@ if($_POST){
     elseif(isset($_POST['flagField']) and $_POST['flagField']=='editCat') {
         require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editCat_post.php");
     }
+    elseif(isset($_POST['flagField']) and $_POST['flagField']=='editCatLongDescr') {
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editCatLongDescr_post.php");
+    }
+    elseif(isset($_POST['flagField']) and $_POST['flagField']=='editProdLongDescr') {
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editProdLongDescr_post.php");
+    }
+    elseif(isset($_POST['flagField']) and $_POST['flagField']=='newProd'){
+        require_once($_SERVER['DOCUMENT_ROOT']."/site/siteMan/actions/siteMan-newProd.php");
+    }
+    elseif(isset($_POST['flagField']) and $_POST['flagField']=='editProduct') {
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editProd_post.php");
+    }
+    elseif(isset($_POST['flagField']) and $_POST['flagField']=='editProdPrice') {
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editProdPrice_post.php");
+    }
     /*
     elseif(isset($_POST['flagField']) and $_POST['flagField']=='editAlbum') {
         require_once($_SERVER['DOCUMENT_ROOT'] . "/site/gallery/actions/glMan-editAlbum.php");
@@ -41,6 +56,9 @@ if($_POST){
     */
     elseif (isset($_POST['cat_id']) and $_POST['cat_id']!==null){
         require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editCatImg.php");
+    }
+    elseif (isset($_POST['prod_id']) and $_POST['prod_id']!==null){
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editProdImg.php");
     }
     /*
     elseif (isset($_POST['alb_id']) and $_POST['alb_id']!==null){
@@ -150,8 +168,8 @@ if($_POST){
     }
     */
 }
-elseif (isset($_GET['delAlbImg']) and $_GET['delAlbImg']!=null){
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/site/gallery/actions/glMan-delAlbImg.php");
+elseif (isset($_GET['delProdImg']) and $_GET['delProdImg']!=null){
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-delProdImg.php");
 }
 
 elseif (isset($_GET['delCatImg']) and $_GET['delCatImg']!=null){
@@ -174,63 +192,43 @@ if($_GET['uploadAlbums']!=null){
 elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="newcat"){
     require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-newCat.php");
 }
+elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="newcat"){
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-newCat.php");
+}
 
 elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="editcat"){
-    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-editCat_get.php");
-}
-/*
-elseif(isset($appRJ->server['reqUri_expl'][3]) and strtolower($appRJ->server['reqUri_expl'][3])=="albums"){
-    require_once($_SERVER["DOCUMENT_ROOT"]."/site/gallery/views/glMan-albums.php");
-}
-elseif(isset($appRJ->server['reqUri_expl'][3]) and strtolower($appRJ->server['reqUri_expl'][3])=="newalbum"){
-    require_once($_SERVER["DOCUMENT_ROOT"]."/site/gallery/views/glMan-newAlbum.php");
-}
-elseif(isset($appRJ->server['reqUri_expl'][3]) and strtolower($appRJ->server['reqUri_expl'][3])=="upload"){
-    require_once($_SERVER["DOCUMENT_ROOT"]."/site/gallery/views/glMan-uploadAlbums.php");
-}
-elseif(isset($appRJ->server['reqUri_expl'][3]) and strtolower($appRJ->server['reqUri_expl'][3])=="editalbum"){
-    $albErr=null;
-    if(isset($_GET['alb_id']) and $_GET['alb_id']!=null){
-        $Alb_rd = new recordDefault("galleryAlb_dt", "album_id");
-        $Alb_rd->result['album_id']=$_GET['alb_id'];
-        if($Alb_rd->copyOne()){
-            if(!$appRJ->server['reqUri_expl'][4]){
-                require_once ($_SERVER['DOCUMENT_ROOT']."/site/gallery/views/glMan-editAlbum.php");
-            }
-            elseif (isset($appRJ->server['reqUri_expl'][4]) and $appRJ->server['reqUri_expl'][4] == 'photo'){
-                require_once ($_SERVER['DOCUMENT_ROOT']."/site/gallery/views/glMan-photoAttachments.php");
-            }elseif (isset($appRJ->server['reqUri_expl'][4]) and $appRJ->server['reqUri_expl'][4] == 'video'){
-                require_once ($_SERVER['DOCUMENT_ROOT']."/site/gallery/views/glMan-videoAttachments.php");
-            }elseif (isset($appRJ->server['reqUri_expl'][4]) and $appRJ->server['reqUri_expl'][4] == 'access'){
-                require_once ($_SERVER['DOCUMENT_ROOT']."/site/gallery/views/glMan-editAlbumAccess.php");
-            }elseif (isset($appRJ->server['reqUri_expl'][4]) and $appRJ->server['reqUri_expl'][4] == 'remove'){
-                if (isset($_GET['delLikes']) and $_GET['delLikes']=='yyy'){
-                    $appRJ->response['format']='ajax';
-                    require_once ($_SERVER["DOCUMENT_ROOT"]."/site/gallery/actions/glMan-rmPhotoLikes.php");
-                    require_once ($_SERVER["DOCUMENT_ROOT"]."/site/gallery/views/glMan-delAlb-form.php");
-                }elseif (isset($_GET['delPhotos']) and $_GET['delPhotos']=='yyy'){
-                    require_once ($_SERVER["DOCUMENT_ROOT"]."/site/gallery/actions/glMan-rmPhotos.php");
-                    require_once ($_SERVER["DOCUMENT_ROOT"]."/site/gallery/views/glMan-delAlb-form.php");
-                }elseif (isset($_GET["delAlbum"]) and $_GET["delAlbum"]=='yyy'){
-                    require_once ($_SERVER["DOCUMENT_ROOT"]."/site/gallery/actions/glMan-rmAlbum.php");
-                    if(!$rmRes){
-                        require_once ($_SERVER["DOCUMENT_ROOT"]."/site/gallery/views/glMan-delAlb-form.php");
-                    }else{
-                        $Alb_rd->removeOne();
-                        $appRJ->response['result'].="<span class='results success'>Удаление успешно</span>";
-                    }
-                }
-                else{
-                    require_once ($_SERVER['DOCUMENT_ROOT']."/site/gallery/views/glMan-removeAlb.php");
-                }
-            }
-        }else{
-            $appRJ->errors['request']['description']='неправильные параметры запроса alb_id';
-        }
+    if(empty($appRJ->server['reqUri_expl'][3])){
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-editCat_get.php");
+    }elseif($appRJ->server['reqUri_expl'][3] == 'longDescr'){
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-editCatLongDescr.php");
+        //echo 111;
+        //exit;
     }else{
-        $appRJ->errors['request']['description']='неправильные параметры запроса alb_id NULL';
+        $appRJ->errors['404']['description']='неправильные параметры url cat';
     }
-}*/
+
+}
+elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="products"){
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-products.php");
+}
+elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="newproduct"){
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-newProd.php");
+}
+elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="editproduct"){
+    if(empty($appRJ->server['reqUri_expl'][3])){
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-editProd_get.php");
+    }elseif($appRJ->server['reqUri_expl'][3] == 'price'){
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-editPrice_get.php");
+    }elseif($appRJ->server['reqUri_expl'][3] == 'longDescr'){
+
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-editProdLongDescr.php");
+        //echo 111;
+        //exit;
+    }else{
+        $appRJ->errors['404']['description']='неправильные параметры url product';
+    }
+
+}
 else{
     require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-defView.php");
 }

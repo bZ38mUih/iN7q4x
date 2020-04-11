@@ -1,12 +1,12 @@
 <?php
-$h1 ="Категория, правка";
+$h1 ="Саженец, правка";
 $appRJ->response['result'].= "<!DOCTYPE html>".
     "<html lang='en-Us'>".
     "<head>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
-    "<meta name='description' content='Категория, правка' http-equiv='Content-Type'/>".
+    "<meta name='description' content='Саженец, правка' http-equiv='Content-Type'/>".
     "<meta name='robots' content='noindex'>".
-    "<title>Категория, правка</title>".
+    "<title>Саженец, правка</title>".
     "<link rel='SHORTCUT ICON' href='/site/siteMan/img/favicon.png' type='image/png'>".
     "<script src='/source/js/jquery-3.2.1.js'></script>".
     "<link rel='stylesheet' href='/site/css/default.css' type='text/css' media='screen, projection'/>".
@@ -23,73 +23,73 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/defaultView.php
 $appRJ->response['result'].= "<div class='contentBlock-frame'><div class='contentBlock-center'>".
     "<div class='contentBlock-wrap'>";
 require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-subMenu.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-catMenu.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-prodMenu.php");
 $appRJ->response['result'].= "<form class='editImg'><div class='img-frame'>";
 $delImgBtn_text=null;
-if($Cat_rd->result['catImg']){
-    $appRJ->response['result'].= "<img src='".GL_CATEG_IMG_PAPH.$_GET['cat_id']."/preview/".$Cat_rd->result['catImg']."'>";
+if($E_rd->result['prodImg']){
+    $appRJ->response['result'].= "<img src='".GL_PROD_IMG_PAPH.$_GET['prod_id']."/preview/".$E_rd->result['prodImg']."'>";
     $delImgBtn_text= "class='active'";
 }else{
     $appRJ->response['result'].= "<img src='/data/default-img.png'>";
 }
 $appRJ->response['result'].= "</div>".
     "<div class='control-frame'><div class='delImg-line'>".
-    "<span onclick='delImg(".$_GET['cat_id'].", ".'"'."delCatImg".'"'.")' ".$delImgBtn_text.">".
+    "<span onclick='delImg(".$_GET['prod_id'].", ".'"'."delCatImg".'"'.")' ".$delImgBtn_text.">".
     "<img src='/source/img/drop-icon.png'>Удалить картинку</span></div>".
-    "<div class='button-line'><input type='file' onchange='loadFiles(".$_GET['cat_id'].", ".'"'."cat_id".
+    "<div class='button-line'><input type='file' onchange='loadFiles(".$_GET['prod_id'].", ".'"'."prod_id".
     '"'.")' accept='image/jpeg,image/png,image/gif'></div>".
     "<div class='err-line'></div></div></form>".
+
     "<form class='newCateg' method='post'>";
-if(isset($catErr['common']) and $catErr['common']===true){
+if(isset($pErr['common']) and $pErr['common']===true){
     $appRJ->response['result'].= "<div class='results success'>Updated SUCCESS</div>";
-}if(isset($catErr['common']) and $catErr['common']===false){
+}if(isset($pErr['common']) and $pErr['common']===false){
     $appRJ->response['result'].= "<div class='results fail'>Updated FAIL</div>";
-    print_r($catErr);
+    print_r($pErr);
 }
-$appRJ->response['result'].= "<input type='hidden' name='flagField' value='editCat'>".
-    "<div class='input-line'><label for='prodCat_id'>prodCat_id:</label>".
-    "<input type='text' name='prodCat_id' value='".$Cat_rd->result['prodCat_id']."' disabled></div>".
-    "<div class='input-line'><label for='catName'>Название:</label>".
-    "<input type='text' name='catName' id='targetName' ";
-if($Cat_rd->result['catName']){
-    $appRJ->response['result'].= "value='".$Cat_rd->result['catName']."'";
+$appRJ->response['result'].= "<input type='hidden' name='flagField' value='editProduct'>".
+    "<div class='input-line'><label for='prod_id'>prod_id:</label>".
+    "<input type='text' name='prod_id' value='".$E_rd->result['prod_id']."' disabled></div>".
+    "<div class='input-line'><label for='prodName'>Название:</label>".
+    "<input type='text' name='prodName' id='targetName' ";
+if($E_rd->result['prodName']){
+    $appRJ->response['result'].= "value='".$E_rd->result['prodName']."'";
 }
 $appRJ->response['result'].= "><div class='field-err'>";
-if(isset($catErr['catName'])){
-    $appRJ->response['result'].= $catErr['catName'];
+if(isset($pErr['prodName'])){
+    $appRJ->response['result'].= $pErr['prodName'];
 }
 $appRJ->response['result'].= "</div></div>".
-    "<div class='input-line'><label for='catAlias'>Alias:</label>".
-    "<input type='text' name='catAlias' id='targetAlias' ";
-if($Cat_rd->result['catAlias']){
-    $appRJ->response['result'].= "value='".$Cat_rd->result['catAlias']."'";
+    "<div class='input-line'><label for='prodAlias'>Alias:</label>".
+    "<input type='text' name='prodAlias' id='targetAlias' ";
+if($E_rd->result['prodAlias']){
+    $appRJ->response['result'].= "value='".$E_rd->result['prodAlias']."'";
 }
 $appRJ->response['result'].= "><input type='button' onclick='mkAlias()' value='mkCatAlias'>".
     "<div class='field-err'>";
-if(isset($catErr['catAlias'])){
-    $appRJ->response['result'].= $catErr['catAlias'];
+if(isset($pErr['prodAlias'])){
+    $appRJ->response['result'].= $pErr['prodAlias'];
 }
 $appRJ->response['result'].= "</div></div>".
-    "<div class='input-line'><label for='catDescr'>Заголовок:</label>".
-    "<input type='text' name='catDescr' ";
-if($Cat_rd->result['catDescr']){
-    $appRJ->response['result'].= "value='".$Cat_rd->result['catDescr']."'";
+    "<div class='input-line'><label for='prodDescr'>Заголовок:</label>".
+    "<input type='text' name='prodDescr' ";
+if($E_rd->result['prodDescr']){
+    $appRJ->response['result'].= "value='".$E_rd->result['prodDescr']."'";
 }
 $appRJ->response['result'].= "><div class='field-err'>";
-if(isset($catErr['catDescr'])){
-    $appRJ->response['result'].= $catErr['catDescr'];
+if(isset($pErr['prodDescr'])){
+    $appRJ->response['result'].= $pErr['prodDescr'];
 }
 $appRJ->response['result'].= "</div></div>".
-    "<div class='input-line'><label for='prodCat_parId'>prodCat_parId:</label><select name='prodCat_parId'>";
+    "<div class='input-line'><label for='prodCat_id'>prodCat_id:</label><select name='prodCat_id'>";
 /*select options-->*/
-$categList_text="select prodCat_id, prodCat_parId, catName from prodCat_dt WHERE prodCat_id<>".$Cat_rd->result['prodCat_id'].
-    " ORDER BY catName ";
+$categList_text="select prodCat_id, prodCat_parId, catName from prodCat_dt ORDER BY catName ";
 $categList_res=$DB->doQuery($categList_text);
 if(mysql_num_rows($categList_res)>0){
     $findSelected=false;
     while ($categList_row=$DB->doFetchRow($categList_res)){
         $catSelectOptions.= "<option value='".$categList_row['prodCat_id']."' ";
-        if($categList_row['prodCat_id'] == $Cat_rd->result['prodCat_parId']){
+        if($categList_row['prodCat_id'] == $E_rd->result['prodCat_id']){
             $findSelected=true;
             $catSelectOptions.= " selected";
         }
@@ -106,21 +106,13 @@ if(mysql_num_rows($categList_res)>0){
 /*<--select options*/
 $appRJ->response['result'].= $catSelectOptions."</select></div>".
 
-    "<div class='input-line'><label for='catActive'>Показывать:</label><input type='checkbox' name='catActive' ";
-if($Cat_rd->result['catActive']){
+    "<div class='input-line'><label for='activeFlag'>Показывать:</label><input type='checkbox' name='activeFlag' ";
+if($E_rd->result['activeFlag']){
     $appRJ->response['result'].= "checked";
 }
 $appRJ->response['result'].= "></div>".
-    "<div class='input-line'><label for='catMeta'>Описание:</label><textarea name='catMeta' rows='3'>".
-    $Cat_rd->result['catMeta'].
-    "</textarea></div>".
-    "<div class='input-line'><label for='popFlag'>Популярная:</label><input type='checkbox' name='popFlag' ";
-if($Cat_rd->result['popFlag']){
-    $appRJ->response['result'].= "checked";
-}
-$appRJ->response['result'].= "></div>".
-    "<div class='input-line'><label for='catIndex'>Индексировать:</label><input type='checkbox' name='catIndex' ";
-if($Cat_rd->result['catIndex']){
+    "<div class='input-line'><label for='newFlag'>Новый:</label><input type='checkbox' name='newFlag' ";
+if($E_rd->result['newFlag']){
     $appRJ->response['result'].= "checked";
 }
 $appRJ->response['result'].= "></div>".

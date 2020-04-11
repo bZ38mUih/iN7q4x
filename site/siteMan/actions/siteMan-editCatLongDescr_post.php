@@ -3,6 +3,7 @@ $Cat_rd = new recordDefault("prodCat_dt", "prodCat_id");
 if(isset($_GET['cat_id']) and $_GET['cat_id']!=null){
     $Cat_rd->result['prodCat_id'] = $_GET['cat_id'];
     $Cat_rd->copyOne();
+    /*
     if(isset($_POST['catName']) and $_POST['catName']!=null){
         $Cat_rd->result['catName']=htmlspecialchars($_POST['catName']);
     }else{
@@ -48,17 +49,22 @@ if(isset($_GET['cat_id']) and $_GET['cat_id']!=null){
     }else{
         $Cat_rd->result['catIndex']=false;
     }
+    */
+    $Cat_rd->result['longDescr']=$_POST['content'];
 }else{
     $catErr['glCat_id']='недопустимое cat_id';
 }
+
+
+
 if(isset($catErr)){
     $catErr['common']=false;
     require_once($_SERVER["DOCUMENT_ROOT"]."/site/siteMan/views/siteMan-editCat.php");
 }else{
     if($Cat_rd->updateOne()){
         $catErr['common']=true;
-        require_once($_SERVER["DOCUMENT_ROOT"]."/site/siteMan/views/siteMan-editCat.php");
+        require_once($_SERVER["DOCUMENT_ROOT"]."/site/siteMan/views/siteMan-editCatDescr.php");
     }else{
-        $appRJ->errors['XXX']['description']="ошибка не обработана: insert into prodCat error";
+        $appRJ->errors['XXX']['description']="ошибка не обработана: update cat long descr error";
     }
 }

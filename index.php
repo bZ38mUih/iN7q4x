@@ -1,4 +1,7 @@
 <?php
+define(GL_CATEG_IMG_PAPH, "/data/catalog/categories/");
+define(GL_PROD_IMG_PAPH, "/data/catalog/products/");
+
 session_start();
 
 require_once ($_SERVER["DOCUMENT_ROOT"]."/source/DB_class.php");

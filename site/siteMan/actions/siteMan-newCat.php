@@ -19,7 +19,7 @@ if(isset($_POST['catAlias']) and $_POST['catAlias']!=null){
 if(isset($_POST['catDescr']) and $_POST['catDescr']!=null){
     $Cat_rd->result['catDescr']=htmlspecialchars($_POST['catDescr']);
 }else{
-    $catErr['catDescr']='недопустимое описание';
+    $catErr['catDescr']='недопустимый заголовок';
 }
 
 if(isset($_POST['prodCat_parId'])){

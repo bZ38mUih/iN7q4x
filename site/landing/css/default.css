@@ -158,3 +158,23 @@ h2{
         padding-top: 0.7em;
     }
 }
+/*sad-primorya-->*/
+.lOffer{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid red;
+}
+.lo-img{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+.lo-img img{
+    width: 100%;
+    vertical-align: top;
+}
+.lo-txt{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}

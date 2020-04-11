@@ -1,8 +1,9 @@
 <?php
-$Cat_rd = new recordDefault("prodCat_dt", "prodCat_id");
-if(isset($_GET['cat_id']) and $_GET['cat_id']!=null){
-    $Cat_rd->result['prodCat_id'] = $_GET['cat_id'];
-    $Cat_rd->copyOne();
+$E_rd = new recordDefault("prodList_dt", "prod_id");
+if(isset($_GET['prod_id']) and $_GET['prod_id']!=null){
+    $E_rd->result['prod_id'] = $_GET['prod_id'];
+    $E_rd->copyOne();
+    /*
     if(isset($_POST['catName']) and $_POST['catName']!=null){
         $Cat_rd->result['catName']=htmlspecialchars($_POST['catName']);
     }else{
@@ -48,17 +49,20 @@ if(isset($_GET['cat_id']) and $_GET['cat_id']!=null){
     }else{
         $Cat_rd->result['catIndex']=false;
     }
+    */
+    $E_rd->result['longDescr']=$_POST['content'];
 }else{
-    $catErr['glCat_id']='недопустимое cat_id';
+    $pErr['prod_id']='недопустимое prod_id';
 }
-if(isset($catErr)){
-    $catErr['common']=false;
-    require_once($_SERVER["DOCUMENT_ROOT"]."/site/siteMan/views/siteMan-editCat.php");
+
+if(isset($pErr)){
+    $pErr['common']=false;
+    require_once($_SERVER["DOCUMENT_ROOT"]."/site/siteMan/views/siteMan-editProduct.php");
 }else{
-    if($Cat_rd->updateOne()){
-        $catErr['common']=true;
-        require_once($_SERVER["DOCUMENT_ROOT"]."/site/siteMan/views/siteMan-editCat.php");
+    if($E_rd->updateOne()){
+        $pErr['common']=true;
+        require_once($_SERVER["DOCUMENT_ROOT"]."/site/siteMan/views/siteMan-editProdDescr.php");
     }else{
-        $appRJ->errors['XXX']['description']="ошибка не обработана: insert into prodCat error";
+        $appRJ->errors['XXX']['description']="ошибка не обработана: update prod long descr error";
     }
 }

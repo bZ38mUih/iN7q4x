@@ -1,0 +1,17 @@
+.age-line{
+    border-bottom: 1px solid gray;
+    display: inline-block;
+    width: 100%;
+}
+.age-line .al-age{
+    width: 33%;
+    display: inline-block;
+}
+.age-line .al-use{
+    width: 33%;
+    display: inline-block;
+}
+.age-line .al-price{
+    width: 33%;
+    display: inline-block;
+}
