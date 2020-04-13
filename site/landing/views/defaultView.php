@@ -40,31 +40,31 @@ $appRJ->response['result'].= "<div id='jssor_1' style='position:relative;margin:
         </div>
         <div data-u='slides' style='cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;'>
             <div>
-                <img data-u='image' src='/site/slider/img/002.jpg' />
+                <img data-u='image' src='/site/landing/img/002.jpg' />
                 <span class='sText'>xxxx--1111</span>
             </div>
             <div>
-                <img data-u='image' src='/site/slider/img/001_1.jpg' />
+                <img data-u='image' src='/site/landing/img/001_1.jpg' />
                 <span class='sText'>xxxx--3333</span>
             </div>
             <div>
-                <img data-u='image' src='/site/slider/img/001_2.jpg' />
+                <img data-u='image' src='/site/landing/img/001_2.jpg' />
                 <span class='sText'>xxxx--4444</span>
             </div>
             <div>
-                <img data-u='image' src='/site/slider/img/005.jpg' />
+                <img data-u='image' src='/site/landing/img/005.jpg' />
                 <span class='sText'>xxxx--5555</span>
             </div>
             <div>
-                <img data-u='image' src='/site/slider/img/001.jpg' />
+                <img data-u='image' src='/site/landing/img/001.jpg' />
                 <span class='sText'>xxxx--666</span>
             </div>
             <div>
-                <img data-u='image' src='/site/slider/img/002_1.jpg' />
+                <img data-u='image' src='/site/landing/img/002_1.jpg' />
                 <span class='sText'>xxxx--777</span>
             </div>
             <div>
-                <img data-u='image' src='/site/slider/img/001_2.jpg' />
+                <img data-u='image' src='/site/landing/img/001_2.jpg' />
                 <span class='sText'>xxxx--8888</span>
             </div>
         </div><a data-scale='0' href='https://www.jssor.com' style='display:none;position:absolute;'>design web</a>
