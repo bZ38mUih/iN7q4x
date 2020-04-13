@@ -1,6 +1,7 @@
 <?php
 //echo 333;
 //exit;
+$pErr = false;
 $E_rd = new recordDefault("prodList_dt", "prod_id");
 if(isset($_GET['prod_id']) and $_GET['prod_id']!=null){
     $E_rd->result['prod_id'] = $_GET['prod_id'];
@@ -10,8 +11,7 @@ if(isset($_GET['prod_id']) and $_GET['prod_id']!=null){
 }else{
     $pErr['prod_id']='недопустимое prod_id';
 }
-if(isset($pErr)){
-    $pErr['common']=false;
+if($pErr){
     require_once($_SERVER["DOCUMENT_ROOT"]."/site/siteMan/views/siteMan-editProdPrice.php");
 }else{
     foreach($_POST as $key=>$val){

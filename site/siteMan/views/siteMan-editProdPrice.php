@@ -27,8 +27,14 @@ $appRJ->response['result'].= "<div class='contentBlock-frame'><div class='conten
     "<div class='contentBlock-wrap'>";
 require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-subMenu.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-prodMenu.php");
-$appRJ->response['result'].="<form class='newCateg' method='post'>".
-    "<input type='hidden' name='flagField' value='editProdPrice'>".
+$appRJ->response['result'].="<form class='newCateg' method='post'>";
+if($pErr === false){
+    $appRJ->response['result'].= "<div class='results success'>Updated SUCCESS</div>";
+}elseif($pErr){
+    $appRJ->response['result'].= "<div class='results fail'>Updated FAIL</div>";
+    print_r($pErr);
+}
+$appRJ->response['result'].="<input type='hidden' name='flagField' value='editProdPrice'>".
     "<div class='input-line ta-left'><label for='catIndex'>Цены на саженец:</label></div>";
 //echo "<pre>";
 //print_r($findPrice_arr);

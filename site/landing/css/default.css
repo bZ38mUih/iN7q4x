@@ -162,11 +162,12 @@ h2{
 .lOffer{
     display: inline-block;
     width: 100%;
-    border: 1px solid red;
+    background: linear-gradient(#f9f9f9 58%,#ffdd3e);
+    padding-bottom: 2.5em;
 }
 .lo-img{
     display: inline-block;
-    width: 50%;
+    width: 40%;
     vertical-align: top;
 }
 .lo-img img{
@@ -174,7 +175,11 @@ h2{
     vertical-align: top;
 }
 .lo-txt{
+    padding: 3%;
     display: inline-block;
-    width: 50%;
+    width: 52%;
     vertical-align: top;
+    box-shadow: 0 0 20px -5px #000000fc;
+    border-radius: 0.2em;
+    margin-right: 2%;
 }
