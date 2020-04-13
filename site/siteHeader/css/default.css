@@ -13,6 +13,12 @@ h1{
 header{
     /*background: rgba(25,25,50,1);*/
     width: 100%;
+
+}
+
+.headerCenter{
+    padding: 1em 0;
+    background-color: white;
 }
 
 .hLogo{
@@ -25,14 +31,16 @@ header{
     width: 30%;
 }
 .hLogo .hlImg img{
-    height: 4em;
-    width: 4em;
+    height: 5em;
+    width: 5em;
     vertical-align: middle;
 }
 .hLogo .hlText{
     display: inline-block;
     width: 70%;
     vertical-align: middle;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 .hLogo .hlText span.sad{
     display: inline-block;
@@ -47,14 +55,21 @@ header{
 
 .hDescr{
     display: inline-block;
-    width: 25%;
+    width: 30%;
     vertical-align: middle;
+    color: #009606;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 .hContacts{
     display: inline-block;
     width: 25%;
     vertical-align: middle;
     text-align: left;
+    color: #356300;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
 }
 .hContacts span.hcMail{
     display: block;
@@ -83,23 +98,32 @@ header{
 
 .hBucket{
     display: inline-block;
-    width: 25%;
+    width: 20%;
     vertical-align: middle;
 }
 
 .hbImg{
     display: inline-block;
     width: 30%;
+    vertical-align: middle;
 }
 .hbImg img{
-    height: 3em;
-    width: 3em;
+    height: 4em;
+    width: 4em;
 }
 .hbVolume{
+    vertical-align: middle;
     display: inline-block;
     width: 70%;
+
 }
-.hbVolume {
+.hbVolume .hbvCount, .hbVolume .hbvAmount{
+    margin: 0.2em 0;
+    display: inline-block;
+    background-color: orange;
+    width: 100%;
+    border-bottom-left-radius: 0.2em;
+    border-top-left-radius: 0.2em;
 }
 .refPanel{
     width: 100%;

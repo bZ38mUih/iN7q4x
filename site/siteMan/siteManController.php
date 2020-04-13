@@ -23,6 +23,9 @@ if($_POST){
     elseif(isset($_POST['flagField']) and $_POST['flagField']=='editProdPrice') {
         require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editProdPrice_post.php");
     }
+    elseif(isset($_POST['flagField']) and $_POST['flagField']=='newMemo') {
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-newMemo.php");
+    }
     elseif (isset($_POST['cat_id']) and $_POST['cat_id']!==null){
         require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editCatImg.php");
     }
@@ -62,6 +65,9 @@ elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['re
 elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="newproduct"){
     require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-newProd.php");
 }
+elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="newmemo"){
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-newMemo.php");
+}
 elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="editproduct"){
     if(empty($appRJ->server['reqUri_expl'][3])){
         require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-editProd_get.php");
@@ -76,6 +82,8 @@ elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['re
         $appRJ->errors['404']['description']='неправильные параметры url product';
     }
 
+}elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="memonote"){
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-memoNotes.php");
 }
 else{
     require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-defView.php");

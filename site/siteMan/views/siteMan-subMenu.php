@@ -9,8 +9,8 @@ if(isset($appRJ->server['reqUri_expl'][2]) and $appRJ->server['reqUri_expl'][2] 
     $appRJ->response['result'].= "class='active'";
 }
 $appRJ->response['result'].= ">Товары</a>".
-    "<a href='/siteMan/other/' ";
-if(isset($appRJ->server['reqUri_expl'][2]) and $appRJ->server['reqUri_expl'][2] === 'other'){
+    "<a href='/siteMan/memoNote/' ";
+if(isset($appRJ->server['reqUri_expl'][2]) and $appRJ->server['reqUri_expl'][2] === 'memoNote'){
     $appRJ->response['result'].= "class='active'";
 }
-$appRJ->response['result'].= ">Другое</a></div>";
+$appRJ->response['result'].= ">Паматка садоводу</a></div>";
