@@ -1,4 +1,13 @@
-    /*jssor slider loading skin spin css*/
+/*jssor slider loading skin spin css*/
+
+.sFrame{
+    display: inline-block;
+    /*border: 2px solid orangered;*/
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
 .jssorl-009-spin img {
     animation-name: jssorl-009-spin;
     animation-duration: 1.6s;
@@ -27,9 +36,12 @@
 .jssora073.jssora073ds {opacity:.3;pointer-events:none;}
 
 span.sText{
-    color: red;
-    padding: 1em;
-    background-color: #000000;
+    color: white;
+    text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+    padding: 0.5em;
+    font-size: 1.5em;
+    background-color: rgba(204,204,0, 0.6);
     position: absolute;
-    bottom: 30%;
+    left: 0;
+    bottom: 38%;
 }

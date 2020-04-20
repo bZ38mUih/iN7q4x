@@ -1,5 +1,9 @@
 <?php
+define(GL_CATEG_IMG_PAPH, "/data/catalog/categories/");
+define(GL_PROD_IMG_PAPH, "/data/catalog/products/");
 require_once($_SERVER["DOCUMENT_ROOT"]."/source/_conf/prodAge.php");
+require_once ($_SERVER["DOCUMENT_ROOT"]."/source/_conf/contacts.php");
+
 if(isset($_SESSION['user_id']) or ($appRJ->server['reqUri_expl'][1]== "signIn" or $appRJ->server['reqUri_expl'][1]== "checkIn")){
     if (isset($_GET['mkAlias'])){
         $appRJ->response['format']='ajax';

@@ -14,8 +14,11 @@ $appRJ->response['result'].= "</div>"
 
     ."<div class='hDescr'>ПИТОМНИК ПЛОДОВЫХ И ДЕКОРАТИВНЫХ РАСТЕНИЙ</div>"
     ."<div class='hContacts'>"
-    ."<span class='hcPhone'>8 (9XX) XXX-XXXX</span>"
-    ."<span class='hcMail'>info@sad-primorya.ru</span>"
+    ."<span class='hcPhone'>".CONT_PHONE_1."</span>";
+if(CONT_PHONE_2){
+    $appRJ->response['result'].= "<span class='hcPhone'>".CONT_PHONE_2."</span>";
+}
+$appRJ->response['result'].= "<span class='hcMail'>info@sad-primorya.ru</span>"
     ."</div>"
     ."<div class='hBucket'>"
     ."<div class='hbImg'><img src='/site/siteHeader/img/bucket.png'></div>"
