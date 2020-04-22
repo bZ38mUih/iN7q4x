@@ -98,10 +98,10 @@ $appRJ->response['result'].= "
     </script>";
 
 $appRJ->response['result'].="<div class='catView'>".
-    "<h2>Разделы каталога</h2>".
+    "<h2><hr><span>Разделы каталога</span></h2>".
     $categories_txt."</div>".
     "<div class='catView'>".
-    "<h2>Популярные категории</h2>".
+    "<h2><hr><span>Популярные категории</span></h2>".
     $popCats_text."</div>";
 
 $appRJ->response['result'].= "<div class='lOffer'>".
@@ -112,13 +112,13 @@ $appRJ->response['result'].= "<div class='lOffer'>".
     А это значит, что Вы получите сильные и здоровые растения по самым выгодным ценам.</div></div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/landing/views/newProducts.php");
-$appRJ->response['result'].= "<div class='catView'><h2>Новые поступления</h2>".
+$appRJ->response['result'].= "<div class='catView'><h2><hr><span>Новые поступления</span>git</h2>".
     $newProd_txt.
 
     "</div>".
 
 
-    "</div>"."<h2>Памятка садоводу</h2>";
+    "</div>"."<h2><hr><span>Памятка садоводу</span></h2>";
 
 
 

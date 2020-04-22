@@ -37,33 +37,36 @@
 .contentBlock-table-right .list-item-text span{
     text-shadow: 2px 2px 2px white, -2px 2px 2px white, -2px -2px 2px white, 2px -2px 2px white;
 }
-/*
-h2{
-    color: grey;
-    font-weight: bold;
-    font-size: 1.2em;
-    text-align: left;
-    border-bottom: 1px solid midnightblue;
-    padding-left: 3%;
-    width: 93%;
-    margin: 1em 2% 0 2%;
-    text-shadow: 2px 2px 2px white, -2px 2px 2px white, -2px -2px 2px white, 2px -2px 2px white;
-}
-.contentBlock-frame.dark h2{
-    border-bottom: none;
+
+.catView h2{
+    width: fit-content;
+    color: #444;
+    font-weight: 100;
     text-align: center;
-}
-.contentBlock-frame.dark h2{
-    border-bottom: none;
+    width: 100%;
     text-align: center;
+    position: relative;
+    background: transparent;
+
+
 }
-.contentBlock-table-right h2{
-    position: absolute;
-    top: 0;
+.catView h2 span{
+    background: radial-gradient(ellipse ,
+    rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0.2), rgba(255,255,255,0.5));
+    position: relative;
     z-index: 1;
+    padding: 0.2em 0;
+}
+.catView hr{
+    border: none;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: orange;
 }
 
- */
+
 .contentBlock-table-left .list-item:not(:last-child){
     position: relative;
     padding-bottom: 1em;
