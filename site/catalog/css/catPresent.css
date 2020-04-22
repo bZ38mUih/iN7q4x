@@ -1,0 +1,32 @@
+.catPresent{
+
+}
+
+.catPresent .cp-list{
+    margin-top: 2%;
+    width: 75%;
+    display: inline-block;
+}
+.catPresent .catItem{
+    vertical-align: top;
+}
+.catPresent .cp-list a{
+    vertical-align: middle;
+    font-size: 1.2em;
+    border: 1px solid silver;
+    padding: 0.1em;
+    margin: 0.2em;
+    display: inline-block;
+    border-radius: 0.3em;
+    text-decoration: none;
+
+}
+
+.catPresent .cp-list a img{
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+    text-decoration: none;
+    padding: 0.2em;
+    border-radius: 0.5em;
+}

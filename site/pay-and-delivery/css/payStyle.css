@@ -1,0 +1,32 @@
+.top-frame .topImg {
+    display: inline-block;
+    width: 100%;
+}
+
+.top-frame .topImg img{
+    width: 100%;
+}
+
+.pd-TxtBlock{
+    display: inline-block;
+    width: 100%;
+}
+
+.pdTb-top, .pdTb-bottom{
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.pdTb-top .pdTop-left, .pdTb-top .pdTop-right {
+    vertical-align: top;
+    display: inline-block;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.pdTb-top .pdTop-left p.lgColor, .pdTb-top .pdTop-right p.lgColor{
+    background: #e3f7bf;
+    font-weight: bold;
+    padding: 1em;
+}

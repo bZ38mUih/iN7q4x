@@ -1,6 +1,21 @@
 /**
  * Created by mrSmitch on 13.04.2020.
  */
+
+$(document).ready(function(){
+    //alert('I am here');
+    $( window ).resize(function() {
+        var wWidth = $( window ).width();
+        if(wWidth >= 1200){
+            $("#jssor_1").width("882px");
+        }else{
+            $("#jssor_1").width(Math.round(wWidth/1200*882));
+        }
+//alert($( window ).width());
+    })
+})
+
+
 window.jssor_1_slider_init = function() {
 
     var jssor_1_SlideshowTransitions = [
@@ -63,3 +78,7 @@ window.jssor_1_slider_init = function() {
     $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
     /*#endregion responsive code end*/
 };
+
+document.ready(function () {
+    alert(111);
+})

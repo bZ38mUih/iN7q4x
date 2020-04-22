@@ -1,6 +1,24 @@
 .navPanel{
+    text-align: left;
     width: 100%;
     margin: 1em 0;
+}
+
+.navPanel ul li {
+    display: inline-block;
+}
+.navPanel ul li:not(:first-child):before {
+    margin-left: 0.5em;
+    content: ">";
+    color: orange;
+    font-weight: bold;
+    list-style-position: inside;
+
+}
+.navPanel ul li a{
+    color: gray;
+    margin-left: 0.5em;
+    text-decoration: none;
 }
 .leftMenu{
     width: 24%;
@@ -49,6 +67,16 @@
     text-align: center;
 }
 
+.top-frame h3{
+    text-align: left;
+    background: #ffdd3e;
+    width: 98%;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.5em 1%;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
 .catView{
     width: 100%;
     display: inline-block;
@@ -58,8 +86,7 @@
 
 .catView .catItem{
     position: relative;
-    border: 1px solid #c0c0c0;
-    border-radius: 0.2em;
+
     display: inline-block;
     width: 20%;
     height: 20%;
@@ -73,10 +100,13 @@
     width: 90%;
     height: 90%;
     padding: 5%;
+    border: 1px solid #c0c0c0;
+    border-radius: 0.2em;
 }
 
 .catView .catItem a{
- color: #436910;
+    color: #436910;
+    font-weight: bold;
 }
 
 .catView h2{

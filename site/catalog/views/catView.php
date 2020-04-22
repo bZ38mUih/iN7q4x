@@ -6,7 +6,7 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
     "<meta name='description' content='".$find_row['catDescr']."'/>".
     //"<meta name='yandex-verification' content='e929004ef40cae1b' />".
-    "<title>Каталог магазина 'Сад приморья'</title>".
+    "<title>".$find_row['catName']."</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".
     "<script src='/source/js/jquery-3.2.1.js'></script>".
     "<link rel='stylesheet' href='/site/css/default.css' type='text/css' media='screen, projection'/>".
@@ -14,7 +14,6 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<link rel='stylesheet' href='/site/css/mainFrame.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/landing/css/default.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/catalog/css/catView.css' type='text/css' media='screen, projection'/>".
-    "<link rel='stylesheet' href='/site/catalog/css/catPresent.css' type='text/css' media='screen, projection'/>".
     "<script src='/site/siteHeader/js/modalHeader.js'></script>";
 if($App['views']['social-block']){
     $appRJ->response['result'].= "<script src='/site/js/social-block.js'></script>";
@@ -32,10 +31,13 @@ $appRJ->response['result'].= "<div class='centerBlock ta-left'>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'><div class='catView'>";
 
-$appRJ->response['result'].= "<h1>КУПИТЬ САЖЕНЦЫ В ИВАНОВО И ИВАНОВСКОЙ ОБЛАСТИ</h1>".
-    $catView.
+$appRJ->response['result'].= "<h1>".$find_row['catDescr']."</h1>".
+"<div class='cv-descr'>".$find_row['catMeta']."</div>";
+$appRJ->response['result'].="</div>".
+    "<div class='catView'>".$sub_text."</div>".
+    "<div class='cv-longDescr'>".$find_row['longDescr']."</div>".
 
-    "</div></div></div>";
+    "</div></div>";
 $appRJ->response['result'].="</div></div></div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");
