@@ -10,7 +10,7 @@ BODY {
 .page-wrap{
     position: relative;
     min-height: 93.5vh;
-    padding-bottom: 6.5vh;
+    padding: 0;
     background-image:
     url(/source/img/background-top.png),
     url(/source/img/background-bottom.png);
@@ -21,14 +21,17 @@ BODY {
 }
 /*footer-->*/
 .contentBlock-frame.dark.ft{
+    /*
     position: absolute;
     left: 0;
     bottom: 0;
+
+     */
 }
 footer{
     background-color: lightblue;
     color: #ffffff;
-    padding: 0.2em 0;
+    padding: 0;
 }
 footer div, footer a, footer img{
     display: inline-block;
@@ -38,11 +41,34 @@ footer div, footer a, footer img{
     width: 30%;
 }
 .ft-center{
-    width: 40%;
-    position: relative;
+    width: 100%;
     display: inline-block;
-    vertical-align: middle;
 }
+.ft-center h2{
+    padding: 0;
+    margin: 0;
+}
+.ft-main, .ft-nav, .ft-cont, .ft-addr{
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+
+}
+.ft-main{
+
+}
+.ft-nav{
+
+}
+.ft-cont{
+
+}
+.ft-addr{
+
+}
+
+
+/*
 .ft-center hr{
     border: none;
     position: absolute;
@@ -74,6 +100,7 @@ footer sup{
     text-decoration: none;
     color: white;
 }
+*/
 /*footer<--*/
 /*contentBlock-->*/
 .contentBlock-frame{
@@ -88,10 +115,7 @@ footer sup{
     width: 100%;
     background-color: white;
 }
-.contentBlock-frame.dark{
-    /*background: orange;*/
-    color: #ffffff;
-}
+
 @media only screen and (max-width : 1024px)  and (orientation : portrait) {
     body {
         font-size: 35px;

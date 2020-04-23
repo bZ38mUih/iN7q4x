@@ -13,7 +13,25 @@ if($App['views']['social-block']) {
         "</div>";
 }
 */
-$appRJ->response['result'].= "<div class='ft-center'><hr><span>footer of site</span></div>";
+$appRJ->response['result'].= "<div class='ft-center'>".
+
+    //"<div class='ft-main'>".
+    "<div class = 'hLogo'><div class='hlImg'>";
+if(isset($appRJ->server['reqUri_expl'][1]) and file_exists($_SERVER['DOCUMENT_ROOT']."/site/".
+        $appRJ->server['reqUri_expl'][1]."/img/logo.png")){
+    $appRJ->response['result'].= "<img src='/site/".$appRJ->server['reqUri_expl'][1]."/img/logo.png' ".
+        "alt='".$appRJ->server['reqUri_expl'][1]."-logo'>";
+}else{
+    $appRJ->response['result'].= "<img src='/site/siteHeader/img/site-logo.png' alt='RJ-logo'>";
+}
+$appRJ->response['result'].= "</div>"
+    ."<div class='hlText'><span class='sad'>Сад</span><span class='primorya'>приморья</span></div>"
+    ."</div>"
+    //."</div>".
+    ."<div class='ft-nav'><h2>Навигация</h2></div>".
+    "<div class='ft-cont'><h2>Наши контакты</h2></div>".
+    "<div class='ft-addr'><h2>Садовые центры</h2></div>".
+    "</div>";
 /*
 if($App['views']['social-block']){
     $appRJ->response['result'].= "<div class='ft-like'>".
