@@ -1,0 +1,33 @@
+.pv-descr{
+    text-align: left;
+    margin-bottom: 17px;
+    background: #fcfcfc;
+    color: #6c8000;
+    padding: 14px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, 0.7), 23px 0 20px -23px rgba(0, 0, 0, 0.35), 0 0 40px rgba(0, 0, 0, .1) inset;
+}
+.pv-order{
+    display: inline-block;
+    width: 100%;
+}
+.pvo-left{
+    display: inline-block;
+    width: 50%;
+}
+.pvo-left img{
+    width: 100%;
+    display: block;
+    margin: 0px auto 30px auto;
+    border-radius: 0%;
+    padding: 2px;
+    /* background: #ddd; */
+    box-shadow: 2px 2px 4px #00000036;
+}
+.pvo-right{
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+}
+.pvo-longDescr{
+    text-align: left;
+}

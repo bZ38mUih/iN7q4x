@@ -65,18 +65,15 @@ $appRJ->response['result'].= "</div></div>".
 if($E_rd->result['prodAlias']){
     $appRJ->response['result'].= "value='".$E_rd->result['prodAlias']."'";
 }
-$appRJ->response['result'].= "><input type='button' onclick='mkAlias()' value='mkCatAlias'>".
+$appRJ->response['result'].= "><input type='button' onclick='mkAlias()' value='mkAlias'>".
     "<div class='field-err'>";
 if(isset($pErr['prodAlias'])){
     $appRJ->response['result'].= $pErr['prodAlias'];
 }
 $appRJ->response['result'].= "</div></div>".
-    "<div class='input-line'><label for='prodDescr'>Заголовок:</label>".
-    "<input type='text' name='prodDescr' ";
-if($E_rd->result['prodDescr']){
-    $appRJ->response['result'].= "value='".$E_rd->result['prodDescr']."'";
-}
-$appRJ->response['result'].= "><div class='field-err'>";
+    "<div class='input-line'><label for='prodDescr'>Кр. описание:</label>".
+    "<textarea rows='3' name='prodDescr'>". $E_rd->result['prodDescr'].
+    "</textarea><div class='field-err'>";
 if(isset($pErr['prodDescr'])){
     $appRJ->response['result'].= $pErr['prodDescr'];
 }

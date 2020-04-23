@@ -24,7 +24,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-subMenu.ph
 
 
 
-$select_query = "select * from prodList_dt";
+$select_query = "select prodList_dt.*, prodCat_dt.catName from prodList_dt ".
+    "left join prodCat_dt on prodCat_dt.prodCat_id = prodList_dt.prodCat_id";
 $select_res=$DB->doQuery($select_query);
 $sCount=0;
 if(mysql_num_rows($select_res)>0){
@@ -50,7 +51,7 @@ if($sCount>0){
             $select_row['prod_id']."</a></div>".
             "<div class='item-line-par_id'>";
         if($select_row['prodCat_id']){
-            $appRJ->response['result'].= "<a href='/siteMan/editCat/?cat_id=".$select_row['prodCat_id']."'>".$select_row['prodCat_id']."</a>";
+            $appRJ->response['result'].= "<a href='/siteMan/editCat/?cat_id=".$select_row['prodCat_id']."' title='".$select_row['catName']."'>".$select_row['prodCat_id']."</a>";
         }else{
             $appRJ->response['result'].= "-";
         }

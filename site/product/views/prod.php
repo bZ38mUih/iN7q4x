@@ -1,23 +1,24 @@
 <?php
-$h1 ="Сад приморья";
 $App['views']['social-block']=true;
 $appRJ->response['result'].= "<!DOCTYPE html>".
     "<html lang='en-Us'>".
     "<head>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
-    "<meta name='description' content='Магазин саженцев Сад Приморья в Иваново | Питомник растений | Садовый центр.'/>".
+    "<meta name='description' content='".$find_row['prodDescr']."'/>".
     //"<meta name='yandex-verification' content='e929004ef40cae1b' />".
-    "<title>Магазин саженцев Сад Приморья в Иваново | Питомник растений | Садовый центр.</title>".
+    "<title>".$find_row['prodName']."</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".
     "<script src='/source/js/jquery-3.2.1.js'></script>".
     "<link rel='stylesheet' href='/site/css/default.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/siteHeader/css/default.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/css/mainFrame.css' type='text/css' media='screen, projection'/>".
-    "<link rel='stylesheet' href='/site/landing/css/default.css' type='text/css' media='screen, projection'/>".
-    "<link rel='stylesheet' href='/site/landing/css/slider.css' type='text/css' media='screen, projection'/>".
-    "<script src='/site/siteHeader/js/modalHeader.js'></script>".
-    " <script src='/source/js/jssor.slider-28.0.0.min.js' type='text/javascript'></script>".
-    "<script src='/site/landing/js/slider.js'></script>";
+    "<link rel='stylesheet' href='/site/catalog/css/catView.css' type='text/css' media='screen, projection'/>".
+    "<link rel='stylesheet' href='/site/product/css/prod.css' type='text/css' media='screen, projection'/>".
+    //"<link rel='stylesheet' href='/site/landing/css/slider.css' type='text/css' media='screen, projection'/>".
+    "<script src='/site/siteHeader/js/modalHeader.js'></script>"
+    //" <script src='/source/js/jssor.slider-28.0.0.min.js' type='text/javascript'></script>".
+    //"<script src='/site/landing/js/slider.js'></script>"
+;
 if($App['views']['social-block']){
     $appRJ->response['result'].= "<script src='/site/js/social-block.js'></script>";
 }
@@ -30,10 +31,52 @@ $appRJ->response['result'].= "<div class='contentBlock-frame'>".
 
 
 $appRJ->response['result'].= "<div class='centerBlock ta-left'>".
-"<div class='navPanel'></div>";
+    "<div class='navPanel'>".$navPanel."</div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'>";
+$appRJ->response['result'].= "<h1>".$find_row['prodName']."</h1>";
+$appRJ->response['result'].= "<div class='pv-descr'>".$find_row['prodDescr']."</div>";
+$appRJ->response['result'].= "<div class='pv-order'>".
+    "<div class='pvo-left'><img src='";
+if($find_row['prodImg']){
+    $appRJ->response['result'].=GL_PROD_IMG_PAPH."/".$find_row['prod_id']."/".$find_row['prodImg'];
+}else{
+    $appRJ->response['result'].="/data/default-img.png";
+}
+
+$appRJ->response['result'].="'> </div>".
+    "<div class='pvo-right'>".
+    "<div class='pvo-offer'>Заказать и купить</div>".
+    "<div class='pvo-age'>".
+    "<input type='radio' id='contactChoice1'
+     name='contact' value='email' checked>
+    <label for='contactChoice1'>1 год</label>
+
+    <input type='radio' id='contactChoice2'
+     name='contact' value='phone'>
+    <label for='contactChoice2'>2 года</label>
+
+    <input type='radio' id='contactChoice3'
+     name='contact' value='mail'>
+    <label for='contactChoice3'>3 года</label>
+  </div>
+  <div>
+  </div>"
+    ."</div>".
+    "<div class='pvo-get'></div>".
+    "</div>".
+    "<h2>".$find_row['prodName']." Основная информация</h2>".
+    "<div class='pvo-longDescr'>".$find_row['longDescr']."</div>";
+if($sub_text){
+    $appRJ->response['result'].="<h2>Похожие товары</h2>"."<div class='catView'>".$sub_text."</div></div>";
+}
+
+
+//$appRJ->response['result'].= ;
+
+
+/*
 
 $appRJ->response['result'].= "
 <div class='sFrame'>
@@ -106,7 +149,10 @@ $appRJ->response['result'].="<div class='catView'>".
 
 $appRJ->response['result'].= "<div class='lOffer'>".
     "<div class='lo-img'><img src='/site/landing/img/green_1.png'></div>".
-    "<div class='lo-txt'>Все саженцы полностью морозостойкие и безболезненно приживаются</div></div>";
+    "<div class='lo-txt'>Интернет магазин саженцев «Сад пиморья» предлагает Вам большой
+    ассортимент плодовых и декоративных растений. Все наши саженцы полностью
+    адаптированы к климату Московской области и безболезненно приживаются.
+    А это значит, что Вы получите сильные и здоровые растения по самым выгодным ценам.</div></div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/landing/views/newProducts.php");
 $appRJ->response['result'].= "<div class='catView'><h2><hr><span>Новые поступления</span></h2>".
@@ -117,7 +163,7 @@ $appRJ->response['result'].= "<div class='catView'><h2><hr><span>Новые по
 
     "</div>"."<h2><hr><span>Памятка садоводу</span></h2>";
 
-
+*/
 
 
 $appRJ->response['result'].="</div></div></div>";

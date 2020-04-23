@@ -181,6 +181,8 @@
     vertical-align: top;
 }
 .lo-txt{
+    margin-top: 2em;
+    font-size: 1.5em;
     padding: 3%;
     display: inline-block;
     width: 52%;
@@ -191,7 +193,7 @@
 }
 
 
-/*slider-->**
+/*slider-->
 .slider .indicators .indicator-item {
     background-color: #666666;
     border: 3px solid #ffffff;
@@ -209,6 +211,6 @@
 .slider .indicators {
     bottom: 60px;
     z-index: 100;
-    /* text-align: left; */
+    /* text-align: left;
 }
-/*slider<--*/
+slider*/
