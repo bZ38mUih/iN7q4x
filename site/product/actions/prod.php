@@ -18,8 +18,14 @@ if($appRJ->server['reqUri_expl'][2]){
             $price_res = $DB->doQuery($price_qry);
 
             if(mysql_num_rows($price_res)>0){
+                /*
                 $findSub_qry = "select * from prodList_dt where prodCat_id = '".$find_row['prodCat_id']."' and activeFlag is true and ".
                     "prodList_dt.prod_id <> ".$find_row['prod_id'];
+                */
+                $findSub_qry = "select prodList_dt.*, min(prodPrice_dt.prodPrice) as minPrice from prodList_dt ".
+                    "left join prodPrice_dt on prodList_dt.prod_id = prodPrice_dt.prod_id and prodPrice_dt.activeFlag is true and prodPrice_dt.prodPrice is not null ".
+                    " where prodList_dt.prodCat_id = '".$find_row['prodCat_id']."' and prodList_dt.activeFlag is true and prodList_dt.prod_id <> ".$find_row['prod_id'].
+                    " group by prodList_dt.prod_id";
 
                 $findSub_res = $DB->doQuery($findSub_qry);
 
@@ -35,7 +41,11 @@ if($appRJ->server['reqUri_expl'][2]){
                             $sub_text.="/data/default-img.png";
                         }
                         $sub_text.="'>".
-                            "<a href='/product/".$findSub_row['prodAlias']."'>".$findSub_row['prodName']."</a></div>";
+                            "<a href='/product/".$findSub_row['prodAlias']."'>".$findSub_row['prodName']."</a>";
+                        if($findSub_row['minPrice']){
+                            $sub_text.=  "<span class='minPrice'>".$findSub_row['minPrice']."</span>";
+                        }
+                        $sub_text.="</div>";
                     }
                 }else{
                     //$sub_text = "не введено никаких данных";

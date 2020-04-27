@@ -1,18 +1,6 @@
 <?php
 $appRJ->response['result'].= "<div class='contentBlock-frame dark ft'><div class='contentBlock-center'>".
     "<div class='contentBlock-wrap'><footer>";
-
-if($App['views']['social-block']) {
-    $appRJ->response['result'].= "<div class='ft-service'>".
-        "<noscript><div>".
-        "<img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>".
-        "<a href='https://metrika.yandex.ru/stat/?id=62372254&amp;from=informer' target='_blank' rel='nofollow'>".
-        "<img src='https://informer.yandex.ru/informer/62372254/3_1_FFFFFFFF_EFEFEFFF_0_pageviews' ".
-        "style='width:88px; height:31px; border:0;' alt='Яндекс.Метрика' title='Яндекс.Метрика: данные за сегодня (просмотры, ".
-        "визиты и уникальные посетители)' class='ym-advanced-informer' data-cid='62372254' data-lang='ru' /></a>".
-        "</div>";
-}
-
 $appRJ->response['result'].= "<div class='ft-center'>".
 
     //"<div class='ft-main'>".
@@ -25,8 +13,19 @@ if(isset($appRJ->server['reqUri_expl'][1]) and file_exists($_SERVER['DOCUMENT_RO
     $appRJ->response['result'].= "<img src='/site/siteHeader/img/site-logo.png' alt='RJ-logo'>";
 }
 $appRJ->response['result'].= "</div>"
-    ."<div class='hlText'><span class='sad'>Сад</span><span class='primorya'>приморья</span></div>"
-    ."</div>"
+    ."<div class='hlText'><span class='sad'>Сад</span><span class='primorya'>приморья</span></div>";
+if($App['views']['social-block']) {
+    $appRJ->response['result'].= "<div class='ft-service'>".
+        "<noscript><div>".
+        "<img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>".
+        "<a href='https://metrika.yandex.ru/stat/?id=62372254&amp;from=informer' target='_blank' rel='nofollow'>".
+        "<img src='https://informer.yandex.ru/informer/62372254/3_1_FFFFFFFF_EFEFEFFF_0_pageviews' ".
+        "style='width:88px; height:31px; border:0;' alt='Яндекс.Метрика' title='Яндекс.Метрика: данные за сегодня (просмотры, ".
+        "визиты и уникальные посетители)' class='ym-advanced-informer' data-cid='62372254' data-lang='ru' /></a>".
+        "</div>";
+}
+
+$appRJ->response['result'].="</div>"
     //."</div>".
     ."<div class='ft-nav'><h2>Навигация</h2></div>".
     "<div class='ft-cont'><h2>Наши контакты</h2></div>".
