@@ -55,13 +55,13 @@
     rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0.2), rgba(255,255,255,0.5));
     position: relative;
     z-index: 1;
-    padding: 0.2em 0;
+    padding: 0.2em 1em;
 }
 .catView hr{
     border: none;
     position: absolute;
     bottom: 0;
-    height: 1px;
+    height: 2px;
     width: 100%;
     background-color: orange;
 }

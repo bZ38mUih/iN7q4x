@@ -1,0 +1,45 @@
+.site-search{
+    width: 100%;
+    padding: 1em 0;
+}
+
+.s-input{
+    font-family: "UbuntuRegular";
+    text-align: right;
+    border: 1px solid gray;
+    width: 100%;
+}
+.site-search .s-input input[type='text']{
+    display: inline-block;
+    width: 79%;
+    font-size: 1em;
+    height: 2.2em;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    border: none;
+
+}
+.site-search .s-input input[type='text']:focus{
+    border: none;
+    outline: none;
+}
+.site-search .s-input .s-button
+{
+    width: 20%;
+    background: #009606;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+    height: 2.2em;
+}
+
+.site-search .s-input .s-button span
+{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+    margin-top: 0.1em;
+}

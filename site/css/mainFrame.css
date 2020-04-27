@@ -40,14 +40,16 @@
 .leftMenu ul li a {
     /*padding: 0.5em 0 0.5em 1em;*/
     padding: 0.5em 0 0.5em 5%;
-
     display: inline-block;
     width: 95%;
     text-decoration: none;
     color: white;
     background-color: #8aa300;
 }
-
+.leftMenu ul li li a {
+    margin-left: 10%;
+    width: 85%;
+}
 .leftMenu ul li li {
     background-color: white;
 }
@@ -56,6 +58,10 @@
     color: #555;
     background-color: white;
     border-bottom: 1px dotted gray;
+}
+.leftMenu ul li li a:hover {
+    background: #550;
+    color: white;
 }
 
 .top-frame{
