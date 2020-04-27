@@ -9,7 +9,7 @@ if(mysql_num_rows($newProd_res)>0){
     while($newProd_row = $DB->doFetchRow($newProd_res)){
         $newProd_txt .= "<div class='catItem'><img src='".GL_PROD_IMG_PAPH."/".$newProd_row['prod_id'].
             "/preview/".$newProd_row['prodImg']."'>".
-            "<a href='/catalog/".$newProd_row['prodAlias']."'>".$newProd_row['prodName']."</a>";
+            "<a href='/product/".$newProd_row['prodAlias']."'>".$newProd_row['prodName']."</a>";
         if($newProd_row['minPrice']){
             $newProd_txt.=  "<span class='minPrice'>".$newProd_row['minPrice']."</span>";
         }
