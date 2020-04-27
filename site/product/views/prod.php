@@ -39,14 +39,14 @@ $appRJ->response['result'].= "<div class='top-frame'>";
 $appRJ->response['result'].= "<h1>".$find_row['prodName']."</h1>";
 $appRJ->response['result'].= "<div class='pv-descr'>".$find_row['longDescr']."</div>";
 $appRJ->response['result'].= "<div class='pv-order'>".
-    "<div class='pvo-left'><img src='";
+    "<div class='pvo-left'>";
 if($find_row['prodImg']){
-    $appRJ->response['result'].=GL_PROD_IMG_PAPH."/".$find_row['prod_id']."/".$find_row['prodImg'];
+    $appRJ->response['result'].="<a href='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/".$find_row['prodImg']."'><img src='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/preview/".$find_row['prodImg']."'></a>";
 }else{
-    $appRJ->response['result'].="/data/default-img.png";
+    $appRJ->response['result'].="><img src='/data/default-img.png'>";
 }
 
-$appRJ->response['result'].="'> </div>".
+$appRJ->response['result'].="</div>".
     "<div class='pvo-right'>".
     "<div class='pvo-offer'>Заказать и купить</div>".
     "<div class='pvo-age'>";
@@ -75,7 +75,7 @@ $appRJ->response['result'].="</div>".
 </div>".
     "</div>".
     "<button id='prodBucket'>В корзину</button>".
-    "<button id='byOneClick'>Купить в 1 клик</button>".
+    //"<button id='byOneClick'>Купить в 1 клик</button>".
     "</div>".
 
     "</div>";

@@ -11,7 +11,9 @@ if(mysql_num_rows($find_res)>0){
     if(!$find_row['prodCat_parId']){
         $findSub_qry = "select * from prodCat_dt where catActive is true and prodCat_parId = ".$find_row['prodCat_id'];
     }else{
-        $findSub_qry = "select * from prodList_dt where prodCat_id = '".$find_row['prodCat_id']."' and activeFlag is true";
+        $findSub_qry = "select prodList_dt.*, min(prodPrice_dt.prodPrice) as minPrice from prodList_dt ".
+            "left join prodPrice_dt on prodList_dt.prod_id = prodPrice_dt.prod_id and prodPrice_dt.activeFlag is true and prodPrice_dt.prodPrice is not null ".
+            " where prodList_dt.prodCat_id = '".$find_row['prodCat_id']."' and prodList_dt.activeFlag is true group by prodList_dt.prod_id";
     }
     $findSub_res = $DB->doQuery($findSub_qry);
 
@@ -37,7 +39,11 @@ if(mysql_num_rows($find_res)>0){
                     $sub_text.="/data/default-img.png";
                 }
                 $sub_text.="'>".
-                    "<a href='/product/".$findSub_row['prodAlias']."'>".$findSub_row['prodName']."</a></div>";
+                    "<a href='/product/".$findSub_row['prodAlias']."'>".$findSub_row['prodName']."</a>";
+                if($findSub_row['minPrice']){
+                    $sub_text.=  "<span class='minPrice'>".$findSub_row['minPrice']."</span>";
+                }
+                $sub_text.=  "</div>";
             }
         }
     }else{

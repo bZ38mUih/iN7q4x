@@ -107,6 +107,9 @@
 .catView .catItem a{
     color: #436910;
     font-weight: bold;
+    min-height: 2.5em;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .catView h2{
