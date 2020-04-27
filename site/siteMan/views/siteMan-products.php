@@ -66,10 +66,10 @@ if($sCount>0){
             "<div class='item-line-name'>". $select_row['prodName']."</div>".
             "<div class='item-line-alias'>".$select_row['prodAlias']."</div>".
             "<div class='item-line-descr'>";
-        if($select_row['prodDescr']){
-            $appRJ->response['result'].= mb_substr($select_row['prodDescr'],0, 20, 'UTF-8')." ...";
+        if($select_row['longDescr']){
+            $appRJ->response['result'].= "Задано - Ok!";
         }else{
-            $appRJ->response['result'].= "-";
+            $appRJ->response['result'].= "<b>ОПИСАНИЕ НЕ ЗАДАНО</b>";
         }
         $appRJ->response['result'].= "</div>".
             "<div class='item-line-flag'>";
