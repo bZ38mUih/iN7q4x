@@ -41,12 +41,16 @@ $appRJ->response['result'].= "><input type='button' onclick='mkAlias()' value='m
 if(isset($pErr['prodAlias'])){
     $appRJ->response['result'].= $pErr['prodAlias'];
 }
-$appRJ->response['result'].= "</div></div><div class='input-line'><label for='prodDescr'>Кр. описание:</label>".
+$appRJ->response['result'].= "</div></div>";
+/*
+"<div class='input-line'><label for='prodDescr'>Кр. описание:</label>".
     "<textarea name='prodDescr' rows='3'>".$Prod_rd->result['prodDescr']."</textarea><div class='field-err'>";
 if(isset($pErr['prodDescr'])){
     $appRJ->response['result'].= $pErr['prodDescr'];
 }
-$appRJ->response['result'].= "</div></div><div class='input-line'><label for='prodCat_id'>Категория товара:</label>".
+$appRJ->response['result'].= "</div></div>";
+*/
+$appRJ->response['result'].=  "<div class='input-line'><label for='prodCat_id'>Категория товара:</label>".
     "<select name='prodCat_id'>";
 /*select options-->*/
 $categList_text="select prodCat_id, prodCat_parId, catName from prodCat_dt ORDER BY catName ";
