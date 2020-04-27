@@ -14,10 +14,9 @@ if(isset($_GET['prod_id']) and $_GET['prod_id']!=null){
         $pErr['prodAlias']='недопустимый alias';
     }
 
-    $E_rd->result['prodDescr']=htmlspecialchars($_POST['prodDescr']);
-    if(empty($_POST['prodDescr'])){
-        $pErr['prodDescr']='недопустимый заголовок';
-    }
+
+    $E_rd->result['longDescr']=$_POST['content'];
+
 
     /*
     if($_POST['catMeta']){

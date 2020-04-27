@@ -99,3 +99,20 @@ a.sb_auth img{
     vertical-align: middle;
     margin-right: 1em;
 }
+
+.adminPanel {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+}
+.adminPanel a {
+    vertical-align: middle;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+.adminPanel a img{
+    vertical-align: middle;
+    height: 1.5em;
+    width: 1.5em;
+}

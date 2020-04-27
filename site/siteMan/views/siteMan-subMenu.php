@@ -1,5 +1,8 @@
 <?php
-$appRJ->response['result'].= "<div class='subMenu'><a href='/siteMan/' ";
+$appRJ->response['result'].= "<div class='subMenu'>".
+    "<a href='/'>Сайт</a>".
+
+"<a href='/siteMan/' ";
 if(!$appRJ->server['reqUri_expl'][2]){
     $appRJ->response['result'].= "class='active'";
 }

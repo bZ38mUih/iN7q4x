@@ -37,7 +37,7 @@ $appRJ->response['result'].= "<div class='centerBlock ta-left'>".
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'>";
 $appRJ->response['result'].= "<h1>".$find_row['prodName']."</h1>";
-$appRJ->response['result'].= "<div class='pv-descr'>".$find_row['prodDescr']."</div>";
+$appRJ->response['result'].= "<div class='pv-descr'>".$find_row['longDescr']."</div>";
 $appRJ->response['result'].= "<div class='pv-order'>".
     "<div class='pvo-left'><img src='";
 if($find_row['prodImg']){
@@ -78,9 +78,10 @@ $appRJ->response['result'].="</div>".
     "<button id='byOneClick'>Купить в 1 клик</button>".
     "</div>".
 
-    "</div>".
-    "<h2>".$find_row['prodName']." Основная информация</h2>".
-    "<div class='pvo-longDescr'>".$find_row['longDescr']."</div>";
+    "</div>";
+
+$appRJ->response['result'].= "<div class='pv-descr'><p>Здесь будет оди для все текст</p>
+<p>Один, может пара абзацев</p></div>";
 if($sub_text){
     $appRJ->response['result'].="<h2>Похожие товары</h2>"."<div class='catView'>".$sub_text."</div></div>";
 }

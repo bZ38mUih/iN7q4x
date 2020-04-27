@@ -4,13 +4,14 @@ $appRJ->response['result'].= "<div class='contentMenu'><div class='contentMenu-l
 if(!$appRJ->server['reqUri_expl'][3]){
     $appRJ->response['result'].= " class='active'";
 }
-$appRJ->response['result'].= ">Карт.-Назв.</a>".
+$appRJ->response['result'].= ">Карт.-Назв.</a>";
+/*
     "<a href='/siteMan/editProduct/longDescr/?prod_id=".$_GET['prod_id']."'";
 if(isset($appRJ->server['reqUri_expl'][3]) and strtolower($appRJ->server['reqUri_expl'][3])=='longdescr'){
     $appRJ->response['result'].= " class='active'";
 }
-$appRJ->response['result'].= ">Длинное описание</a>".
-    "<a href='/siteMan/editProduct/price/?prod_id=".$_GET['prod_id']."'";
+$appRJ->response['result'].= ">Длинное описание</a>"*/
+$appRJ->response['result'].="<a href='/siteMan/editProduct/price/?prod_id=".$_GET['prod_id']."'";
 if(isset($appRJ->server['reqUri_expl'][3]) and strtolower($appRJ->server['reqUri_expl'][3])=='price'){
     $appRJ->response['result'].= " class='active'";
 }

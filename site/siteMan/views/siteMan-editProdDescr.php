@@ -31,7 +31,8 @@ $appRJ->response['result'].="<form class='newCateg' method='post'>".
 "<div class='input-line ta-left'><label for='catIndex'>Длинное описание саженца:</label></div>";
 $appRJ->response['result'].="<textarea name='content'>".
     $E_rd->result['longDescr']."</textarea>".
-"<div class='input-line'><input type='submit' value='save'></div>".
+"<div class='input-line'>".
+    "<input type='submit' value='save'></div>".
 "</form></div></div></div>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalOrder.php");
