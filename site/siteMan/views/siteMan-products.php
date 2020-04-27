@@ -67,7 +67,7 @@ if($sCount>0){
             "<div class='item-line-alias'>".$select_row['prodAlias']."</div>".
             "<div class='item-line-descr'>";
         if($select_row['prodDescr']){
-            $appRJ->response['result'].= mb_substr($select_row['prodDescr'],0, 20, 'UTF-8')." ...";
+            $appRJ->response['result'].= mb_substr($select_row['longDescr'],0, 20, 'UTF-8')." ...";
         }else{
             $appRJ->response['result'].= "-";
         }
