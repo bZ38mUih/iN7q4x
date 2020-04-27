@@ -1,4 +1,9 @@
 <?php
+if(isset($_SESSION['groups']['2']) and $_SESSION['groups']['2']>=5) {
+    $navPanel = "<ul><li><a href='/siteMan'>siteMan :: </a></li>".substr($navPanel, 4 , strlen($navPanel)). "<ul></ul>";
+}
+
+
 $appRJ->response['result'].= "<div class='page-wrap'><header><div class='headerCenter'>"
     ."<div class = 'hLogo'><div class='hlImg'>";
 if(isset($appRJ->server['reqUri_expl'][1]) and file_exists($_SERVER['DOCUMENT_ROOT']."/site/".

@@ -16,11 +16,13 @@ if(isset($_POST['prodAlias']) and $_POST['prodAlias']!=null){
 }else{
     $pErr['prodAlias']='недопустимый alias';
 }
+/*
 if(isset($_POST['prodDescr']) and $_POST['prodDescr']!=null){
     $Prod_rd->result['prodDescr']=htmlspecialchars($_POST['prodDescr']);
 }else{
     $pErr['prodDescr']='недопустимый заголовок';
 }
+*/
 
 if(isset($_POST['prodCat_id'])){
 

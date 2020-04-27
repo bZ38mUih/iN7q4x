@@ -30,7 +30,7 @@ $appRJ->response['result'].= "<div class='contentBlock-frame'>".
 
 
 $appRJ->response['result'].= "<div class='centerBlock ta-left'>".
-"<div class='navPanel'></div>";
+"<div class='navPanel'>".$navPanel."</div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'>";
@@ -113,9 +113,7 @@ $appRJ->response['result'].= "<div class='catView'><h2><hr><span>Новые по
     $newProd_txt.
 
     "</div>".
-
-
-    "</div>"."<h2><hr><span>Памятка садоводу</span></h2>";
+    "</div>";
 
 
 
