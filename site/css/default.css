@@ -144,3 +144,20 @@ footer sup{
 .line div{
     display: inline-block;
 }
+span.minPrice{
+    display: inline-block;
+    width: 100%;
+    color: red;
+    font-weight: bold;
+}
+span.minPrice:after{
+    content: " p.";
+    font-weight: normal;
+    color: black;
+}
+span.minPrice:before{
+    content: "Цена от: ";
+    color: black;
+    font-weight: normal;
+
+}

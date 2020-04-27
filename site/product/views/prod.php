@@ -15,8 +15,13 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<link rel='stylesheet' href='/site/catalog/css/catView.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/product/css/prod.css' type='text/css' media='screen, projection'/>".
     //"<link rel='stylesheet' href='/site/landing/css/slider.css' type='text/css' media='screen, projection'/>".
+    "<link rel='stylesheet' href='/site/search/css/default.css' type='text/css' media='screen, projection'/>".
+    "<script src='/site/search/js/default.js'></script>".
+
     "<script src='/site/siteHeader/js/modalHeader.js'></script>".
-    "<script src='/site/product/js/bucket.js'></script>"
+    "<script src='/site/product/js/bucket.js'></script>".
+    "<link rel='stylesheet' href='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/css/preloader.css'/>".
+    "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>"
     //" <script src='/source/js/jssor.slider-28.0.0.min.js' type='text/javascript'></script>".
     //"<script src='/site/landing/js/slider.js'></script>"
 ;
@@ -32,8 +37,10 @@ $appRJ->response['result'].= "<div class='contentBlock-frame'>".
 
 
 $appRJ->response['result'].= "<div class='centerBlock ta-left'>".
-    "<div class='navPanel'>".$navPanel."</div>";
-
+    "<div class='navPanel'>".$navPanel."</div>".
+"<div class='search-frame'>";
+require_once($_SERVER["DOCUMENT_ROOT"] . "/site/search/views/defaultView.php");
+$appRJ->response['result'].="</div>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'>";
 $appRJ->response['result'].= "<h1>".$find_row['prodName']."</h1>";

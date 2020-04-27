@@ -191,23 +191,7 @@
     border-radius: 0.2em;
     margin-right: 2%;
 }
-span.minPrice{
-    display: inline-block;
-    width: 100%;
-    color: red;
-    font-weight: bold;
-}
-span.minPrice:after{
-    content: " p.";
-    font-weight: normal;
-    color: black;
-}
-span.minPrice:before{
-    content: "Цена от: ";
-    color: black;
-    font-weight: normal;
 
-}
 
 
 /*slider-->

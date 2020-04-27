@@ -1,3 +1,8 @@
+.search-frame{
+    display: inline-block;
+    margin: 1em 1%;
+    width: 98%;
+}
 .site-search{
     width: 100%;
     padding: 1em 0;
@@ -42,4 +47,44 @@
     vertical-align: middle;
     font-size: 1.5em;
     margin-top: 0.1em;
+}
+.s-result{
+    display: none;
+}
+.s-result.active{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.s-result.active span.err{
+    color: red;
+    margin: 1em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.s-result .find-line{
+    text-align: center;
+    display: inline-block;
+    border-bottom: 1px dotted gray;
+    width: 100%;
+    margin: 0.2em 0;
+}
+.s-result .find-line img{
+    height: 3em;
+    width: 3em;
+}
+
+.s-result .find-line .fl-img {
+    display: inline-block;
+    width: 25%;
+    vertical-align: middle;
+}
+.s-result .find-line .fl-text {
+    display: inline-block;
+    width: 75%;
+    vertical-align: middle;
 }
