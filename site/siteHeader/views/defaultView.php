@@ -4,8 +4,10 @@ if(isset($_SESSION['groups']['2']) and $_SESSION['groups']['2']>=5) {
 }
 
 
-$appRJ->response['result'].= "<div class='page-wrap'><header><div class='headerCenter'>"
-    ."<div class = 'hLogo'><div class='hlImg'>";
+$appRJ->response['result'].= "<div class='page-wrap'><header><div class='headerCenter'>".
+    "<strong style='display: inline-block; width: 100%; background-color: firebrick;padding: 0; margin: 0; color: white;'>".
+"Идет отладка! Некоторые функции сайта могут не работать</strong>".
+    "<div class = 'hLogo'><div class='hlImg'>";
 if(isset($appRJ->server['reqUri_expl'][1]) and file_exists($_SERVER['DOCUMENT_ROOT']."/site/".
         $appRJ->server['reqUri_expl'][1]."/img/logo.png")){
     $appRJ->response['result'].= "<img src='/site/".$appRJ->server['reqUri_expl'][1]."/img/logo.png' ".
@@ -17,7 +19,7 @@ $appRJ->response['result'].= "</div>"
     ."<div class='hlText'><span class='sad'>Сад</span><span class='primorya'>приморья</span></div>"
     ."</div>"
 
-    ."<div class='hDescr'>ПИТОМНИК ПЛОДОВЫХ И ДЕКОРАТИВНЫХ РАСТЕНИЙ</div>"
+    ."<div class='hDescr'>Саженцы плодовых деревьев и кустарников из питомника</div>"
     ."<div class='hContacts'>"
     ."<span class='hcPhone'>".CONT_PHONE_1."</span>";
 if(CONT_PHONE_2){

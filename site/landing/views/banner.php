@@ -29,7 +29,7 @@ $appRJ->response['result'].= "
             </div>
             <div>
                 <img data-u='image' src='/site/landing/img/cherry.jpg' />
-                <span class='sText'>Вишня - до 600 кг с м2</span>
+                <span class='sText'>Вишня - зимостойкое</span>
             </div>
             <div>
                 <img data-u='image' src='/site/landing/img/plum.jpg' />

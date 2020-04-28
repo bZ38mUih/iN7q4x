@@ -6,6 +6,7 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<head>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
     "<meta name='description' content='Магазин саженцев Сад Приморья в Иваново | Питомник растений | Садовый центр.'/>".
+    "<meta name='yandex-verification' content='a28b37bc8b7582ac' />".
     //"<meta name='yandex-verification' content='e929004ef40cae1b' />".
     "<title>Магазин саженцев Сад Приморья в Иваново | Питомник растений | Садовый центр.</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".

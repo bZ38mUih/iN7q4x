@@ -10,7 +10,7 @@ if($_GET['sTemplate']){
         //$findProd_qry = "select * from prodList_dt where prodName like '%".$_GET['sTemplate']."%'";
         $findProd_qry = "select prodList_dt.*, min(prodPrice_dt.prodPrice) as minPrice from prodList_dt ".
             "left join prodPrice_dt on prodList_dt.prod_id = prodPrice_dt.prod_id and prodPrice_dt.activeFlag is true and prodPrice_dt.prodPrice is not null ".
-            "where (prodList_dt.prodName like '%".$_GET['sTemplate']."%' or prodList_dt.prodAlias like '%".$_GET['sTemplate']."%') ".$prodWhere." group by prodList_dt.prod_id";
+            "where (LOWER(prodList_dt.prodName) like '%".strtolower($_GET['sTemplate'])."%' or LOWER(prodList_dt.prodAlias) like '%".strtolower($_GET['sTemplate'])."%' ".$prodWhere." group by prodList_dt.prod_id";
         $findProd_res = $DB->doQuery($findProd_qry);
         if(mysql_num_rows($findProd_res) > 0){
             $appRJ->response['result'] = "в Саженцах: ".mysql_num_rows($findProd_res);
@@ -30,7 +30,7 @@ if($_GET['sTemplate']){
                 $appRJ->response['result'] .= "</div></div>";
             }
         }else{
-            $appRJ->response['result'] = "<span class='err'>Хуй чего</span>";
+            $appRJ->response['result'] = "<span class='err'>Ничего не найдено</span>";
         }
         //$appRJ->response['result'] = "<span class='err'>Условия поиска не заданы222</span>";
 

@@ -1,9 +1,4 @@
-/**
- * Created by mrSmitch on 13.04.2020.
- */
-
 $(document).ready(function(){
-    //alert('I am here');
     $( window ).resize(function() {
         var wWidth = $( window ).width();
         if(wWidth >= 1200){
@@ -13,6 +8,8 @@ $(document).ready(function(){
         }
 //alert($( window ).width());
     })
+    $( window ).trigger("resize");
+    jssor_1_slider_init();
 })
 
 

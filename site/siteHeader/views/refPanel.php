@@ -9,7 +9,7 @@ $appRJ->response['result'].= "<div class='contentBlock-frame'>".
     ."<a href='/pay-and-delivery'>Оплата и доставка</a>"
     //."<a href='/gallery'>Галерея</a>"
     //."<a href='/articles'>Статьи</a>"
-    ."<a href='/contacts'>Контакты</a>"
+    . "<a href='/site/contacts'>Контакты</a>"
     ."</div>"
     ."</div></div></div>";
 $appRJ->response['result'].= "<div class='locPanel'>".

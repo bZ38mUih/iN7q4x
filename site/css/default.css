@@ -10,7 +10,6 @@ BODY {
 .page-wrap{
     position: relative;
     min-height: 93.5vh;
-    padding: 0;
     background-image:
     url(/source/img/background-top.png),
     url(/source/img/background-bottom.png);

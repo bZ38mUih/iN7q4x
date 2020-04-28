@@ -5,7 +5,7 @@ header{
 }
 
 .headerCenter{
-    padding: 1em 0;
+    padding: 0 0 1em 0;
     background-color: white;
 }
 
@@ -43,11 +43,13 @@ header{
 
 .hDescr{
     display: inline-block;
-    width: 30%;
+    width: 28%;
+    padding: 0 1%;
     vertical-align: middle;
     color: #009606;
     font-size: 1.4em;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .hContacts{
     display: inline-block;
@@ -73,6 +75,7 @@ header{
     width: 1.5em;
     background-size: cover;
     vertical-align: middle;
+    margin-right: 0.5em;
 }
 .hContacts span.hcPhone::before{
     content: " ";
@@ -82,6 +85,7 @@ header{
     width: 1.5em;
     background-size: cover;
     vertical-align: middle;
+    margin-right: 0.5em;
 }
 
 .hBucket{

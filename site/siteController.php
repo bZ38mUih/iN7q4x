@@ -4,7 +4,7 @@ define(GL_PROD_IMG_PAPH, "/data/catalog/products/");
 require_once($_SERVER["DOCUMENT_ROOT"]."/source/_conf/prodAge.php");
 require_once ($_SERVER["DOCUMENT_ROOT"]."/source/_conf/contacts.php");
 
-if(isset($_SESSION['user_id']) or ($appRJ->server['reqUri_expl'][1]== "signIn" or $appRJ->server['reqUri_expl'][1]== "checkIn")){
+//if(isset($_SESSION['user_id']) or ($appRJ->server['reqUri_expl'][1]== "signIn" or $appRJ->server['reqUri_expl'][1]== "checkIn")){
     if (isset($_GET['mkAlias'])){
         $appRJ->response['format']='ajax';
         require_once($_SERVER['DOCUMENT_ROOT'] . "/source/accessorial_class.php");
@@ -34,8 +34,8 @@ if(isset($_SESSION['user_id']) or ($appRJ->server['reqUri_expl'][1]== "signIn" o
             require_once($_SERVER["DOCUMENT_ROOT"]."/site/landing/defaultController.php");
         }
     }
-}else{
-        $appRJ->errors['stab']['description']='Сайт на реконструкции.
-    Администрация просит извинения за предоставленные неудобства';
-}
+//}else{
+//        $appRJ->errors['stab']['description']='Сайт на реконструкции.
+//    Администрация просит извинения за предоставленные неудобства';
+//}
 

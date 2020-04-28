@@ -1,11 +1,11 @@
 .search-frame{
     display: inline-block;
-    margin: 1em 1%;
+    margin: 0 1% 1em 1%;
     width: 98%;
 }
 .site-search{
     width: 100%;
-    padding: 1em 0;
+    padding: 0 0;
 }
 
 .s-input{

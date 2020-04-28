@@ -3,7 +3,9 @@
     width: 100%;
     margin: 1em 0;
 }
-
+.navPanel ul{
+    padding-left: 1em;
+}
 .navPanel ul li {
     display: inline-block;
 }

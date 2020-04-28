@@ -15,7 +15,21 @@ if(isset($appRJ->server['reqUri_expl'][1]) and file_exists($_SERVER['DOCUMENT_RO
 $appRJ->response['result'].= "</div>"
     ."<div class='hlText'><span class='sad'>Сад</span><span class='primorya'>приморья</span></div>";
 if($App['views']['social-block']) {
-    $appRJ->response['result'].= "<div class='ft-service'>".
+    $appRJ->response['result'].=
+        "<script type='text/javascript' >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+   ym(62372254, 'init', {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>";
+
+        "<div class='ft-service'>".
         "<noscript><div>".
         "<img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>".
         "<a href='https://metrika.yandex.ru/stat/?id=62372254&amp;from=informer' target='_blank' rel='nofollow'>".

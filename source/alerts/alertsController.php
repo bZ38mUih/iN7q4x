@@ -78,7 +78,9 @@ if($this->errors){
         "<a href='/' title='на главную Райт Джойнт ру'><img src='/site/siteHeader/img/rightjoint-logo-400-2.png'>Главная</a>".
         "<a href='/donate' title='Пожертвования на развитие проекта'><img src='/site/donate/img/logo.png'>Помощь проекту</a>".
 */
+        "<a href='/' title='Главная'><img src='/site/siteHeader/img/site-logo.png'>Главная «Сад приморья»</a>".
         "<a href='/signIn' title='Авторизация'><img src='/site/signIn/img/logo.png'>Вход на сайт</a>".
+
         "</div>".
         "</div>".
         "</body>".
