@@ -28,7 +28,12 @@ if($App['views']['social-block']) {
    });
 </script>
 <noscript><div><img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>";
-
+    //<!-- Yandex.Metrika informer -->
+    $appRJ->response['result'].= "<a href='https://metrika.yandex.ru/stat/?id=62372254&amp;from=informer'
+target='_blank' rel='nofollow'><img src='https://informer.yandex.ru/informer/62372254/3_1_FFFFFFFF_EFEFEFFF_0_pageviews'
+style='width:88px; height:31px; border:0;' alt='Яндекс.Метрика' title='Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)' 
+class='ym-advanced-informer' data-cid='62372254' data-lang='ru' /></a>";
+//<!-- /Yandex.Metrika informer -->
         "<div class='ft-service'>".
         "<noscript><div>".
         "<img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>".
