@@ -1,0 +1,56 @@
+h1{
+    color: #444;
+    font-weight: 100;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    background: transparent;
+    margin: 0;
+}
+h1 span{
+    background: radial-gradient(ellipse ,
+    rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0.2), rgba(255,255,255,0.5));
+    position: relative;
+    z-index: 1;
+    padding: 0.2em 1em;
+}
+h1 hr{
+    border: none;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: orange;
+}
+.c-delivery{
+    text-align: left;
+    margin-bottom: 17px;
+    background: #fcfcfc;
+    color: #6c8000;
+    padding: 14px 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3),  0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.top-frame strong {
+    margin: 1em 0;
+    display: inline-block;
+    background: #ffdd3e;
+    padding: 15px 15px 20px 15px;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 7px 55px -21px #676767;
+    font-size: 24px;
+    font-weight: 700;
+}
+.top-frame .hContacts
+{
+    width: 100%;
+}
+
+.top-frame .hContacts .hcPhone{
+    width: 50%;
+    display: inline-block;
+}
+.top-frame .hContacts span{
+    font-weight: normal;
+    padding: 0.2em 0;
+}

@@ -87,7 +87,29 @@ header{
     vertical-align: middle;
     margin-right: 0.5em;
 }
-
+.hContacts span.hcAddr, .hContacts span.hcSchedule{
+    display: block;
+}
+.hContacts span.hcAddr::before{
+    content: " ";
+    display: inline-block;
+    background: url("/site/siteHeader/img/addr-icon.png");
+    height: 1.5em;
+    width: 1.5em;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+.hContacts span.hcSchedule::before{
+    content: " ";
+    display: inline-block;
+    background: url("/site/siteHeader/img/Clock-icon-1.png");
+    height: 1.5em;
+    width: 1.5em;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
 .hBucket{
     display: inline-block;
     width: 20%;

@@ -84,8 +84,19 @@ class='ym-advanced-informer' data-cid='62372254' data-lang='ru' /></a>";
 $appRJ->response['result'].="</div>"
     //."</div>".
     ."<div class='ft-nav'><h2>Навигация</h2></div>".
-    "<div class='ft-cont'><h2>Наши контакты</h2></div>".
-    "<div class='ft-addr'><h2>Садовые центры</h2></div>".
+    "<div class='ft-cont'><h2>Наши контакты</h2>";
+$appRJ->response['result'].="<div class='hContacts'>"
+    ."<span class='hcPhone'>".CONT_PHONE_1."</span>";
+if(CONT_PHONE_2){
+    $appRJ->response['result'].= "<span class='hcPhone'>".CONT_PHONE_2."</span>";
+}
+$appRJ->response['result'].= "<span class='hcMail'>info@sad-primorya.ru</span>".
+    "<span class='hcSchedule'>Пн - Пт: с 9.00 до 18.00, сбт., вск. - выходной</span>".
+    "<span class='hcAddr'>Россия, Приморский край, г. Владивосток, ул. 3-я Пригородная,  район станции Весенняя.</span>"
+    ."</div>";
+
+$appRJ->response['result'].="</div>".
+    //"<div class='ft-addr'><h2>Садовые центры</h2></div>".
     "</div>";
 /*
 if($App['views']['social-block']){

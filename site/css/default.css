@@ -30,7 +30,7 @@ BODY {
 footer{
     background-color: lightblue;
     color: #ffffff;
-    padding: 0;
+    padding: 0 0 1em 0;
 }
 footer div, footer a, footer img{
     display: inline-block;
@@ -49,7 +49,7 @@ footer div, footer a, footer img{
 }
 .ft-main, .ft-nav, .ft-cont, .ft-addr{
     display: inline-block;
-    width: 25%;
+    width: 33%;
     vertical-align: top;
 
 }
@@ -60,10 +60,27 @@ footer div, footer a, footer img{
 
 }
 .ft-cont{
-
+    text-align: left;
+}
+.ft-cont .hContacts{
+    font-size: 0.9em;
+    display: inline-block;
+    width: 100%;
+}
+.ft-cont span{
+    width: 100%;
+    /*display: ;*/
 }
 .ft-addr{
 
+}
+
+footer h2{
+    display: inline-block;
+    width: 100%;
+    color: #337ab7;
+    font-weight: normal;
+    text-align: center;
 }
 
 
