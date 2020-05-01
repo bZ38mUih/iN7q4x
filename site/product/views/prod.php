@@ -4,7 +4,7 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<html lang='en-Us'>".
     "<head>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
-    "<meta name='description' content='".$find_row['prodDescr']."'/>".
+    "<meta name='description' content='Саженцы ".$find_row['prodName']." в питомнике от ".$price_row['prodPrice']." руб. Описание и покупка саженцев.'/>".
     //"<meta name='yandex-verification' content='e929004ef40cae1b' />".
     "<title>".$find_row['prodName']."</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".
@@ -48,7 +48,8 @@ $appRJ->response['result'].= "<div class='pv-descr'>".$find_row['longDescr']."</
 $appRJ->response['result'].= "<div class='pv-order'>".
     "<div class='pvo-left'>";
 if($find_row['prodImg']){
-    $appRJ->response['result'].="<a href='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/".$find_row['prodImg']."'><img src='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/preview/".$find_row['prodImg']."'></a>";
+    $appRJ->response['result'].="<a href='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/".$find_row['prodImg']."'>".
+        "<img src='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/preview/".$find_row['prodImg']."' id='shareImg'></a>";
 }else{
     $appRJ->response['result'].="><img src='/data/default-img.png'>";
 }

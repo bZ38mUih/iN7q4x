@@ -1,2 +1,2 @@
 <?php
-$appRJ->errors['stab']['description']="Страница «О питомнике» на реконструкции";
+require_once ($_SERVER['DOCUMENT_ROOT']."/site/about/views/defautView.php");

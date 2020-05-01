@@ -4,7 +4,7 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<html lang='en-Us'>".
     "<head>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
-    "<meta name='description' content='".$find_row['catDescr']."'/>".
+    "<meta name='description' content='Каталог магазина 'Сад приморья'/>".
     //"<meta name='yandex-verification' content='e929004ef40cae1b' />".
     "<title>Каталог магазина 'Сад приморья'</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".
@@ -43,6 +43,9 @@ $appRJ->response['result'].= "<h1>КУПИТЬ САЖЕНЦЫ В ИВАНОВО 
     $catView.
 
     "</div></div></div>";
+$appRJ->response['result'].= "<div class='pv-descr'><p>Дорогие садоводы, для того чтобы провести заказ в нашем интернет-магазине 
+саженцев «Сады Приморья», необходимо под желаемым товаром нажать кнопку «Добавить в корзину» или связаться по телефону.</p>
+<p>Питомник «Сад приморья» осуществляет доставку саженцев по всей России. Минимальный заказ 30 тысяч рублей. ДОСТАВКА БЕСПЛАТНАЯ.</p></div>";
 $appRJ->response['result'].="</div></div></div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");

@@ -12,6 +12,7 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<script src='/source/js/jquery-3.2.1.js'></script>".
     "<link rel='stylesheet' href='/site/css/default.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/siteHeader/css/default.css' type='text/css' media='screen, projection'/>".
+
     "<link rel='stylesheet' href='/site/css/mainFrame.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/pay-and-delivery/css/payStyle.css' type='text/css' media='screen, projection'/>".
     "<script src='/site/siteHeader/js/modalHeader.js'></script>";
@@ -30,7 +31,7 @@ $appRJ->response['result'].= "<div class='centerBlock ta-left'>".
     "<div class='navPanel'>".$navPanel."</div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
-$appRJ->response['result'].= "<div class='top-frame'>".
+$appRJ->response['result'].= "<div class='top-frame'><h1><hr><span>Оплата и доставка</span></h1>".
     "<div class='topImg'><img src='/site/pay-and-delivery/img/pay-and-delivery.jpg'></div>".
     "<div class='pd-TxtBlock'>".
     "<div class='pdTb-top'>".
@@ -46,7 +47,7 @@ $appRJ->response['result'].= "<div class='top-frame'>".
     "</div>".
     "</div>".
     "<div class='pdTb-bottom'><h3>Доставка и оплата саженцев</h3>".
-    "<p>Питомник «Сад приморья» осуществляет доставку саженцев по всей России. 
+    "<p class='pv-descr'>Питомник «Сад приморья» осуществляет доставку саженцев по всей России. 
 Минимальный заказ 30 тысяч рублей. ДОСТАВКА БЕСПЛАТНАЯ.</p>".
     "</div>".
     "</div>".

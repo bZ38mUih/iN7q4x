@@ -21,18 +21,18 @@ if(mysql_num_rows($leftMenu_res)>0){
 
         //if()
 
-        $leftMenu_txt.= "<li><a href='/catalog/".$leftMenu_row['catAlias']."'>".mb_strtoupper($leftMenu_row['catName'])."</a>";
+        $leftMenu_txt.= "<li><a href='/catalog/".$leftMenu_row['catAlias']."' title='перейти к описанию ".$leftMenu_row['catName']."'>".mb_strtoupper($leftMenu_row['catName'])."</a>";
 
         $parCat_qry = "select prodCat_dt.*, count(prodList_dt.prod_id) as cnt from prodCat_dt ".
             "left join prodList_dt on prodCat_dt.prodCat_id = prodList_dt.prodCat_id ".
             " Where  prodCat_dt.prodCat_parId = '".$leftMenu_row['prodCat_id']."' and prodCat_dt.prodCat_parId is not null ".
-            " and prodCat_dt.catActive is true group by prodCat_dt.prodCat_id order by prodCat_dt.prodCat_id";
+            " and prodCat_dt.catActive is true group by prodCat_dt.prodCat_id having cnt > 0 order by prodCat_dt.prodCat_id";
         $parCat_res = $DB->doQuery($parCat_qry);
 
         if(mysql_num_rows($parCat_res)>0){
             $leftMenu_txt.="<ul>";
             while($parCat_row = $DB->doFetchRow($parCat_res)){
-                $leftMenu_txt .= "<li><a href='/catalog/".$parCat_row['catAlias']."'>".$parCat_row['catName']." (".$parCat_row['cnt'].")</a></li>";
+                $leftMenu_txt .= "<li><a href='/catalog/".$parCat_row['catAlias']."' title='перейти к описанию и саженцам ".$parCat_row['catName']."'>".$parCat_row['catName']." (".$parCat_row['cnt'].")</a></li>";
 
 
                 if($parCat_row['popFlag'])

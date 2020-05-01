@@ -14,29 +14,29 @@ header{
     width: 25%;
     vertical-align: middle;
 }
-.hLogo .hlImg{
+.hlImg{
     display: inline-block;
     width: 30%;
 }
-.hLogo .hlImg img{
+.hlImg img{
     height: 5em;
     width: 5em;
     vertical-align: middle;
 }
-.hLogo .hlText{
+.hlText{
     display: inline-block;
     width: 70%;
     vertical-align: middle;
     font-size: 1.5em;
     font-weight: bold;
 }
-.hLogo .hlText span.sad{
+.hlText span.sad{
     display: inline-block;
     color: #00ff00;
     font-size: 1.5em;
     text-shadow: 2px 2px 2px darkgreen, -1px -1px 2px darkgreen;
 }
-.hLogo .hlText span.primorya{
+.hlText span.primorya{
     color: darkgreen;
     font-size: 1.5em;
 }

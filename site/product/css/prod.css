@@ -1,11 +1,3 @@
-.pv-descr{
-    text-align: left;
-    margin-bottom: 17px;
-    background: #fcfcfc;
-    color: #6c8000;
-    padding: 14px 20px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .3),  0 0 40px rgba(0, 0, 0, .1) inset;
-}
 .pv-order{
     display: inline-block;
     width: 100%;

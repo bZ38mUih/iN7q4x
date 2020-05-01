@@ -39,12 +39,17 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'><div class='catView'>";
 
 $appRJ->response['result'].= "<h1>".$find_row['catDescr']."</h1>".
-"<div class='cv-descr'>".$find_row['catMeta']."</div>";
+"<div class='pv-descr'>".$find_row['catMeta']."</div>";
 $appRJ->response['result'].="</div>".
     "<div class='catView'>".$sub_text."</div>".
-    "<div class='cv-longDescr'>".$find_row['longDescr']."</div>".
+    "<div class='cv-longDescr'>".$find_row['longDescr']."</div>";
+$appRJ->response['result'].= "<div class='pv-descr'><p>Дорогие садоводы, для того чтобы провести заказ в нашем интернет-магазине 
+саженцев «Сады Приморья», необходимо под желаемым товаром нажать кнопку «Добавить в корзину» или связаться по телефону.</p>
+<p>Питомник «Сад приморья» осуществляет доставку саженцев по всей России. Минимальный заказ 30 тысяч рублей. ДОСТАВКА БЕСПЛАТНАЯ.</p></div>";
+$appRJ->response['result'].="</div></div></div>".
 
     "</div></div>";
+
 $appRJ->response['result'].="</div></div></div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");

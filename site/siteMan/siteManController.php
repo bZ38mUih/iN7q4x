@@ -82,8 +82,9 @@ elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['re
         $appRJ->errors['404']['description']='неправильные параметры url product';
     }
 
-}elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="memonote"){
-    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-memoNotes.php");
+}elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="sitemap"){
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMap.php");
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-siteMap.php");
 }
 else{
     require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-defView.php");

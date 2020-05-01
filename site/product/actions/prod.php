@@ -11,13 +11,14 @@ if($appRJ->server['reqUri_expl'][2]){
                 "<li><a href='/product/".$find_row['prodAlias']."'>".$find_row['prodName']."</a></li>".
                 "</ul>";
 
-            $price_qry = "select * from prodPrice_dt where prod_id = ".$find_row['prod_id']." and prodPrice is not null ".
+            $price_qry = "select prod_id, prodPrice from prodPrice_dt where prod_id = ".$find_row['prod_id']." and prodPrice is not null ".
                 "and activeFlag is true ".
                 "order by prodAge";
             //echo $price_qry;
             $price_res = $DB->doQuery($price_qry);
 
             if(mysql_num_rows($price_res)>0){
+                $price_row = $DB->doFetchRow($price_res);
                 /*
                 $findSub_qry = "select * from prodList_dt where prodCat_id = '".$find_row['prodCat_id']."' and activeFlag is true and ".
                     "prodList_dt.prod_id <> ".$find_row['prod_id'];

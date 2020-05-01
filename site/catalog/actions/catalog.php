@@ -20,12 +20,12 @@ if(mysql_num_rows($find_res)>0){
             $catView.="/data/default-img.png";
         }
         $catView.="'>".
-            "<a href='/catalog/".$find_row['catAlias']."'>".$find_row['catName']."</a></div>";
+            "<a href='/catalog/".$find_row['catAlias']."' title='перейти к описанию категории ".$find_row['catName']."'>".$find_row['catName']."</a></div>";
         $catView.="<div class='cp-list'>";
         $sub_qry = "select * from prodCat_dt where prodCat_parId = ".$find_row['prodCat_id']." and catActive is true";
         $sub_res = $DB->doQuery($sub_qry);
         while ($sub_row = $DB->doFetchRow($sub_res)){
-            $catView.="<a href='/catalog/".$sub_row['catAlias']."'>";
+            $catView.="<a href='/catalog/".$sub_row['catAlias']."'  title='перейти к описанию и товарам ".$sub_row['catName']."'>";
             $catView .= "<img src='";
             if($sub_row['catImg']){
                 $catView.=GL_CATEG_IMG_PAPH."/".$sub_row['prodCat_id'].
