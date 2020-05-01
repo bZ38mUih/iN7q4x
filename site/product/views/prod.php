@@ -4,7 +4,7 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<html lang='en-Us'>".
     "<head>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
-    "<meta name='description' content='Саженцы ".$find_row['prodName']." в питомнике от ".$price_row['prodPrice']." руб. Описание и покупка саженцев.'/>".
+    "<meta name='description' content='Саженцы ".$find_row['prodName']." в питомнике от ".$minProdPrice." руб. Описание и покупка саженцев.'/>".
     //"<meta name='yandex-verification' content='e929004ef40cae1b' />".
     "<title>".$find_row['prodName']."</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".
@@ -57,21 +57,8 @@ if($find_row['prodImg']){
 $appRJ->response['result'].="</div>".
     "<div class='pvo-right'>".
     "<div class='pvo-offer'>Заказать и купить</div>".
-    "<div class='pvo-age'>";
-$tCounter = 0;
-$tPrice = 0;
-while ($price_row = $DB->doFetchRow($price_res)){
-    $appRJ->response['result'].= "<div class='price-line'>".
-        "<input type='radio' id='pChoice".$tCounter."' name='opt' value='".$price_row['prodAge'].",".$price_row['prodPrice']."' ";
+    "<div class='pvo-age ta-left'>".$prodPrice_text;
 
-    if(!$tCounter){
-        $appRJ->response['result'].="checked";
-        $tPrice = $price_row['prodPrice'];
-    }
-    $appRJ->response['result'].=">
-    <label for='pChoice".$tCounter."'>".$prodAge_conf[$price_row['prodAge']]." - <span class='pChoice'>".$price_row['prodPrice']."</span></label></div>";
-    $tCounter++;
-}
 
 $appRJ->response['result'].="</div>".
     "<div class='pvo-get'>".

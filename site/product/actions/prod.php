@@ -16,9 +16,32 @@ if($appRJ->server['reqUri_expl'][2]){
                 "order by prodAge";
             //echo $price_qry;
             $price_res = $DB->doQuery($price_qry);
+            //$tRes = $price_res;
+            $minProdPrice = 0;
+            $prodPrice_text = null;
 
             if(mysql_num_rows($price_res)>0){
-                $price_row = $DB->doFetchRow($price_res);
+
+
+                $tCounter = 0;
+                $tPrice = 0;
+                while ($price_row = $DB->doFetchRow($price_res)){
+                    if($tCounter == 0){
+                        $minProdPrice = $price_row['prodPrice'];
+                    }
+                    $prodPrice_text.= "<div class='price-line'>".
+                        "<input type='radio' id='pChoice".$tCounter."' name='opt' value='".$price_row['prodAge'].",".$price_row['prodPrice']."' ";
+
+                    if(!$tCounter){
+                        $prodPrice_text.="checked";
+                        $tPrice = $price_row['prodPrice'];
+                    }
+                    $prodPrice_text.=">
+    <label for='pChoice".$tCounter."'>".$prodAge_conf[$price_row['prodAge']]." - <span class='pChoice'>".$price_row['prodPrice']."</span></label></div>";
+                    $tCounter++;
+                }
+
+              //  $price_row = $DB->doFetchRow($tRes);
                 /*
                 $findSub_qry = "select * from prodList_dt where prodCat_id = '".$find_row['prodCat_id']."' and activeFlag is true and ".
                     "prodList_dt.prod_id <> ".$find_row['prod_id'];
