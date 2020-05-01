@@ -39,7 +39,7 @@ $appRJ->response['result'].= "<div class='centerBlock ta-left'>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'><div class='catView'>";
 
-$appRJ->response['result'].= "<h1>КУПИТЬ САЖЕНЦЫ В ИВАНОВО И ИВАНОВСКОЙ ОБЛАСТИ</h1>".
+$appRJ->response['result'].= "<h1>КУПИТЬ САЖЕНЦЫ В ПРИМОРСКОМ КРАЕ</h1>".
     $catView.
 
     "</div></div></div>";
