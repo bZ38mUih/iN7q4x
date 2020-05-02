@@ -11,7 +11,7 @@ if($appRJ->server['reqUri_expl'][2]){
                 "<li><a href='/product/".$find_row['prodAlias']."'>".$find_row['prodName']."</a></li>".
                 "</ul>";
 
-            $price_qry = "select prod_id, prodPrice from prodPrice_dt where prod_id = ".$find_row['prod_id']." and prodPrice is not null ".
+            $price_qry = "select prod_id, prodPrice, prodAge from prodPrice_dt where prod_id = ".$find_row['prod_id']." and prodPrice is not null ".
                 "and activeFlag is true ".
                 "order by prodAge";
             //echo $price_qry;
