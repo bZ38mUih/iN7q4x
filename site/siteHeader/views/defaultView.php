@@ -25,7 +25,7 @@ $appRJ->response['result'].= "</div>"
 if(CONT_PHONE_2){
     $appRJ->response['result'].= "<span class='hcPhone'>".CONT_PHONE_2."</span>";
 }
-$appRJ->response['result'].= "<span class='hcMail'>info@sad-primorya.ru</span>"
+$appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>"
     ."</div>"
     ."<div class='hBucket'>"
     ."<div class='hbImg'><img src='/site/siteHeader/img/bucket.png'></div>"
