@@ -68,12 +68,12 @@ include ($_SERVER["DOCUMENT_ROOT"]."/site/siteHeader/views/rp-text.php");
 $appRJ->response['result'].= "</div>".
     "<div class='ft-cont'><h2>Наши контакты</h2>";
 $appRJ->response['result'].="<div class='hContacts'>"
-    ."<span class='hcPhone'>".CONT_PHONE_1."</span>";
+    ."<span class='hcPhone'><a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1))."' title='Получить консультацию по телефону'>".CONT_PHONE_1."</a></span>";
 if(CONT_PHONE_2){
-    $appRJ->response['result'].= "<span class='hcPhone'>".CONT_PHONE_2."</span>";
+    $appRJ->response['result'].= "<span class='hcPhone'><a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1))."' title='Получить консультацию по телефону'>".CONT_PHONE_2."</a></span>";
 }
-$appRJ->response['result'].= "<span class='hcMail'>info@sad-primorya.ru</span>".
-    "<span class='hcSchedule'>Пн - Пт: с 9.00 до 18.00, сбт., вск. - выходной</span>".
+$appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
+    "<span class='hcSchedule'>".F_SHEDULE_TEXT."</span>".
     "<span class='hcAddr'>Россия, Приморский край, г. Владивосток, ул. 3-я Пригородная,  район станции Весенняя.</span>"
     ."</div>";
 

@@ -44,7 +44,9 @@ $appRJ->response['result'].="</div>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'>";
 $appRJ->response['result'].= "<h1>".$find_row['prodName']."</h1>";
-$appRJ->response['result'].= "<div class='pv-descr'>".$find_row['longDescr']."</div>";
+if($find_row['longDescr']){
+    $appRJ->response['result'].= "<div class='pv-descr'>".$find_row['longDescr']."</div>";
+}
 $appRJ->response['result'].= "<div class='pv-order'>".
     "<div class='pvo-left'>";
 if($find_row['prodImg']){

@@ -196,6 +196,72 @@
     margin-top: 0.5em;
 }
 
+.h1Box{
+    margin: 1em 0;
+    padding: 0.2em 0;
+    background: #ffdd3e;
+    box-shadow: 0 0 10px #00000038;
+    display: inline-block;
+    width: 100%;
+    border: 2px solid white;
+}
+
+h1{
+    font-size: 1.8em;
+}
+.h1Box span{
+    display: block;
+    color: darkgreen;
+    background: none;
+    font-weight: bold;
+}
+
+
+
+.lc-block{
+    border: 1px solid gray;
+    width: 96%;
+    padding: 0.5em 2%;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: gray;
+    margin-bottom: 0.5em;
+}
+.lc-block p{
+    padding: 0;
+    margin: 0.2em 0;
+}
+a.lc-viber{
+
+}
+a.lc-viber::before{
+    content: " ";
+    display: inline-block;
+    background: url("/source/img/vib.jpg");
+    height: 1.5em;
+    width: 1.5em;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+
+a.lc-whatsapp{
+
+}
+a.lc-whatsapp::before{
+    content: " ";
+    display: inline-block;
+    background: url("/source/img/what.jpg");
+    height: 1.5em;
+    width: 1.5em;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+
 
 /*slider-->
 .slider .indicators .indicator-item {

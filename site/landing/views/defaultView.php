@@ -41,9 +41,25 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/landing/views/banner.php");
 
+$appRJ->response['result'].= "<div class='h1Box'><h1>Питомник саженцев, растений и деревьев <span class='fName'>«Сад Приморья»</span></h1></div>".
+"<div class='lc-block'>Уточняйте наличие саженцев и возможность доставки по телефону ".
+        "<span class='hcPhone'><a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1))."' title='Получить консультацию по телефону'>".CONT_PHONE_1."</a></span>";
+if(CONT_PHONE_2){
+    $appRJ->response['result'].= "<span class='hcPhone'><a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1)).
+        "' title='Получить консультацию по телефону'>".CONT_PHONE_2."</a></span>";
+}
+$appRJ->response['result'].=", по <a class='lc-whatsapp' title='Получить консультацию по WhatsApp' href='whatsapp://send?phone=".
+    str_replace(" ", "", str_replace(")", "", str_replace("(", "", CONT_PHONE_1)))."'>WhatsApp.</a>";
+
+
+$appRJ->response['result'].="или по <a class='lc-viber' title='Получить консультацию по Viber' href='viber://add?number=".
+    str_replace("+", "", str_replace(" ", "", str_replace(")", "", str_replace("(", "", CONT_PHONE_1))))."'>Viber.</a>";
+
+
+$appRJ->response['result'].="<p>Цены актуальны на весну 2020</p></div>";
+
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/search/views/defaultView.php");
-
 
 
 $appRJ->response['result'].="<div class='catView'>".

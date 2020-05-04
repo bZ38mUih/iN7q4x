@@ -35,8 +35,8 @@ $appRJ->response['result'].="<div class='hContacts'>"
 if(CONT_PHONE_2){
     $appRJ->response['result'].= "<span class='hcPhone'>".CONT_PHONE_2."</span>";
 }
-$appRJ->response['result'].= "<span class='hcMail'>info@sad-primorya.ru</span>".
-    "<span class='hcSchedule'>Пн - Пт: с 9.00 до 18.00, сбт., вск. - выходной</span>".
+$appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
+    "<span class='hcSchedule'>".F_SHEDULE_TEXT."</span>".
     "<span class='hcAddr'>Россия, Приморский край, г. Владивосток, ул. 3-я Пригородная,  район станции Весенняя.</span>"
     ."</div>";
     $appRJ->response['result'].= "<div class='c-delivery'>
@@ -46,9 +46,12 @@ $appRJ->response['result'] .="<div class='yMap'><script type='text/javascript' c
 src='https://api-maps.yandex.ru/services/constructor/1.0/js/
 ?um=constructor%3Acd9b4a98845af0bb26f81134be1091ec79594f99c4b5226c38817fcc8b2875af&amp;width=882&amp;height=400&amp;
 lang=ru_RU&amp;scroll=true'></script></div>";
-$appRJ->response['result'] .="<strong>По всем вопросам Вы можете получить консультацию, позвонив нам по телефонам  
-<a href='tel:+7 (915) 818-70-66' title='Получить консультацию по телефону'>+7 (915) 818-70-66</a> и <a href='tel:+7 (962) 936-76-22' title='Получить консультацию по телефону'>+7 (962) 936-76-22</a> 
-</strong>";
+$appRJ->response['result'] .="<strong>По всем вопросам Вы можете получить консультацию, позвонив нам по телефону  
+<a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1))."' title='Получить консультацию по телефону'>".CONT_PHONE_1."</a>";
+if(CONT_PHONE_2){
+    $appRJ->response['result'].= " и <a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_2))."' title='Получить консультацию по телефону'>".CONT_PHONE_2."</a>";
+}
+$appRJ->response['result'] .= "</strong>";
 
 $appRJ->response['result'] .="</div>";
 
