@@ -2,6 +2,12 @@
 if(isset($_SESSION['groups']['2']) and $_SESSION['groups']['2']>=5) {
     $navPanel = "<ul><li><a href='/siteMan'>siteMan :: </a></li>".substr($navPanel, 4 , strlen($navPanel)). "<ul></ul>";
 }
+if(!$_SESSION['count']){
+    $_SESSION['count'] = 0;
+}
+if(!$_SESSION['amount']){
+    $_SESSION['amount'] = 0;
+}
 
 $appRJ->response['result'].= "<div class='page-wrap'><header><div class='headerCenter'>".
     "<strong style='display: inline-block; width: 100%; background-color: firebrick;padding: 0; margin: 0; color: white;'>".
