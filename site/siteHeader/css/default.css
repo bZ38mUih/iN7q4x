@@ -111,6 +111,7 @@ header{
     margin-right: 0.5em;
 }
 .hBucket{
+    position: relative;
     display: inline-block;
     width: 20%;
     vertical-align: middle;
@@ -131,13 +132,39 @@ header{
     width: 70%;
 
 }
-.hbVolume .hbvCount, .hbVolume .hbvAmount{
+.hbVolume span.hbvCount, .hbVolume span.hbvAmount{
+    font-weight: bold;
     margin: 0.2em 0;
     display: inline-block;
     background-color: orange;
     width: 100%;
     border-bottom-left-radius: 0.2em;
     border-top-left-radius: 0.2em;
+}
+
+.hbVolume span.hbvCount.active, .hbVolume span.hbvAmount.active{
+    cursor: pointer;
+}
+
+
+
+
+
+span.hbvCount:before{
+    content: "Товаров: ";
+    font-weight: normal;
+}
+span.hbvCount:after{
+    content: " шт.";
+    font-weight: normal;
+}
+span.hbvAmount:before{
+    content: "На сумму: ";
+    font-weight: normal;
+}
+span.hbvAmount:after{
+    content: " р.";
+    font-weight: normal;
 }
 .refPanel{
     width: 100%;
@@ -522,4 +549,220 @@ header .rightConn{
     header .logo .imgBlock {
         width: 100%;
     }
+}
+
+.hb-view-frame {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 250%;
+    left: -250%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 1em 0 1em 1em;
+    background: white;
+    border: 1px solid lightblue;
+}
+.hb-view{
+width: 100%;
+
+}
+
+.hb-view-frame.active{
+    display: block;
+}
+
+.hb-view-frame .hbv-title{
+    font-size: 1.2em;
+    display: inline-block;
+    width: 100%;
+}
+.hb-view-frame .hbv-title .hbvt-text{
+    display: inline-block;
+    width: 90%;
+    font-weight: bold;
+    text-align: left;
+}
+.hb-view-frame .hbv-title .hbvt-text img{
+    vertical-align: middle;
+    height:1.5em;
+    width: 1.5em;
+}
+.hb-view-frame .hbv-title .bm-close{
+    display: inline-block;
+    width: 10%;
+}
+.hb-view-frame .hbv-title .bm-close img{
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    float: right;
+    cursor: pointer;
+}
+.hbv-title span.hbvCount, .hbv-title span.hbvAmount
+{
+    margin-left: 0.5em;
+    text-transform: lowercase;
+    color: red;
+}
+
+.hbv-title span.hbvCount:after, .hbv-title span.hbvCount:before, .hbv-title span.hbvAmount:after,  .hbv-title span.hbvAmount:before
+{
+    text-transform: lowercase;
+    color: black;
+}
+
+.hb-view .hb-line{
+    padding: 0.5em 0;
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.hb-view .hb-line .hbl-img{
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.hb-view .hb-line .hbl-img img{
+    vertical-align: middle;
+    height: 3em;
+    width: 3em;
+}
+.hb-view .hb-line .hbl-name{
+    vertical-align: middle;
+    display: inline-block;
+    width: 20%;
+}
+
+.hb-view .hb-line .hbl-action{
+    vertical-align: middle;
+    display: inline-block;
+    width: 60%;
+}
+.hb-view .hb-line .hbla-line{
+    width: 100%;
+    display: inline-block;
+}
+
+
+.hb-view .hb-line .hbl-action .hblal-age{
+    font-weight: bold;
+    display: inline-block;
+    width: 25%;
+    vertical-align: middle;
+}
+.hb-view .hb-line .hbl-action .hblal-input{
+    font-size: 0.8em;
+    margin: 0.5em 0;
+    display: inline-block;
+    width: 75%;
+    vertical-align: middle;
+}
+.hb-view .hb-line .hbl-action .hblal-input button.hblali-add{
+    content: " ";
+    display: inline-block;
+    background: url("/source/img/add-btn.png");
+    height: 2em;
+    width: 2em;
+    background-size: cover;
+    vertical-align: middle;
+    border-style: none;
+    cursor: pointer;
+}
+.hb-view .hb-line .hbl-action .hblal-input button.hblali-remove{
+    content: " ";
+    display: inline-block;
+    background: url("/source/img/del-btn.png");
+    background-size: 100% 100%;
+    height: 2em;
+    width: 2em;
+    vertical-align: middle;
+    border-style: none;
+    cursor: pointer;
+}
+
+.hb-view .hb-line .hbl-action .hblal-input input[type=number]{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 3em;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-style: none;
+}
+.hb-view .hb-line .hbl-action .hblal-input button.hblali-clear{
+    content: " ";
+    display: inline-block;
+    background: url("/source/img/drop-icon.png");
+    height: 2em;
+    width: 2em;
+    background-size: cover;
+    vertical-align: middle;
+    border-style: none;
+    float: right;
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+.hb-view .hb-line .hbl-action .hbla-line span {
+    font-weight: bold;
+    color: firebrick;
+}
+.hb-view .hb-line .hbl-action .hbla-line span:after {
+    color: black;
+    content: ' .р';
+}
+.hbvf-buttons{
+    display: inline-block;
+    width: 100%;
+}
+.hbvf-clear{
+    text-align: left;
+    display: inline-block;
+    width: 50%;
+    font-size: 1.5em;
+}
+.hbvf-order{
+
+    text-align: right;
+    display: inline-block;
+    width: 50%;
+    font-size: 1.5em;
+}
+.hbvf-order img, .hbvf-clear img{
+    height: 2em;
+    width: 2em;
+    vertical-align: middle;
+}
+
+.hbvf-order a {
+    display: inline-block;
+    vertical-align: bottom;
+    color: red;
+    padding: 0.2em;
+    font-weight: bold;
+}
+.hbvf-clear span {
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.2em;
+    color: blue;
+
+}
+
+.hbvf-order a:hover {
+    background: lightgreen;
+    color: white;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+}
+.hbvf-clear span:hover {
+    background: red;
+    color: white;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    border-top-right-radius: 0.5em;
 }

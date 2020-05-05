@@ -40,12 +40,6 @@ if($appRJ->server['reqUri_expl'][2]){
     <label for='pChoice".$tCounter."'>".$prodAge_conf[$price_row['prodAge']]." - <span class='pChoice'>".$price_row['prodPrice']."</span></label></div>";
                     $tCounter++;
                 }
-
-              //  $price_row = $DB->doFetchRow($tRes);
-                /*
-                $findSub_qry = "select * from prodList_dt where prodCat_id = '".$find_row['prodCat_id']."' and activeFlag is true and ".
-                    "prodList_dt.prod_id <> ".$find_row['prod_id'];
-                */
                 $findSub_qry = "select prodList_dt.*, min(prodPrice_dt.prodPrice) as minPrice from prodList_dt ".
                     "left join prodPrice_dt on prodList_dt.prod_id = prodPrice_dt.prod_id and prodPrice_dt.activeFlag is true and prodPrice_dt.prodPrice is not null ".
                     " where prodList_dt.prodCat_id = '".$find_row['prodCat_id']."' and prodList_dt.activeFlag is true and prodList_dt.prod_id <> ".$find_row['prod_id'].

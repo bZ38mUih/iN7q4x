@@ -3,7 +3,6 @@ if(isset($_SESSION['groups']['2']) and $_SESSION['groups']['2']>=5) {
     $navPanel = "<ul><li><a href='/siteMan'>siteMan :: </a></li>".substr($navPanel, 4 , strlen($navPanel)). "<ul></ul>";
 }
 
-
 $appRJ->response['result'].= "<div class='page-wrap'><header><div class='headerCenter'>".
     "<strong style='display: inline-block; width: 100%; background-color: firebrick;padding: 0; margin: 0; color: white;'>".
 "Идет отладка! Некоторые функции сайта могут не работать</strong>".
@@ -25,13 +24,23 @@ $appRJ->response['result'].= "</div>"
 if(CONT_PHONE_2){
     $appRJ->response['result'].= "<span class='hcPhone'>".CONT_PHONE_2."</span>";
 }
-$appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>"
-    ."</div>"
-    ."<div class='hBucket'>"
-    ."<div class='hbImg'><img src='/site/siteHeader/img/bucket.png'></div>"
+$hbActive = null;
+if($_SESSION['count']){
+    $hbActive = "active";
+}
+$appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
+    "</div>".
+    "<div class='hBucket'>".
+    "<div class='hb-view-frame'><div class='hbv-title'><div class='hbvt-text'><img src='/site/siteHeader/img/bucket.png'>Корзина<span class='hbvCount'>0</span><span class='hbvAmount'>0</span></div>".
+    "<div class='bm-close'><img src='/site/siteHeader/img/closeModal.png' onclick='bucketClose()'></div></div><div class='hb-view'></div>".
+    "<div class='hbvf-buttons'>".
+    "<div class='hbvf-clear'><span><img src='/source/img/clear-icon.png'> - Очистить корзину</span></div>".
+    "<div class='hbvf-order'><a href='/bucket'><img src='/source/img/handsShake-color.png'> - Оформить заказ</a></div>".
+    "</div></div>".
+    "<div class='hbImg'><img src='/site/siteHeader/img/bucket.png'></div>"
     ."<div class = 'hbVolume'>"
-    ."<span class='hbvCount'>Товаров: 0 шт.</span>"
-    ."<span class='hbvAmount'>На сумму: 0 р.</span>"
+    ."<span class='hbvCount ".$hbActive."'>".$_SESSION['count']."</span>"
+    ."<span class='hbvAmount ".$hbActive."'>".$_SESSION['amount']."</span>"
     ."</div>"
     ."</div>"
     ."</div></header>";

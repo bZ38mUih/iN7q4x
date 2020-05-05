@@ -1,9 +1,4 @@
 $(document).ready(function() {
-
-    /*
-    $("#pChoice").change(function () {
-        alert('xxx');
-    })*/
     $('input[name=opt]').change(function(){
         var value = $( 'input[name=opt]:checked' ).parent().find("span.pChoice").html();
         $("#pVal").html(value);
@@ -33,3 +28,17 @@ String.prototype.getDecimals || (String.prototype.getDecimals = function() {
         e = a.attr("step");
     b && "" !== b && "NaN" !== b || (b = 0), "" !== c && "NaN" !== c || (c = ""), "" !== d && "NaN" !== d || (d = 0), "any" !== e && "" !== e && void 0 !== e && "NaN" !== parseFloat(e) || (e = 1), jQuery(this).is(".plus") ? c && b >= c ? a.val(c) : a.val((b + parseFloat(e)).toFixed(e.getDecimals())) : d && b <= d ? a.val(d) : b > 0 && a.val((b - parseFloat(e)).toFixed(e.getDecimals())), a.trigger("change")
 });
+
+function addProduct(prod_id) {
+    var prod_age = $( 'input[name=opt]:checked' ).val();
+    var qty = $( 'input[name=quantity]' ).val();
+
+    $.post( "/bucket", { bucket: "addBucket", prod_age: prod_age, prod_id: prod_id, qty: qty}, function( data ) {
+        var response=JSON.parse(data);
+        $("span.hbvCount").html(response.count);
+        $("span.hbvAmount").html(response.amount);
+        $(".hb-view").html(response.content);
+        $(".hb-view-frame").addClass("active");
+    });
+
+}

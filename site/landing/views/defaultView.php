@@ -22,7 +22,8 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     " <script src='/source/js/jssor.slider-28.0.0.min.js' type='text/javascript'></script>".
     "<script src='/site/landing/js/slider.js'></script>".
     "<link rel='stylesheet' href='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/css/preloader.css'/>".
-    "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>";
+    "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>".
+    "<script src='/site/bucket/js/bucket.js'></script>";
 if($App['views']['social-block']){
     $appRJ->response['result'].= "<script src='/site/js/social-block.js'></script>";
 }

@@ -20,6 +20,7 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
 
     "<script src='/site/siteHeader/js/modalHeader.js'></script>".
     "<script src='/site/product/js/bucket.js'></script>".
+    "<script src='/site/bucket/js/bucket.js'></script>".
     "<link rel='stylesheet' href='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/css/preloader.css'/>".
     "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>"
     //" <script src='/source/js/jssor.slider-28.0.0.min.js' type='text/javascript'></script>".
@@ -71,7 +72,7 @@ $appRJ->response['result'].="</div>".
 	title='Qty' class='input-text qty text' size='4' pattern='' inputmode=''><input type='button' value='+' class='plus'>
 </div>".
     "</div>".
-    "<button id='prodBucket'>В корзину</button>".
+    "<button id='prodBucket' onclick='addProduct(".$find_row['prod_id'].")'>В корзину</button>".
     //"<button id='byOneClick'>Купить в 1 клик</button>".
     "</div>".
 
