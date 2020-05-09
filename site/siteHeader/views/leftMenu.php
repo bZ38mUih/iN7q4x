@@ -1,6 +1,7 @@
 <?php
 $leftMenu_txt = "<div class='lm-btn'><img src='/site/siteHeader/img/icons8-menu-100.png'><span> - Меню</span></div>".
     "<div class='leftMenu'>".
+    "<span class='test' onclick='alert(window.innerWidth)'>test</span>".
     "<div class='lm-title'><div class='lmt-text'><img src='/site/siteHeader/img/site-logo.png'>Меню интернет магазина саженцев «Сад приморья»</div>".
     "<div class='lmt-close'><img src='/source/img/closeModal.png'></div> </div>".
 

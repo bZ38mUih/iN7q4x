@@ -433,3 +433,19 @@ width: 100%;
     }
 
 }
+@media only screen and (max-width : 960px){
+    .headerCenter{
+        border: 2px solid green;
+    }
+}
+
+    @media only screen and (max-width : 960px) and (orientation : portrait){
+    .headerCenter{
+        border: 2px solid red;
+    }
+}
+@media only screen and (max-width : 960px){
+    .headerCenter{
+        border: 2px solid green;
+    }
+}
