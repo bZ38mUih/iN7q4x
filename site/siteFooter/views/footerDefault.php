@@ -25,7 +25,6 @@ if($App['views']['social-block']) {
         "визиты и уникальные посетители)' class='ym-advanced-informer' data-cid='62372254' data-lang='ru' /></a>".
         "</div>";
     */
-
     $appRJ->response['result'].="<!-- Yandex.Metrika informer -->
 <a href='https://metrika.yandex.ru/stat/?id=62372254&amp;from=informer'
 target='_blank' rel='nofollow'><img src='https://informer.yandex.ru/informer/62372254/3_1_FFFFFFFF_EFEFEFFF_0_pageviews'
@@ -47,7 +46,6 @@ class='ym-advanced-informer' data-cid='62372254' data-lang='ru' /></a>
 </script>
 <noscript><div><img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>
 <!-- /Yandex.Metrika counter -->";
-
 }
 if($App['views']['social-block']){
     $appRJ->response['result'].= "<div class='ft-like'>".
