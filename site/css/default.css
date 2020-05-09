@@ -79,11 +79,13 @@ footer div, footer a, footer img{
     padding: 0;
     margin: 0;
 }
-.ft-nav, .ft-cont, .ft-addr{
+.ft-nav, .ft-cont, .ft-main{
 
     width: 33%;
     vertical-align: middle;
     display: inline-block;
+    vertical-align: top;
+    margin: 1em 0;
 
 }
 .ft-main {
@@ -191,11 +193,6 @@ footer sup{
     background-color: white;
 }
 
-@media only screen and (max-width : 1024px)  and (orientation : portrait) {
-    body {
-        font-size: 35px;
-    }
-}
 /*contentBlock--<*/
 .pageErr{
     padding: 1em 0;

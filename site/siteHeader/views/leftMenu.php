@@ -1,5 +1,10 @@
 <?php
-$leftMenu_txt = "<div class='leftMenu'><ul>";
+$leftMenu_txt = "<div class='lm-btn'><img src='/site/siteHeader/img/icons8-menu-100.png'><span> - Меню</span></div>".
+    "<div class='leftMenu'>".
+    "<div class='lm-title'><div class='lmt-text'><img src='/site/siteHeader/img/site-logo.png'>Меню интернет магазина саженцев «Сад приморья»</div>".
+    "<div class='lmt-close'><img src='/source/img/closeModal.png'></div> </div>".
+
+    "<ul>";
 $categories_txt = null;
 $popCats_text = null;
 

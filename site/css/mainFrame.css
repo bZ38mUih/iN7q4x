@@ -22,6 +22,10 @@
     margin-left: 0.5em;
     text-decoration: none;
 }
+.lm-btn{
+    display: none;
+}
+
 .leftMenu{
     width: 24%;
     margin-right: 1%;
@@ -122,4 +126,93 @@
 
 .catView h2{
     text-align: center;
+}
+
+.leftMenu .lm-title{
+    display: none;
+    width: 100%;
+}
+.leftMenu .lm-title .lmt-text{
+    display: inline-block;
+    font-weight: bold;
+    color: darkgreen;
+    width: 80%;
+}
+.leftMenu .lm-title .lmt-close{
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+.leftMenu .lm-title img {
+    height: 2em;
+    width: 2em;
+    vertical-align: middle;
+}
+
+.leftMenu .lm-title .lmt-close img {
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 960px) {
+
+    .leftMenu{
+        display: none;
+    }
+    .leftMenu.active{
+        /*display: block;
+        width: 100%;*/
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        background-color: white;
+        color: white;
+        float: left;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 100vh;
+        z-index: 5;
+
+    }
+    .leftMenu .lm-title{
+        display: inline-block;
+    }
+
+    .lm-btn{
+        border-radius: 0.5em;
+        background: darkorange;
+        position: fixed;
+        left: 0.8em;
+        top: 1.2em;
+        display: inline-block;
+        width: 15%;
+        border: 2px solid green;
+        z-index: 3;
+        cursor: pointer;
+    }
+    .lm-btn:hover{
+        background: lightgreen;
+    }
+    .lm-btn img {
+        height: 2em;
+        width: 2em;
+    }
+    .lm-btn span{
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 0.5em;
+        font-weight: bold;
+        color: white;
+    }
+
+    .top-frame{
+        width: 98%;
+        font-size: 1.2em;
+    }
+    .catView .catItem{
+        height: 29%;
+        width: 29%;
+    }
+
 }

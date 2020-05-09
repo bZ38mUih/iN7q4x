@@ -5,13 +5,13 @@ header{
 }
 
 .headerCenter{
-    padding: 0 0 1em 0;
+    padding: 1em 0 1em 0;
     background-color: white;
 }
 
 .hLogo{
     display: inline-block;
-    width: 25%;
+    width: 20%;
     vertical-align: middle;
 }
 .hlImg{
@@ -34,6 +34,7 @@ header{
     display: inline-block;
     color: #00ff00;
     font-size: 1.5em;
+    padding-right: 0.5em;
     text-shadow: 2px 2px 2px darkgreen, -1px -1px 2px darkgreen;
 }
 .hlText span.primorya{
@@ -53,7 +54,7 @@ header{
 }
 .hContacts{
     display: inline-block;
-    width: 25%;
+    width: 30%;
     vertical-align: middle;
     text-align: left;
     color: #356300;
@@ -186,377 +187,14 @@ header .headerCenter{
     display: inline-block;
     background-color: white;
 }
-/*header-->
-header .menuBtn{
-    width: 20%;
-    max-width: 273px;
-    display: inline-block;
-    vertical-align: middle;
-}
-header .menuBtn img{
-    height: 2em;
-    width: 2em;
-    cursor: pointer;
-    vertical-align: middle;
-}
-header .menuBtn span{
-    color: #ffffff;
-    font-family: Calibri;
-    font-size: 0.7em;
-    vertical-align: middle;
-    cursor: pointer;
-}
-header .logo{
-    width: 60%;
-    max-width: 820px;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-}
-header .logo .imgBlock{
-    display: inline-block;
-    width: 25%;
-    vertical-align: middle;
-}
-header .logo .imgBlock img{
-    height: 4em;
-    width: 4em;
-    vertical-align: middle;
-}
-header .logo .textBlock{
-    width: 75%;
-    vertical-align: middle;
-    display: inline-block;
-    text-align: left;
-}
-header .logo span.firmName{
-    color: white;
-    font-size: 1.3em;
-    display: inline-block;
-    width: 90%;
-    font-weight: bold;
-    margin-left: 2em;
-    border-bottom: 1px solid #ffffff;
-    font-family: Calibri;
-}
-header .orderBtn{
-    display: inline-block;
-    width: 20%;
-    max-width: 273px;
-    vertical-align: middle;
-}
-header .orderBtn span{
-    color: #ffffff;
-    font-family: Calibri;
-    font-size: 0.7em;
-    vertical-align: middle;
-    cursor: pointer;
-}
-header .orderBtn img{
-    height: 2em;
-    width: 2em;
-    cursor: pointer;
-    vertical-align: middle;
-}
-header .rightConn{
-    width: 50%;
-    text-align: right;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 1.5em;
-    font-weight: bold;
-    font-style: italic;
-}
-<--header*/
-/*modal-->*/
-.modal{
-    visibility: hidden;
-}
-.overlay {
-    background-color: rgba(255, 255, 255, 0.8);
-    bottom: 0;
-    cursor: default;
-    left: 0;
-    opacity: 0;
-    position: fixed;
-    right: 0;
-    top: 0;
-    visibility: hidden;
-    z-index: 1;
-}
-.modal .contentBlock-frame{
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 2;
-}
-.modal .contentBlock-center{
-    z-index: 3;
-}
-.modal-line{
-    width: 100%;
-    display: block;
-    text-align: left;
-    border-bottom: 1px dotted silver;
-}
-.modal-line-img{
-    display: inline-block;
-    width: 25%;
-}
-.modal-line-img img{
-    height: 1.8em;
-    width: 1.8em;
-    margin: 0.5em;
-    border-radius: 0.3em;
-}
-.modal-line-text{
-    width: 75%;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 0.7em;
-}
-.modal-line-text.guest{
-    margin-top: 0.2em;
-}
-/*modal order-->*/
-.modal-line-text.free{
-    margin-top: 0.2em;
-    font-size: 0.8em;
-}
-.modal-line-text.lookFor{
-    margin-top: 0.2em;
-    color: wheat;
-    font-size: 0.8em;
-}
-.modal-line-text.busy{
-    margin-top: 0.2em;
-    color: red;
-    font-size: 0.8em;
-}
-.modal-line-text span.phone{
-    display: block;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-.modal-line-text.free span.phone{
-    color: limegreen;
-}
-.modal-line-text.free span.phone{
-    color: limegreen;
-}
-.modal-line-text.lookFor span{
-    color: lightblue;
-}
-.modal.order .details a{
-    display: inline-block;
-    color: lightblue;
-    font-size: 1em;
-    margin-bottom: 0.5em;
-}
-.modal-line-text img.payStat{
-    height: 3em;
-    width: 3em;
-    position: absolute;
-    right: 1em;
-    top: 0em;
-}
-/*<--modal order*/
-.modal-line-text.ref a, .modal-line-text.srv a, .modal-line-text.bucket a{
-    color: white;
-    text-decoration: none;
-}
-/*modal-left -->*/
-.modal-left {
-    width: 70%;
-    display: inline-block;
-    background-color: rgba(25,25,50,1);
-    color: white;
-    float: left;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 100vh;
-}
-/*modal-right -->*/
-.modal-right {
-    float: right;
-    width: 30%;
-    text-align: left;
-    display: inline-block;
-}
-.modal-right img{
-    height: 3em;
-    width: 3em;
-    cursor: pointer;
-}
-.modal-right .modal-close{
-    height: 3em;
-    width: 3em;
-    background-image: url("/site/siteHeader/img/closeModal.png");
-    display: inline-block;
-    background-size: 100% 100%;
-    cursor: pointer;
-}
-/*<-- modal-right*/
-/*.modal.signIn-->*/
-.modal.signIn .modal-left, .modal.signIn .modal-right{
-    width: 90%;
-    padding: 2% 5% 2% 5%;
-}
-.modal.signIn .modal-right{
-    float: left;
-    text-align: right;
-    background-color: rgba(25,25,50,1);
-    position: relative;
-}
-.modal.signIn .modal-right .modal-close{
-    height: 2em;
-    width: 2em;
-    background-image: url("/site/siteHeader/img/closeModal-white.png");
-    position: absolute;
-    right: 0.5em;
-    top: 0.5em;
-    z-index: 1;
-    background-color: rgba(25,25,50,1);
-}
-.modal.signIn .modal-left{
-    float: right;
-}
-/*<--modal signIn*/
-/*modal.menu-->*/
-.modal-line:first-child{
-    margin-top: 1em;
-}
-.modal.menu a{
-    color: white;
-    font-size: 1.2em;
-    text-decoration: none;
-}
-.modal.menu a.exit{
-    color: red;
-    float: right;
-    margin-right: 1em;
-    text-decoration: underline;
-}
-.modal.menu a.ntf{
-    float: right;
-    margin-right: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    vertical-align: middle;
-    color: lightgreen;
-}
-.modal.menu a.ntf img{
-    height: 1.3em;
-    width: 1.3em;
-    vertical-align: middle;
-}
-.modal.menu a.ntf span{
-    padding: 0.1em;
-    vertical-align: top;
-    font-size: 0.7em;
-    font-weight: bold;
-}
-.modal.menu span.opnSubMenu{
-    display: inline-block;
-    float: right;
-    margin-right: 1em;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-.modal.menu ul li{
-    margin-bottom: 0.5em;
-}
-.modal.menu ul a.sub-lnk{
-    margin-left: 1em;
-}
-.modal.menu a.sub-lnk.light{
-    color: white;
-}
-.modal.menu a.sub-lnk.gold{
-    color: goldenrod;
-}
-.modal.menu a.sub-lnk.blue{
-    color: aqua;
-}
-.modal.menu a.sub-lnk.active{
-    text-decoration: underline;
-}
-.modal.menu a span.guest{
-    display: inline-block;
-    width: 100%;
-    color: #c0c0c0;
-    font-size: 0.8em;
-}
-/*<--modal.menu*/
-/*modal-scroll-->*/
-.modal-left::-webkit-scrollbar, .modal-right::-webkit-scrollbar {
-    width: 2px;
-}
-/* Track */
-.modal-left::-webkit-scrollbar-track, .modal-right::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-/* Handle */
-.modal-left::-webkit-scrollbar-thumb, .modal-right::-webkit-scrollbar-thumb {
-    background: aquamarine;
-    border-radius: 10px;
-}
-/* Handle on hover */
-.modal-left::-webkit-scrollbar-thumb:hover, .modal-right::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
-}
-/*<--modal-scroll*/
-/*media-->*/
-@media only screen and (max-width : 960px) {
-    header .logo .textBlock span.firmName {
-        display: none;
-    }
-}
-@media only screen and (max-width : 1024px){
-    header .logo .imgBlock{
-        width: 20%;
-    }
-    header .logo .textBlock{
-        width: 80%;
-    }
-}
-@media only screen and (max-width : 1024px) and (orientation : portrait){
-    .modal-left:not(.signIn), .modal-right:not(.signIn){
-        width: 100%;
-    }
-    .modal-right:not(.modal.signIn){
-        float: left;
-        text-align: right;
-        background-color: rgba(25,25,50,1);
-        position: relative;
-    }
-    .modal-right:not(.signIn) .modal-close:not(.signIn){
-        height: 2em;
-        width: 2em;
-        background-image: url("/site/siteHeader/img/closeModal-white.png");
-        position: absolute;
-        right: 0.5em;
-        top: 0.5em;
-    }
-    .modal-left:not(.signIn){
-        float: right;
-    }
-    header .logo .textBlock {
-        display: none;
-        visibility: hidden;
-    }
-    header .logo .imgBlock {
-        width: 100%;
-    }
-}
+
 
 .hb-view-frame {
     display: none;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
-    width: 250%;
-    left: -250%;
+    width: 300%;
+    left: -300%;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 1em 0 1em 1em;
     background: white;
@@ -720,14 +358,12 @@ width: 100%;
     text-align: left;
     display: inline-block;
     width: 50%;
-    font-size: 1.5em;
 }
 .hbvf-order{
 
     text-align: right;
     display: inline-block;
     width: 50%;
-    font-size: 1.5em;
 }
 .hbvf-order img, .hbvf-clear img{
     height: 2em;
@@ -765,4 +401,35 @@ width: 100%;
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
     border-top-right-radius: 0.5em;
+}
+
+@media only screen and (max-width : 960px) {
+    .hLogo{
+        width: 50%;
+    }
+    .hDescr{
+        width: 48%;
+    }
+    .hContacts{
+        width: 49%;
+        margin-left: 1%;
+    }
+    .hBucket{
+        width: 50%;
+    }
+    .hb-view-frame {
+        display: none;
+        z-index: 2;
+        position: absolute;
+        width: 180%;
+        margin-left: 10%;
+        left: -100%;
+        top: 100%;
+        //left: -250%;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 1em 0 1em 1em;
+        background: white;
+        border: 1px solid lightblue;
+    }
+
 }

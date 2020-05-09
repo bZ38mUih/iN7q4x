@@ -38,6 +38,7 @@ if(mysql_num_rows($find_res)>0){
         }
         $catView."</div>";
         $catView.="</div>";
+        $catView.="</div>";
     }
 }else{
 

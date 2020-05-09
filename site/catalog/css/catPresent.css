@@ -4,11 +4,13 @@
 
 .catPresent .cp-list{
     margin-top: 2%;
-    width: 75%;
+    width: 71%;
     display: inline-block;
 }
 .catPresent .catItem{
     vertical-align: top;
+    display: inline-block;
+    width: 25%;
 }
 .catPresent .cp-list a{
     vertical-align: middle;
@@ -29,4 +31,10 @@
     text-decoration: none;
     padding: 0.2em;
     border-radius: 0.5em;
+}
+
+@media only screen and (max-width : 960px) {
+    .cp-list{
+        width: 30%;
+    }
 }
