@@ -418,6 +418,7 @@ width: 100%;
         width: 50%;
     }
     .hb-view-frame {
+        font-size: 1.2em;
         display: none;
         z-index: 2;
         position: absolute;

@@ -215,5 +215,8 @@
         height: 29%;
         width: 29%;
     }
+    .catView .catItem a{
+        font-size: 1.2em;
+    }
 
 }
