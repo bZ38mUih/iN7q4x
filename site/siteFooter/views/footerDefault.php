@@ -15,39 +15,8 @@ if(isset($appRJ->server['reqUri_expl'][1]) and file_exists($_SERVER['DOCUMENT_RO
 $appRJ->response['result'].= "</div>"
     ."<div class='hlText'><span class='sad'>Сад</span><span class='primorya'>приморья</span></div>";
 if($App['views']['social-block']) {
-    //62372254
-    /*
-    $appRJ->response['result'].= "<div class='ft-service'><noscript><div>".
-        "<img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>".
-        "<a href='https://metrika.yandex.ru/stat/?id=62372254&amp;from=informer' target='_blank' rel='nofollow'>".
-        "<img src='https://informer.yandex.ru/informer/62372254/3_1_FFFFFFFF_EFEFEFFF_0_pageviews' ".
-        "style='width:88px; height:31px; border:0;' alt='Яндекс.Метрика' title='Яндекс.Метрика: данные за сегодня (просмотры, ".
-        "визиты и уникальные посетители)' class='ym-advanced-informer' data-cid='62372254' data-lang='ru' /></a>".
-        "</div>";
-    */
-    $appRJ->response['result'].="<!-- Yandex.Metrika informer -->
-<a href='https://metrika.yandex.ru/stat/?id=62372254&amp;from=informer'
-target='_blank' rel='nofollow'><img src='https://informer.yandex.ru/informer/62372254/3_1_FFFFFFFF_EFEFEFFF_0_pageviews'
-style='width:88px; height:31px; border:0;' alt='Яндекс.Метрика' title='Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)' 
-class='ym-advanced-informer' data-cid='62372254' data-lang='ru' /></a>
-<!-- /Yandex.Metrika informer -->
+    $appRJ->response['result'].="<!-- Yandex.Metrika informer --> <a href='https://metrika.yandex.ru/stat/?id=62372254&amp;from=informer' target='_blank' rel='nofollow'><img src='https://informer.yandex.ru/informer/62372254/3_1_FFFFFFFF_EFEFEFFF_0_pageviews' style='width:88px; height:31px; border:0' alt='Яндекс.Метрика' title='Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)' class='ym-advanced-informer' data-cid'62372254' data-lang='ru' /></a> <!-- /Yandex.Metrika informer --> <!-- Yandex.Metrika counter --> <script type='text/javascript' > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym'); ym(62372254, 'init', { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript> <!-- /Yandex.Metrika counter -->";
 
-<!-- Yandex.Metrika counter -->
-<script type='text/javascript' >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-   ym(62372254, 'init', {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
-</script>
-<noscript><div><img src='https://mc.yandex.ru/watch/62372254' style='position:absolute; left:-9999px;' alt='' /></div></noscript>
-<!-- /Yandex.Metrika counter -->";
-}
-if($App['views']['social-block']){
     $appRJ->response['result'].= "<div class='ft-like'>".
         "<a href='#' class='social_share' data-type='ok' title='Постить в Одноклассники'>".
         "<img src='/site/siteFooter/img/ok.png' alt='ok-like'><sup></sup></a>".
