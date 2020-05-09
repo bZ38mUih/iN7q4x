@@ -4,8 +4,17 @@ $(document).ready(function(){
         if(wWidth >= 1200){
             $("#jssor_1").width("882px");
         }else{
-            if(wWidth <= 960)
-            $("#jssor_1").width(Math.round(wWidth*0.98));
+            if(wWidth <= 960){
+                $("#jssor_1").width(Math.round(wWidth*0.98));
+            }else{
+                $("#jssor_1").width(Math.round(wWidth/1200*882));
+            }
+
+            /*
+            if(wWidth <= 1200)
+
+            *
+             */
         }
 //alert($( window ).width());
     })
