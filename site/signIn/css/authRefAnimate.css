@@ -157,7 +157,7 @@
     color: #008000;
 }
 
-@media only screen and (max-width : 959px) {
+@media only screen and (max-width : 960px) {
     .auth-ref-wrap
     {
         height: 8em;
