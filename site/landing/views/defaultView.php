@@ -11,8 +11,7 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<title>Магазин саженцев Сад Приморья в Приморском крае | Питомник растений | Садовый центр.</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".
     "<script src='/source/js/jquery-3.2.1.js'></script>".
-    " <script src='/source/js/jssor.slider-28.0.0.min.js' type='text/javascript'></script>".
-    "<script src='/site/landing/js/slider.js'></script>".
+
     "<link rel='stylesheet' href='/site/css/default.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/siteHeader/css/default.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/css/mainFrame.css' type='text/css' media='screen, projection'/>".
@@ -21,6 +20,8 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<script src='/site/siteHeader/js/modalHeader.js'></script>".
     "<link rel='stylesheet' href='/site/search/css/default.css' type='text/css' media='screen, projection'/>".
     "<script src='/site/search/js/default.js'></script>".
+    " <script src='/source/js/jssor.slider-28.0.0.min.js' type='text/javascript'></script>".
+    "<script src='/site/landing/js/slider.js'></script>".
     "<link rel='stylesheet' href='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/css/preloader.css'/>".
     "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>".
     "<script src='/site/bucket/js/bucket.js'></script>";
