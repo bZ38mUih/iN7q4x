@@ -4,9 +4,10 @@ $(document).ready(function(){
         if(wWidth >= 1200){
             $("#jssor_1").width("882px");
         }else{
-            if(wWidth <= 960){
+            if(wWidth <= 980){
                 $("#jssor_1").width(Math.round(wWidth*0.98));
-            }else{
+            }
+            else{
                 $("#jssor_1").width(Math.round(wWidth/1200*882));
             }
 

@@ -148,10 +148,9 @@
         display: inline-block;
     }
     h2{
-        width: 98%;
-        padding-left: 2%;
-        margin-left: 0;
+
     }
+
     .contentBlock-table-right .list-item-text{
         display: block;
         position: relative;
