@@ -403,7 +403,7 @@ width: 100%;
     border-top-right-radius: 0.5em;
 }
 
-@media only screen and (max-width : 960px) and (orientation : portrait){
+@media only screen and (max-width : 980px) and (orientation : portrait){
     .hLogo{
         width: 50%;
     }
@@ -432,20 +432,4 @@ width: 100%;
         border: 1px solid lightblue;
     }
 
-}
-@media only screen and (max-width : 960px){
-    .headerCenter{
-        border: 2px solid green;
-    }
-}
-
-    @media only screen and (max-width : 960px) and (orientation : portrait){
-    .headerCenter{
-        border: 2px solid red;
-    }
-}
-@media only screen and (max-width : 960px){
-    .headerCenter{
-        border: 2px solid green;
-    }
 }

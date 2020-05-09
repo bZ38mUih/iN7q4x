@@ -157,7 +157,7 @@
     color: #008000;
 }
 
-@media only screen and (max-width : 960px) and (orientation : portrait){
+@media only screen and (max-width : 980px) and (orientation : portrait){
     .auth-ref-wrap
     {
         height: 8em;

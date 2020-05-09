@@ -33,7 +33,7 @@
     border-radius: 0.5em;
 }
 
-@media only screen and (max-width : 960px) and (orientation : portrait){
+@media only screen and (max-width : 980px) and (orientation : portrait){
     .cp-list{
         width: 30%;
     }
