@@ -22,21 +22,69 @@ $appRJ->response['result'].= "<div class='contentBlock-frame'><div class='conten
 require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-subMenu.php");
 
 
+$prodOnPage = 20;
+$curPage = 1;
+
+if($_GET['prodOnPage']){
+    $prodOnPage = $_GET['prodOnPage'];
+}
+if($_GET['newPodPage']){
+    $curPage = $_GET['newPodPage'];
+}
 
 
 $select_query = "select prodList_dt.*, prodCat_dt.catName from prodList_dt ".
+    "left join prodCat_dt on prodCat_dt.prodCat_id = prodList_dt.prodCat_id order by prodList_dt.prod_id desc LIMIT ".(($curPage-1)*$prodOnPage).", ".$prodOnPage;
+
+$select_count_qry = "select prodList_dt.*, prodCat_dt.catName from prodList_dt ".
     "left join prodCat_dt on prodCat_dt.prodCat_id = prodList_dt.prodCat_id";
+
+
+$select_count_res = $DB->doQuery($select_count_qry);
+
+$pod_count = mysql_num_rows($select_count_res);
+
 $select_res=$DB->doQuery($select_query);
-$sCount=0;
-if(mysql_num_rows($select_res)>0){
-    $sCount=mysql_num_rows($select_res);
-}
+
 $appRJ->response['result'].= "<div class='manFrame'>".
-    "<div class='manTopPanel'><div class='itemsCount'>Всего: <span>".$sCount."</span> записей</div>".
+    "<div class='manTopPanel'><div class='itemsCount'>Всего: <span>".$pod_count."</span> записей</div>".
     "<div class='newItem'><a href='/siteMan/newProduct'><img src='/source/img/create-icon.png'>".
     "Создать саженец</a></div></div>";
-if($sCount>0){
-    $appRJ->response['result'].= "<div class='item-line caption'>".
+if($pod_count>0){
+
+
+    $tPage = 1;
+    $pages_text.="<div class='pgn' style='margin-bottom: 1em;'><div class='pgn-num'>Стр. ";
+    while ($pod_count - $prodOnPage*($tPage-1) >=0){
+
+        $pages_text .= "<a href='?newPodPage=".$tPage."&prodOnPage=".$prodOnPage."' ";
+        if($tPage == $curPage){
+            $pages_text.="class='active'";
+        }
+        $pages_text.=">".$tPage."</a>, ";
+        $tPage++;
+    }
+
+    $pages_text = substr($pages_text, 0 , strlen($pages_text)-2);
+    $pages_text.="</div><div class='pgn-on'>по <a href='?prodOnPage=10' ";
+    if($prodOnPage == 10){
+        $pages_text.=" class='active'";
+    }
+    $pages_text.=">10</a>, <a href='?prodOnPage=20'";
+    if($prodOnPage == 20){
+        $pages_text.=" class='active'";
+    }
+    $pages_text.=">20</a>, <a href='?prodOnPage=50'";
+    if($prodOnPage == 50){
+        $pages_text.=" class='active'";
+    }
+    $pages_text.=">50</a></div></div>";
+
+
+    //$newProd_txt.=$pages_text;
+
+
+    $appRJ->response['result'].= $pages_text."<div class='item-line caption'>".
         "<div class='item-line-id'>prod_id</div>".
         "<div class='item-line-par_id'>cat_id</div>".
         "<div class='item-line-img'>prodImg</div>".
@@ -86,6 +134,4 @@ $appRJ->response['result'].= "</div>";
 
 $appRJ->response['result'].= "</div></div></div>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalOrder.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalMenu.php");
 $appRJ->response['result'].= "</body></html>";

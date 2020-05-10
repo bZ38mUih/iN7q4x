@@ -86,6 +86,4 @@ $appRJ->response['result'].= $site_map_text;
 $appRJ->response['result'].="</div>";
 $appRJ->response['result'].= "</div></div></div>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalOrder.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalMenu.php");
 $appRJ->response['result'].= "</body></html>";

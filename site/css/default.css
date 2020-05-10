@@ -239,3 +239,26 @@ p.lgColor{
     font-weight: bold;
     padding: 1em;
 }
+
+.pgn{
+    display: inline-block;
+    width: 100%;
+}
+.pgn a {
+    color: darkgreen;
+
+}
+.pgn a.active{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.pgn .pgn-num{
+    text-align: left;
+    display: inline-block;
+    width: 70%;
+}
+.pgn .pgn-on{
+    text-align: right;
+    display: inline-block;
+    width: 30%;
+}

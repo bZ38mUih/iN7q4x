@@ -23,6 +23,4 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-subMenu.ph
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-categories.php");
 $appRJ->response['result'].= "</div></div></div>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalOrder.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalMenu.php");
 $appRJ->response['result'].= "</body></html>";

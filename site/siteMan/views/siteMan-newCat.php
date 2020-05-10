@@ -85,6 +85,4 @@ if($Cat_rd->result['catActive']){
 $appRJ->response['result'].= "></div><div class='input-line'><input type='submit' value='addNew'></div></form>".
     "</div></div></div>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalOrder.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalMenu.php");
 $appRJ->response['result'].= "</body></html>";

@@ -67,7 +67,5 @@ $appRJ->response['result'].="<textarea name='content'>".
 $appRJ->response['result'].="<div class='input-line'><input type='submit' value='save'></div>".
 "</form></div></div></div>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteFooter/views/footerDefault.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalOrder.php");
-require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/modalMenu.php");
 
 $appRJ->response['result'].= "</body></html>";
