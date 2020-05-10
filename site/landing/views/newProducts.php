@@ -14,7 +14,9 @@ if($_GET['newPodPage']){
 $newProd_txt = null;
 $newProd_qry = "select prodList_dt.*, min(prodPrice_dt.prodPrice) as minPrice from prodList_dt ".
     "left join prodPrice_dt on prodList_dt.prod_id = prodPrice_dt.prod_id and prodPrice_dt.activeFlag is true and prodPrice_dt.prodPrice is not null ".
-    " where prodList_dt.newFlag is TRUE and prodList_dt.activeFlag is true group by prodList_dt.prod_id LIMIT ".(($curPage-1)*$prodOnPage).", ".$prodOnPage;
+    " where prodList_dt.newFlag is TRUE and prodList_dt.activeFlag is true group by prodList_dt.prod_id ".
+    " order by prodList_dt.prod_id desc ".
+    "LIMIT ".(($curPage-1)*$prodOnPage).", ".$prodOnPage;
 //echo $newProd_qry;
 //"
 
