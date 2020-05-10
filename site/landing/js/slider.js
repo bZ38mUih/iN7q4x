@@ -1,11 +1,17 @@
 $(document).ready(function(){
     $( window ).resize(function() {
+
+
+        /*
         var wWidth = $( window ).width();
         if(wWidth >= 1200){
             $("#jssor_1").width("882px");
         }else{
             if(wWidth <= 980){
-                $("#jssor_1").width(Math.round(wWidth*0.98));
+
+         */
+                $("#jssor_1").width(Math.round($(".top-frame").width()));
+                /*
             }
             else{
                 $("#jssor_1").width(Math.round(wWidth/1200*882));
@@ -13,10 +19,8 @@ $(document).ready(function(){
 
             /*
             if(wWidth <= 1200)
-
-            *
-             */
         }
+        */
 //alert($( window ).width());
     })
     $( window ).trigger("resize");
