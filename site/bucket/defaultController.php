@@ -27,6 +27,12 @@ if($_POST['bucket'] == 'addBucket'){
 }elseif($_POST['bucket'] == 'removeProduct'){
     $p_age = explode(",", $_POST['prod_age']);
     unset($_SESSION['bucket'][$_POST['prod_id']][$p_age['0']]);
+    foreach ($_SESSION['bucket'] as $product_id=>$product_age){
+        if(!$product_age){
+            unset($_SESSION['bucket'][$product_id]);
+        }
+    }
+
     require_once ($_SERVER["DOCUMENT_ROOT"]."/site/bucket/views/bucket.php");
 
     $appRJ->response['format']='json';

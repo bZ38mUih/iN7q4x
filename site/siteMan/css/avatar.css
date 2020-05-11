@@ -1,0 +1,60 @@
+.avatar{
+    border: 1px solid silver;
+    display: inline-block;
+    width: 98%;
+    margin: 1em 1%;
+    text-align: left;
+}
+
+.ai-line{
+    display: inline-block;
+    width: 100%;
+    margin: 0.5em 0;
+}
+.ai-line label::before, .ai-line span::before{
+    width: 10em;
+    content: "-";
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ai-line span.uMail::before{
+    content: "eMail: ";
+}
+.ai-line span.uLogin::before{
+    content: "Login: ";
+}
+.ai-line span.uId::before{
+    content: "uId: ";
+}
+label[for='curPass']::before{
+    content: "Пароль:";
+}
+label[for='newPass']::before{
+    content: "Новый пароль:";
+}
+label[for='newPassRepeat']::before{
+    content: "Повтор нового пароля:";
+}
+label[for='newMail']::before{
+    content: "Новый eMail:";
+}
+.note{
+    margin: 1em 0;
+    font-style: italic;
+}
+input[type=submit]{
+    margin: 1em;
+}
+.a-res{
+
+}
+.a-res span{
+    display: block;
+}
+.a-res span.fail{
+    color: red;
+}
+.a-res span.well{
+    color: green;
+}

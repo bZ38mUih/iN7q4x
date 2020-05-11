@@ -1,5 +1,6 @@
 <?php
-
+//echo "<pre>";
+//print_r($_POST);
 if($_POST){
 
     if(isset($_POST['flagField']) and $_POST['flagField']=='newCat'){
@@ -31,6 +32,13 @@ if($_POST){
     }
     elseif (isset($_POST['prod_id']) and $_POST['prod_id']!==null){
         require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/actions/siteMan-editProdImg.php");
+    }elseif($_POST['changePass']){
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-changePass.php");
+    }elseif ($_POST['resetPass']){
+        echo "222";
+    }elseif ($_POST['changeMail']){
+
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-changeMail.php");
     }
 }
 elseif (isset($_GET['delProdImg']) and $_GET['delProdImg']!=null){
@@ -85,6 +93,10 @@ elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['re
 }elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="sitemap"){
     require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMap.php");
     require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-siteMap.php");
+}elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="avatar"){
+
+
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-avatar.php");
 }
 else{
     require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-defView.php");

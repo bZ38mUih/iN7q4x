@@ -19,12 +19,7 @@ if(isset($_GET['cat_id']) and $_GET['cat_id']!=null){
         $catErr['catDescr']='недопустимый заголовок';
     }
 
-    if($_POST['catMeta']){
-        $Cat_rd->result['catMeta']=htmlspecialchars($_POST['catMeta']);
-    }else{
-        $Cat_rd->result['catMeta']= null;
-    }
-
+    $Cat_rd->result['catMeta']=htmlspecialchars($_POST['content']);
 
     if(isset($_POST['prodCat_parId'])){
         if($_POST['prodCat_parId'] == 'none'){

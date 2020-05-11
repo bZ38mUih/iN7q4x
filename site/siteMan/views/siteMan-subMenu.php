@@ -16,4 +16,9 @@ $appRJ->response['result'].= " title='Саженцы, создание и ред
 if(isset($appRJ->server['reqUri_expl'][2]) and $appRJ->server['reqUri_expl'][2] === 'siteMap'){
     $appRJ->response['result'].= "class='active'";
 }
-$appRJ->response['result'].= " title='Создать карту сайта'>Карта сайта</a></div>";
+$appRJ->response['result'].= " title='Создать карту сайта'>Карта сайта</a>";
+$appRJ->response['result'].= "<a href='/siteMan/avatar/' ";
+if(isset($appRJ->server['reqUri_expl'][2]) and $appRJ->server['reqUri_expl'][2] === 'avatar'){
+    $appRJ->response['result'].= "class='active'";
+}
+$appRJ->response['result'].= " title='Настройки учетной записи'>Уч. запись</a></div>";

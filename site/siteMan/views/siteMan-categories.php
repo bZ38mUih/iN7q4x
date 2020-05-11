@@ -41,9 +41,9 @@ if($catCount>0){
             "<div class='item-line-alias'>".$selectCat_row['catAlias']."</div>".
             "<div class='item-line-descr'>";
         if($selectCat_row['catDescr']){
-            $appRJ->response['result'].= mb_substr($selectCat_row['catDescr'],0, 20, 'UTF-8')." ...";
+            $appRJ->response['result'].= "Задано - Ok!";
         }else{
-            $appRJ->response['result'].= "-";
+            $appRJ->response['result'].= "<b>ОПИСАНИЕ НЕ ЗАДАНО</b>";
         }
         $appRJ->response['result'].= "</div>".
             "<div class='item-line-flag'>";

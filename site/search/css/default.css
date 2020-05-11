@@ -14,6 +14,14 @@
     border: 1px solid gray;
     width: 100%;
 }
+
+.s-input label{
+    position: absolute;
+    display: inline-block;
+    color: silver;
+    font-style: italic;
+    font-size: 1.5em;
+}
 .site-search .s-input input[type='text']{
     display: inline-block;
     width: 79%;
@@ -52,11 +60,19 @@
     display: none;
 }
 .s-result.active{
+
+    z-index: 3;
+    background-color: white;
     width: 100%;
-    border: 1px solid black;
+    border-style: outset;
     border-radius: 0.5em;
     display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 100%;
     margin-top: 1em;
+    max-height: 30em;
+    overflow-y: scroll;
 }
 
 .s-result.active span.err{
@@ -73,9 +89,9 @@
     width: 100%;
     margin: 0.2em 0;
 }
-.s-result .find-line img{
-    height: 3em;
-    width: 3em;
+.s-result .find-line .fl-img img{
+    height: 4em;
+    width: 4em;
 }
 
 .s-result .find-line .fl-img {
@@ -85,6 +101,58 @@
 }
 .s-result .find-line .fl-text {
     display: inline-block;
-    width: 75%;
+    width: 55%;
     vertical-align: middle;
+}
+.s-result .find-line .fl-price {
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+}
+a.s-admin{
+    display: block;
+}
+a.s-admin img{
+    height: 1em;
+    width: 1em;
+}
+.find-title-res{
+
+    color: white;
+    padding: 0.5em 0;
+    background: darkorange;
+    text-align: left;
+    width: 97%;
+    padding-left: 1%;
+    margin: 1em 1%;
+}
+.find-title-res span{
+    font-size: 1.2em;
+    float: right;
+    padding-right: 1em;
+}
+.find-title{
+    color: navy;
+    padding: 0.5em 0;
+    text-align: left;
+    width: 97%;
+    padding-left: 1%;
+    margin: 1em 1%;
+    font-size: 1.2em;
+}
+.find-title img{
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    float: right;
+    cursor: pointer;
+}
+.youSearch{
+    width: 100%;
+    text-align: left;
+    margin: 1em 0;
+}
+.youSearch span{
+    color: red;
+    font-weight: bold;
 }

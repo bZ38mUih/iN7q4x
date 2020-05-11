@@ -16,6 +16,8 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<link rel='stylesheet' href='/site/css/manForm.css' type='text/css' media='screen, projection'/>".
     "<link rel='stylesheet' href='/site/css/contentMenu.css' type='text/css' media='screen, projection'/>".
     "<script type='text/javascript' src='/site/js/manForm.js'></script>".
+    "<script src='/source/js/tinymce/js/tinymce/tinymce.min.js'></script>".
+    "<script src='/site/siteMan/js/main.js'></script>".
     "<link rel='stylesheet' href='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/css/preloader.css'/>".
     "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>".
     "</head><body>";
@@ -111,9 +113,9 @@ if($Cat_rd->result['catActive']){
     $appRJ->response['result'].= "checked";
 }
 $appRJ->response['result'].= "></div>".
-    "<div class='input-line'><label for='catMeta'>Описание:</label><textarea name='catMeta' rows='3'>".
-    $Cat_rd->result['catMeta'].
-    "</textarea></div>".
+    "<div class='input-line ta-left'><label for='content'>Описание категории:</label></div>";
+$appRJ->response['result'].="<textarea name='content'>".
+    $Cat_rd->result['catMeta']."</textarea>"."</div>".
     "<div class='input-line'><label for='popFlag'>Популярная:</label><input type='checkbox' name='popFlag' ";
 if($Cat_rd->result['popFlag']){
     $appRJ->response['result'].= "checked";
