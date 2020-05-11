@@ -46,7 +46,7 @@ if($_GET['sTemplate']){
                 }
             }
         }
-        $catWhere = "where prodCat_dt.activeFlag is true";
+        $catWhere = "where prodCat_dt.catActive is true";
         if(isset($_SESSION['groups']['2']) and $_SESSION['groups']['2']>=5) {
             $catWhere = null;
         }
