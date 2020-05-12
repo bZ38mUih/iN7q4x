@@ -79,31 +79,36 @@ footer div, footer a, footer img{
     padding: 0;
     margin: 0;
 }
-.ft-nav, .ft-cont, .ft-main{
-
-    width: 33%;
-    vertical-align: middle;
+.ft-right{
     display: inline-block;
     vertical-align: top;
+    width: 67%;
     margin: 1em 0;
-
+}
+.ft-nav, .ft-cont{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
 }
 .ft-main {
     text-align: center;
     display: inline-block;
     width: 27%;
     padding: 0 3%;
-
+    margin: 1em 0;
     vertical-align: middle;
 
 }
 .ft-nav{
 
 }
+.ft-nav div{
+    width: 80%;
+}
 .ft-nav a{
     text-align: left;
     display: inline-block;
-    width: 80%;
+    width: 100%;
     color: navy;
     padding: 0.2em 0;
     text-decoration: none;

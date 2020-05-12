@@ -21,24 +21,24 @@ if(mysql_num_rows($find_res)>0){
     if(mysql_num_rows($findSub_res)>0){
         while($findSub_row = $DB->doFetchRow($findSub_res)){
             if(!$find_row['prodCat_parId']){
-                $sub_text .= "<div class='catItem'><img src='";
+                $sub_text .= "<div class='catItem'><a href='/catalog/".$findSub_row['catAlias']."'><img src='";
                 if($findSub_row['catImg']){
                     $sub_text.=GL_CATEG_IMG_PAPH."/".$findSub_row['prodCat_id'].
                         "/preview/".$findSub_row['catImg'];
                 }else{
                     $sub_text.="/data/default-img.png";
                 }
-                $sub_text.="'>".
+                $sub_text.="'></a>".
                     "<a href='/catalog/".$findSub_row['catAlias']."'>".$findSub_row['catName']."</a></div>";
             }else{
-                $sub_text .= "<div class='catItem'><img src='";
+                $sub_text .= "<div class='catItem'><a href='/product/".$findSub_row['prodAlias']."'><img src='";
                 if($findSub_row['prodImg']){
                     $sub_text.=GL_PROD_IMG_PAPH."/".$findSub_row['prod_id'].
                         "/preview/".$findSub_row['prodImg'];
                 }else{
                     $sub_text.="/data/default-img.png";
                 }
-                $sub_text.="'>".
+                $sub_text.="'></a>".
                     "<a href='/product/".$findSub_row['prodAlias']."'>".$findSub_row['prodName']."</a>";
                 if($findSub_row['minPrice']){
                     $sub_text.=  "<span class='minPrice'>".$findSub_row['minPrice']."</span>";

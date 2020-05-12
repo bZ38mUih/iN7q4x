@@ -14,14 +14,14 @@ $leftMenu_res = $DB->doQuery($leftMenu_qry);
 if(mysql_num_rows($leftMenu_res)>0){
     while($leftMenu_row = $DB->doFetchRow($leftMenu_res)){
 
-        $categories_txt .= "<div class='catItem'><img src='";
+        $categories_txt .= "<div class='catItem big'><a href='/catalog/".$leftMenu_row['catAlias']."'><img src='";
         if($leftMenu_row['catImg']){
             $categories_txt.=GL_CATEG_IMG_PAPH."/".$leftMenu_row['prodCat_id'].
                 "/preview/".$leftMenu_row['catImg'];
         }else{
             $categories_txt.="/data/default-img.png";
         }
-        $categories_txt.="'>".
+        $categories_txt.="'></a>".
             "<a href='/catalog/".$leftMenu_row['catAlias']."'>".$leftMenu_row['catName']."</a></div>";
 
         //if()
@@ -41,8 +41,8 @@ if(mysql_num_rows($leftMenu_res)>0){
 
 
                 if($parCat_row['popFlag'])
-                    $popCats_text .= "<div class='catItem'><img src='".GL_CATEG_IMG_PAPH."/".$parCat_row['prodCat_id'].
-                    "/preview/".$parCat_row['catImg']."'>".
+                    $popCats_text .= "<div class='catItem'><a href='/catalog/".$parCat_row['catAlias']."'><img src='".GL_CATEG_IMG_PAPH."/".$parCat_row['prodCat_id'].
+                    "/preview/".$parCat_row['catImg']."'></a>".
                     "<a href='/catalog/".$parCat_row['catAlias']."'>".$parCat_row['catName']."</a></div>";
 
 

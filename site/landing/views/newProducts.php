@@ -1,5 +1,5 @@
 <?php
-$prodOnPage = 10;
+$prodOnPage = 12;
 $curPage = 1;
 
 if($_GET['prodOnPage']){
@@ -50,31 +50,31 @@ if($newProd_count>0){
     }
 
     $pages_text = substr($pages_text, 0 , strlen($pages_text)-2);
-    $pages_text.="</div><div class='pgn-on'>по <a href='?prodOnPage=10' ";
-    if($prodOnPage == 10){
+    $pages_text.="</div><div class='pgn-on'>по <a href='?prodOnPage=12' ";
+    if($prodOnPage == 12){
         $pages_text.=" class='active'";
     }
-    $pages_text.=">10</a>, <a href='?prodOnPage=20'";
-    if($prodOnPage == 20){
+    $pages_text.=">12</a>, <a href='?prodOnPage=24'";
+    if($prodOnPage == 24){
         $pages_text.=" class='active'";
     }
-    $pages_text.=">20</a>, <a href='?prodOnPage=50'";
-    if($prodOnPage == 50){
+    $pages_text.=">24</a>, <a href='?prodOnPage=48'";
+    if($prodOnPage == 48){
         $pages_text.=" class='active'";
     }
-    $pages_text.=">50</a></div></div>";
+    $pages_text.=">48</a></div></div>";
 
     $newProd_txt.=$pages_text;
     while($newProd_row = $DB->doFetchRow($newProd_res)){
         $newProd_txt .= "<div class='catItem'>";
         if($newProd_row['prodImg']){
-            $newProd_txt .= "<img src='".GL_PROD_IMG_PAPH."/".$newProd_row['prod_id'].
+            $newProd_txt .= "<a href='/product/".$newProd_row['prodAlias']."'><img src='".GL_PROD_IMG_PAPH."/".$newProd_row['prod_id'].
             "/preview/".$newProd_row['prodImg']."'>";
         }else{
             $newProd_txt .= "<img src='/data/default-img.png'>";
         }
 
-        $newProd_txt .="<a href='/product/".$newProd_row['prodAlias']."'>".$newProd_row['prodName']."</a>";
+        $newProd_txt .="</a><a href='/product/".$newProd_row['prodAlias']."'>".$newProd_row['prodName']."</a>";
         if($newProd_row['minPrice']){
             $newProd_txt.=  "<span class='minPrice'>".$newProd_row['minPrice']."</span>";
         }

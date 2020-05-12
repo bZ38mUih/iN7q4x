@@ -63,26 +63,12 @@ if($this->errors){
         "<p>".$this->errors[$errType]['description']."</p>".
         "</div>".
         "<div class='alertsMenu'>".
-        "<h2>На этом сайте:</h2>"./*
-        "<a href='/blog' title='Все статьи'><img src='/site/blog/img/logo.png'>it-Блог</a>".
-        "<h3>Заказчику</h3>".
-        "<a href='/services' title='Расценки и заказ услуг'><img src='/site/services/img/logo.png'>Услуги</a>".
-        "<a href='/forum/faq' title='Об этом сайте'><img src='/site/status/img/faq.png'>Часто задаваемые вопросы</a>".
-        "<a href='/references' title='Посмотреть отзывы, написать отзыв'><img src='/site/references/img/logo.png'>Отзывы</a>".
-        "<h3>Полезные ссылки</h3>".
-        "<a href='/downloads' title='Ссылки на загрузки программ'><img src='/site/downloads/img/logo.png'>Загрузки</a>".
-        "<a href='/handbook'><img src='/site/handbook/img/logo.png'>Справочник</a>".
-        "<h3>Портфолио</h3>".
-        "<a href='/gallery' title='Галерея фотографий на разные темы'><img src='/site/gallery/img/logo.png'>Галерея</a>".
-        "<h3>Еще</h3>".
-        "<a href='/' title='на главную Райт Джойнт ру'><img src='/site/siteHeader/img/rightjoint-logo-400-2.png'>Главная</a>".
-        "<a href='/donate' title='Пожертвования на развитие проекта'><img src='/site/donate/img/logo.png'>Помощь проекту</a>".
-*/
+        "<h2>На этом сайте:</h2>".
         "<a href='/' title='Главная'><img src='/site/siteHeader/img/site-logo.png'>Главная «Сад приморья»</a>".
         "<a href='/catalog' title='Каталог саженцев'><img src='/site/siteHeader/img/site-logo.png'>Каталог</a>".
         "<a href='/about' title='Информация о фирме'><img src='/site/siteHeader/img/site-logo.png'>О питомнике</a>".
         "<a href='/pay-and-delivery' title='Как оплатить и как доставят'><img src='/site/siteHeader/img/site-logo.png'>Оплата и доставка</a>".
-        "<a href='/contact' title='Телефоны, почта, адрес, карта'><img src='/site/siteHeader/img/addr-icon.png'>Контакты</a>".
+        "<a href='/contacts' title='Телефоны, почта, адрес, карта'><img src='/site/siteHeader/img/addr-icon.png'>Контакты</a>".
         "<a href='/signIn' title='Авторизация'><img src='/site/signIn/img/logo.png'>Вход на сайт</a>".
 
         "</div>".

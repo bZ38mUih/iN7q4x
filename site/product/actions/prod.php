@@ -51,14 +51,14 @@ if($appRJ->server['reqUri_expl'][2]){
                 if(mysql_num_rows($findSub_res)>0){
                     //echo "yyy";
                     while($findSub_row = $DB->doFetchRow($findSub_res)){
-                        $sub_text .= "<div class='catItem'><img src='";
+                        $sub_text .= "<div class='catItem'><a href='/product/".$findSub_row['prodAlias']."'><img src='";
                         if($findSub_row['prodImg']){
                             $sub_text.=GL_PROD_IMG_PAPH."/".$findSub_row['prod_id'].
                                 "/preview/".$findSub_row['prodImg'];
                         }else{
                             $sub_text.="/data/default-img.png";
                         }
-                        $sub_text.="'>".
+                        $sub_text.="'></a>".
                             "<a href='/product/".$findSub_row['prodAlias']."'>".$findSub_row['prodName']."</a>";
                         if($findSub_row['minPrice']){
                             $sub_text.=  "<span class='minPrice'>".$findSub_row['minPrice']."</span>";

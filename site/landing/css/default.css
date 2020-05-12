@@ -147,8 +147,8 @@
         margin-top: 10%;
         display: inline-block;
     }
-    h2{
-
+    .catView h2{
+        font-size: 2em;
     }
 
     .contentBlock-table-right .list-item-text{
@@ -259,3 +259,19 @@ a.lc-whatsapp::before{
     vertical-align: middle;
     margin-right: 0.5em;
 }
+.catItem.big{
+    height: 30%;
+    margin: 0 9%;
+
+    width: 30%;
+}
+
+.catItem.big a{
+    font-size: 1.5em;
+}
+.pv-descr{
+
+    margin-left: 1%;
+    margin-right: 1%;
+}
+

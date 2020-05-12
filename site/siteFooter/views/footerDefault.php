@@ -26,9 +26,10 @@ if($App['views']['social-block']) {
         "</div>";
 }
 //$appRJ->response['result'].="</div>";
-$appRJ->response['result'].="</div>"
+$appRJ->response['result'].="</div>".
     //."</div>".
-    ."<div class='ft-nav'><h2>Навигация</h2>";
+    "<div class='ft-right'>".
+    "<div class='ft-nav'><h2>Навигация</h2>";
 include ($_SERVER["DOCUMENT_ROOT"]."/site/siteHeader/views/rp-text.php");
 
 $appRJ->response['result'].= "</div>".
@@ -41,7 +42,7 @@ if(CONT_PHONE_2){
 $appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
     "<span class='hcSchedule'>".F_SHEDULE_TEXT."</span>".
     "<span class='hcAddr'>Россия, Приморский край, г. Владивосток, ул. 3-я Пригородная,  район станции Весенняя.</span>"
-    ."</div>";
+    ."</div></div>";
 
 $appRJ->response['result'].="</div>".
     //"<div class='ft-addr'><h2>Садовые центры</h2></div>".

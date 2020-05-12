@@ -159,7 +159,7 @@
         display: none;
     }
     .leftMenu.active{
-        font-size: 1.5em;
+        font-size: 1.8em;
         /*display: block;
         width: 100%;*/
         width: 100%;
@@ -181,13 +181,14 @@
     }
 
     .lm-btn{
+        font-size: 1.4em;
         border-radius: 0.5em;
         background: darkorange;
         position: fixed;
         left: 0.8em;
         top: 1.2em;
         display: inline-block;
-        width: 15%;
+        width: 20%;
         border: 2px solid green;
         z-index: 3;
         cursor: pointer;
@@ -216,7 +217,21 @@
         width: 29%;
     }
     .catView .catItem a{
-        font-size: 1.2em;
+        font-size: 1.5em;
+    }
+    .ft-center{
+
+    }
+    .ft-nav, .ft-cont{
+        width: 100%;
+        font-size: 1.5em;
+        text-align: left;
+    }
+    .ft-main{
+        vertical-align: middle;
+    }
+    .ft-right{
+        vertical-align: middle;
     }
 
 }
