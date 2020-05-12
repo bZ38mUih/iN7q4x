@@ -84,23 +84,27 @@ if($_GET['sTemplate']){
                 }
             }
         }
+        $appRJ->response['result'] .="<div class='find-title'>Найдено: <span>".($cat_find_count + $prod_find_count).
+            "</span><img onclick='findClose()' src='/source/img/closeModal.png'></div>";
+        if($prod_find_count){
 
-        if($cat_find_count or $prod_find_count){
-            $appRJ->response['result'] .="<div class='find-title'>Найдено: <span>".($cat_find_count + $prod_find_count).
-                "</span><img onclick='findClose()' src='/source/img/closeModal.png'></div>";
             $appRJ->response['result'] .="<div class='find-title-res'>в Саженцах: <span>".$prod_find_count."</span></div>".$prod_find_text;
+        }
             if($cat_find_count){
                 $appRJ->response['result'] .="<div class='find-title-res'>в Категориях: <span>".$cat_find_count."</span></div>".$cat_find_text;
             }
-        }
+            if(!$prod_find_count and !$cat_find_count ){
+                $appRJ->response['result'] .="По вашему запросу ничего не найдено :(";
+            }
+
 
         //if()
         //$appRJ->response['result'] = "в Саженцах: ".mysql_num_rows($findProd_res);
         //$appRJ->response['result'] = "<span class='err'>Условия поиска не заданы222</span>";
 
     }else{
-        $appRJ->response['result'] .="<div class='find-title'>Найдено: <span>0</span><img onclick='findClose()' src='/source/img/closeModal.png'></div>";
-        $appRJ->response['result'] .= "<span class='err'>Условия поиска не заданы 2</span>";
+        $appRJ->response['result'] .="<div class='find-title'>Найдено: <span>0</span><img onclick='findClose()' src='/source/img/closeModal.png'></div>".
+            "<span class='err'>Условия поиска не заданы222</span>";
     }
 
 }else{
