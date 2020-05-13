@@ -47,7 +47,7 @@ $appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
 
 $appRJ->response['result'] .="<div class='yMap'><script type='text/javascript' charset='utf-8' async 
 src='https://api-maps.yandex.ru/services/constructor/1.0/js/
-?um=constructor%3Acd9b4a98845af0bb26f81134be1091ec79594f99c4b5226c38817fcc8b2875af&amp;width=1200&amp;height=600&amp;
+?um=constructor%3Acd9b4a98845af0bb26f81134be1091ec79594f99c4b5226c38817fcc8b2875af&amp;width=1200&amp;height=400&amp;
 lang=ru_RU&amp;scroll=true'></script></div>";
 $appRJ->response['result'] .="<strong>По всем вопросам Вы можете получить консультацию, позвонив нам по телефону  
 <a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1))."' title='Получить консультацию по телефону'>".CONT_PHONE_1."</a>";
