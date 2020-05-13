@@ -179,4 +179,28 @@
 .quantity.buttons_added .plus:focus {
     outline: none; }
 
+@media only screen and (max-width : 980px) and (orientation : portrait) {
+    .pvo-age, .pvo-cnt {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .pvo-pv{
+        display: none;
+    }
+    .pvo-cnt input[type=number]{
+        font-size: 1.5em;
+    }
+    .quantity .input-text.qty {
+        width: 70px;
+        height: 78px;
+        padding: 0 10px;
+    }
+    .quantity.buttons_added .minus,
+    .quantity.buttons_added .plus {
+        font-size: 1.2em;
+        padding: 14px 20px 16px;
+        height: 82px;}
+
+}
+
 

@@ -36,5 +36,10 @@
 @media only screen and (max-width : 980px) and (orientation : portrait){
     .cp-list{
         width: 30%;
+        font-size: 1.2em;
+    }
+    .cp-list a img{
+        height: 2em;
+        width: 2em;
     }
 }
