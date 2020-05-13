@@ -1,7 +1,11 @@
 $(document).ready(function() {
    //alert(111);
-    $(".hbVolume span.hbvCount.active, .hbVolume span.hbvAmount.active").click(function () {
-        bucketRemoveOne(null, null);
+    $(".hbVolume span.hbvCount, .hbVolume span.hbvAmount").click(function () {
+        if($(this).hasClass("active")){
+            bucketRemoveOne(null, null);
+        }
+        //alert(111);
+
     });
 
 })
@@ -28,8 +32,8 @@ function bucketAddOne(prod_id, prod_age) {
         $("span.hbvAmount").html(response.amount);
         $(".hb-view").html(response.content);
         $(".hb-view-frame").addClass("active");
-        $("span.hbvCount").addClass("active");
-        $("span.hbvAmount").addClass("active");
+        $("span.hbvCount").removeClass("active");
+        $("span.hbvAmount").removeClass("active");
         $(".hb-view").preloader("remove");
     });
 }
@@ -43,14 +47,15 @@ function bucketRemoveOne(prod_id, prod_age) {
         setRelative: true
     });
     $.post( "/bucket", { bucket: "addBucket", prod_age: prod_age, prod_id: prod_id, qty: -1}, function( data ) {
+
         var response=JSON.parse(data);
         $("span.hbvCount").html(response.count);
         $("span.hbvAmount").html(response.amount);
         $(".hb-view").html(response.content);
         if(response.count > 0){
             $(".hb-view-frame").addClass("active");
-            $("span.hbvCount").addClass("active");
-            $("span.hbvAmount").addClass("active");
+            $("span.hbvCount").removeClass("active");
+            $("span.hbvAmount").removeClass("active");
         }else{
             $(".hb-view-frame").removeClass("active");
             $("span.hbvCount").removeClass("active");
@@ -75,8 +80,8 @@ function bucketRemoveProduct(prod_id, prod_age){
         $(".hb-view").html(response.content);
         if(response.count > 0){
             $(".hb-view-frame").addClass("active");
-            $("span.hbvCount").addClass("active");
-            $("span.hbvAmount").addClass("active");
+            $("span.hbvCount").removeClass("active");
+            $("span.hbvAmount").removeClass("active");
         }else {
             $(".hb-view-frame").removeClass("active");
             $("span.hbvCount").removeClass("active");

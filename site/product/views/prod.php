@@ -51,8 +51,7 @@ if($find_row['longDescr']){
 $appRJ->response['result'].= "<div class='pv-order'>".
     "<div class='pvo-left'>";
 if($find_row['prodImg']){
-    $appRJ->response['result'].="<a href='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/".$find_row['prodImg']."'>".
-        "<img src='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/preview/".$find_row['prodImg']."' id='shareImg'></a>";
+    $appRJ->response['result'].="<img src='".GL_PROD_IMG_PAPH.$find_row['prod_id']."/".$find_row['prodImg']."' id='shareImg'>";
 }else{
     $appRJ->response['result'].="><img src='/data/default-img.png'>";
 }

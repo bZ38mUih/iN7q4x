@@ -37,6 +37,8 @@ function addProduct(prod_id) {
         var response=JSON.parse(data);
         $("span.hbvCount").html(response.count);
         $("span.hbvAmount").html(response.amount);
+        $("span.hbvCount").removeClass("active");
+        $("span.hbvAmount").removeClass("active");
         $(".hb-view").html(response.content);
         $(".hb-view-frame").addClass("active");
     });
