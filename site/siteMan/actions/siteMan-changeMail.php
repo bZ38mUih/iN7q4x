@@ -27,13 +27,13 @@ if($_POST['newMail']){
             $sendMailMessage = "Вам необходимо подвердить eMail адрес на ".$_SERVER["HTTP_HOST"]."/signIn при следующей авторизации, для этого ".
                 "перейдите по ссылке в письме ".
                 "http://".$_SERVER["HTTP_HOST"]."/checkIn/?vldCode=".$vldCode."&login=".
-                $account_rd->result['login']. ". Если вам не знаком сайт ".$_SERVER["HTTP_HOST"]
+                $account_rd->result['accLogin']. ". Если вам не знаком сайт ".$_SERVER["HTTP_HOST"]
                 .",  то просто проигнорируйте письмо.";
-
+            $newMail = null;
             if (!mail($account_rd->result['eMail'], 'Смена eMail адреса '.$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: Сад Приморья')){
                 $mailErr.= "<p>Ошибки: письмо не отправлено. Ссылка для подтверждения дана ниже<br>".
                     "<a href='http://".$_SERVER["HTTP_HOST"]."/checkIn/?vldCode=".$vldCode."&login=".
-                    $account_rd->result['login']."'>ссылка для подтверждения</a></p>";
+                    $account_rd->result['accLogin']."'>ссылка для подтверждения</a></p>";
             }
         }else{
             $mailErr = "<span class='fail'>Вы ввели тот же самый eMail</span>";
