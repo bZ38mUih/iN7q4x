@@ -35,7 +35,7 @@ if($_POST){
     }elseif($_POST['changePass']){
         require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-changePass.php");
     }elseif ($_POST['resetPass']){
-        echo "222";
+        require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-resetPass.php");
     }elseif ($_POST['changeMail']){
 
         require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/actions/siteMan-changeMail.php");

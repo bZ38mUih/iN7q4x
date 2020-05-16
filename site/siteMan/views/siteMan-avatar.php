@@ -50,8 +50,9 @@ $appRJ->response['result'].="<div class='avatar'>".
     "</form>".
     "<form class='changeMail' method='post'>".
     "<h2>Сменить eMail</h2>".
-    "<div class='ai-line'><label for='newMail'><input type='email' name='newMail'></label></div>".
+    "<div class='ai-line'><label for='newMail'><input type='email' name='newMail' value='".$newMail."'></label></div>".
     "<input type='submit' value='changeMail' name='changeMail' title='Изменить eMail'>".
+    "<div class='a-res'>".$mailErr."</div>".
     "<div class='note'><p>Необходимо подтвердить новый eMail перейдя по ссылке в письме при следующей авторизации</p></div>".
     "</form>".
     "</div></div></div>";
