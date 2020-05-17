@@ -30,7 +30,7 @@ if($_POST['newMail']){
                 $account_rd->result['accLogin']. ". Если вам не знаком сайт ".$_SERVER["HTTP_HOST"]
                 .",  то просто проигнорируйте письмо.";
             $newMail = null;
-            if (!mail($account_rd->result['eMail'], 'Смена eMail адреса '.$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: Сад Приморья')){
+            if (!mail($account_rd->result['eMail'], 'Смена eMail адреса '.$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: '.F_NAME)){
                 $mailErr.= "<p>Ошибки: письмо не отправлено. Ссылка для подтверждения дана ниже<br>".
                     "<a href='http://".$_SERVER["HTTP_HOST"]."/checkIn/?vldCode=".$vldCode."&login=".
                     $account_rd->result['accLogin']."'>ссылка для подтверждения</a></p>";

@@ -27,7 +27,7 @@ $sendMailMessage = "Для завершения регистрации подт�
     $requiredFields['login']['val']. " Ваш логин: ".$requiredFields['login']['val'].
     " пароль: ".$requiredFields['password']['val'].". Если вы не регистрировались на ".$_SERVER["HTTP_HOST"]
     .",  то просто проигнорируйте письмо.";
-if (!mail($requiredFields['eMail']['val'], 'Регистрация на '.$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: Сад Приморья')){
+if (!mail($requiredFields['eMail']['val'], 'Регистрация на '.$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: '.F_NAME)){
     $appRJ->response['result'].= "<p>Ошибки: письмо не отправлено. Ссылка для подтверждения дана ниже<br>".
         "<a href='http://".$_SERVER["HTTP_HOST"]."/checkIn/?vldCode=".$vldCode."&login=".
         $requiredFields['login']['val']."'>ссылка для подтверждения</a></p>";

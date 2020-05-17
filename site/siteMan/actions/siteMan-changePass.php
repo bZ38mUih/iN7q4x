@@ -47,8 +47,8 @@ if(!$avatarErr){
         $aCurPass = null;
         $aNewPass = null;
         $aRepeatPass = null;
-        $sendMailMessage = "Ваш новый пароль на 'Сад Приморья': ".$_POST['newPass'];
-        if (!mail($queryRow['eMail'], 'Регистрация на '.$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: Сад Приморья')){
+        $sendMailMessage = "Ваш новый пароль на '".F_NAME."': ".$_POST['newPass'];
+        if (!mail($queryRow['eMail'], 'Регистрация на '.$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: '.F_NAME)){
             $appRJ->response['result'].= "<p>Ошибки: письмо не отправлено</p>>";
         }
     }

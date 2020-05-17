@@ -5,9 +5,9 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<html lang='en-Us'>".
     "<head>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
-    "<meta name='description' content='Магазин саженцев Сад Приморья в Иваново | Питомник растений | Садовый центр.'/>".
+    "<meta name='description' content='Магазин саженцев ".F_NAME." в Приморском крае | Питомник растений | Садовый центр.'/>".
     //"<meta name='yandex-verification' content='e929004ef40cae1b' />".
-    "<title>Магазин саженцев Сад Приморья в Иваново. Способы оплаты и доставки саженцев.</title>".
+    "<title>Магазин саженцев ".F_NAME." в Приморском крае. Способы оплаты и доставки саженцев.</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".
     "<script src='/source/js/jquery-3.2.1.js'></script>".
     "<link rel='stylesheet' href='/site/css/default.css' type='text/css' media='screen, projection'/>".
@@ -50,7 +50,7 @@ $appRJ->response['result'].= "<div class='top-frame'><h1><hr><span>Оплата 
     "</div>".
     "</div>".
     "<div class='pdTb-bottom'><h3>Доставка и оплата саженцев</h3>".
-    "<p class='pv-descr'>Питомник «Сад приморья» осуществляет доставку саженцев по всей России. 
+    "<p class='pv-descr'>Питомник «".F_NAME."» осуществляет доставку саженцев по всей России. 
 Минимальный заказ 30 тысяч рублей. ДОСТАВКА БЕСПЛАТНАЯ.</p>".
     "</div>".
     "</div>".

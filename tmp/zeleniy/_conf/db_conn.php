@@ -1,0 +1,1 @@
+{"CONN_LOC":"127.0.0.1","CONN_USER":"p264533_join","CONN_PW":"cwgh45hb45nh4g","CONN_DB":"p264533_zeleniy_db"}

@@ -4,8 +4,8 @@ $appRJ->response['result'] .= "<!DOCTYPE html>" .
     "<html lang='en-Us'>" .
     "<head>" .
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>" .
-    "<meta name='description' content='Контакты Сад Приморья. Телефоны, почта, адрес, карта.'/>" .
-    "<title>Контакты Сад Приморья. Телефоны, почта, адрес, карта</title>" .
+    "<meta name='description' content='Контакты ".F_NAME.". Телефоны, почта, адрес, карта.'/>" .
+    "<title>Контакты ".F_NAME.". Телефоны, почта, адрес, карта</title>" .
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>" .
     "<script src='/source/js/jquery-3.2.1.js'></script>" .
     "<link rel='stylesheet' href='/site/css/default.css' type='text/css' media='screen, projection'/>" .
@@ -40,15 +40,12 @@ if(CONT_PHONE_2){
 }
 $appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
     "<span class='hcSchedule'>".F_SHEDULE_TEXT."</span>".
-    "<span class='hcAddr'>Россия, Приморский край, г. Владивосток, ул. 3-я Пригородная,  район станции Весенняя.</span>"
+    "<span class='hcAddr'>".F_ADDRESS."</span>"
     ."</div>";
     $appRJ->response['result'].= "<div class='c-delivery'>
-<p>Питомник «Сад приморья» осуществляет доставку саженцев по всей России. Минимальный заказ 30 тысяч рублей. ДОСТАВКА БЕСПЛАТНАЯ.</p></div>";
+<p>Питомник «".F_NAME."» осуществляет доставку саженцев по всей России. Минимальный заказ 30 тысяч рублей. ДОСТАВКА БЕСПЛАТНАЯ.</p></div>";
 
-$appRJ->response['result'] .="<div class='yMap'><script type='text/javascript' charset='utf-8' async 
-src='https://api-maps.yandex.ru/services/constructor/1.0/js/
-?um=constructor%3Acd9b4a98845af0bb26f81134be1091ec79594f99c4b5226c38817fcc8b2875af&amp;width=1200&amp;height=400&amp;
-lang=ru_RU&amp;scroll=true'></script></div>";
+$appRJ->response['result'] .=@file_get_contents($_SERVER["DOCUMENT_ROOT"]."/source/_conf/yMap.html");
 $appRJ->response['result'] .="<strong>По всем вопросам Вы можете получить консультацию, позвонив нам по телефону  
 <a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1))."' title='Получить консультацию по телефону'>".CONT_PHONE_1."</a>";
 if(CONT_PHONE_2){

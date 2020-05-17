@@ -64,7 +64,7 @@ if($this->errors){
         "</div>".
         "<div class='alertsMenu'>".
         "<h2>На этом сайте:</h2>".
-        "<a href='/' title='Главная'><img src='/site/siteHeader/img/site-logo.png'>Главная «Сад приморья»</a>".
+        "<a href='/' title='Главная'><img src='/site/siteHeader/img/site-logo.png'>Главная «".F_NAME."»</a>".
         "<a href='/catalog' title='Каталог саженцев'><img src='/site/siteHeader/img/site-logo.png'>Каталог</a>".
         "<a href='/about' title='Информация о фирме'><img src='/site/siteHeader/img/site-logo.png'>О питомнике</a>".
         "<a href='/pay-and-delivery' title='Как оплатить и как доставят'><img src='/site/siteHeader/img/site-logo.png'>Оплата и доставка</a>".

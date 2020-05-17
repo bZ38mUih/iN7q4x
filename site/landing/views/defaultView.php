@@ -1,14 +1,14 @@
 <?php
-$h1 ="Сад приморья";
+$h1 =F_NAME;
 $App['views']['social-block']=true;
 $appRJ->response['result'].= "<!DOCTYPE html>".
     "<html lang='en-Us'>".
     "<head>".
     "<meta http-equiv='content-type' content='text/html; charset=utf-8'/>".
-    "<meta name='description' content='Магазин саженцев Сад Приморья в Приморском крае | Питомник растений | Садовый центр.'/>".
+    "<meta name='description' content='Магазин саженцев ".F_NAME." в Приморском крае | Питомник растений | Садовый центр.'/>".
     "<meta name='yandex-verification' content='a28b37bc8b7582ac' />".
     //"<meta name='yandex-verification' content='e929004ef40cae1b' />".
-    "<title>Магазин саженцев Сад Приморья в Приморском крае | Питомник растений | Садовый центр.</title>".
+    "<title>Магазин саженцев ".F_NAME." в Приморском крае | Питомник растений | Садовый центр.</title>".
     "<link rel='SHORTCUT ICON' href='/site/landing/img/favicon.png' type='image/png'>".
     "<script src='/source/js/jquery-3.2.1.js'></script>".
 
@@ -43,7 +43,7 @@ require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/landing/views/banner.php");
 
-$appRJ->response['result'].= "<div class='h1Box'><h1>Питомник саженцев, растений и деревьев <span class='fName'>«Сад Приморья»</span></h1></div>".
+$appRJ->response['result'].= "<div class='h1Box'><h1>Питомник саженцев, растений и деревьев <span class='fName'>«".F_NAME."»</span></h1></div>".
 "<div class='lc-block'>Уточняйте наличие саженцев и возможность доставки по телефону ".
         "<span class='hcPhone'><a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1))."' title='Получить консультацию по телефону'>".CONT_PHONE_1."</a></span>";
 if(CONT_PHONE_2){
@@ -84,7 +84,7 @@ $appRJ->response['result'].= "<div class='catView'><h2><hr><span>Новые по
 
 $appRJ->response['result'].= "<div class='pv-descr'><p>Дорогие садоводы, для того чтобы провести заказ в нашем интернет-магазине 
 саженцев «Сады Приморья», необходимо под желаемым товаром нажать кнопку «Добавить в корзину» или связаться по телефону.</p>
-<p>Питомник «Сад приморья» осуществляет доставку саженцев по всей России. Минимальный заказ 30 тысяч рублей. ДОСТАВКА БЕСПЛАТНАЯ.</p></div>";
+<p>Питомник «".F_NAME."» осуществляет доставку саженцев по всей России. Минимальный заказ 30 тысяч рублей. ДОСТАВКА БЕСПЛАТНАЯ.</p></div>";
 
 
 $appRJ->response['result'].="</div></div></div><span id='shareImg' src='http://sad-primorya.ru/site/siteHeader/img/site-logo.png'></span>";

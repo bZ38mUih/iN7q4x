@@ -21,7 +21,7 @@ $DB->doQuery($updateHash_qry);
 $sendMailMessage = "Ваш новый пароль: ".$vldCode.", используйте его при следующей авторизации" ;
 
 
-if (!mail($account_rd->result['eMail'], "Сброс пароля на ".$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: Сад Приморья')){
+if (!mail($account_rd->result['eMail'], "Сброс пароля на ".$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: '.F_NAME)){
     $avatarErr.= "Ошибки: письмо не отправлено. Ваш новый пароль: ".$vldCode;
 }else{
     $avatarErr = "<span class='well'>Смена пароля успешно</span>";

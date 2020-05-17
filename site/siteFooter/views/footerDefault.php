@@ -13,9 +13,9 @@ if(isset($appRJ->server['reqUri_expl'][1]) and file_exists($_SERVER['DOCUMENT_RO
     $appRJ->response['result'].= "<img src='/site/siteHeader/img/site-logo.png' alt='RJ-logo'>";
 }
 $appRJ->response['result'].= "</div>"
-    ."<div class='hlText'><span class='sad'>Сад</span><span class='primorya'>приморья</span></div>";
+    .F_NAME_TITLE;
 if($App['views']['social-block']) {
-    $appRJ->response['result'].=file_get_contents($_SERVER["DOCUMENT_ROOT"]."/site/siteFooter/views/yMetrika.html");
+    $appRJ->response['result'].=@file_get_contents($_SERVER["DOCUMENT_ROOT"]."/source/_conf/yMetrika.html");
     $appRJ->response['result'].= "<div class='ft-like'>".
         "<a href='#' class='social_share' data-type='ok' title='Постить в Одноклассники'>".
         "<img src='/site/siteFooter/img/ok.png' alt='ok-like'><sup></sup></a>".
@@ -41,7 +41,7 @@ if(CONT_PHONE_2){
 }
 $appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
     "<span class='hcSchedule'>".F_SHEDULE_TEXT."</span>".
-    "<span class='hcAddr'>Россия, Приморский край, г. Владивосток, ул. 3-я Пригородная,  район станции Весенняя.</span>"
+    "<span class='hcAddr'>".F_ADDRESS."</span>"
     ."</div></div>";
 
 $appRJ->response['result'].="</div>".

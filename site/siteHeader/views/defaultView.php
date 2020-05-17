@@ -21,7 +21,7 @@ if(isset($appRJ->server['reqUri_expl'][1]) and file_exists($_SERVER['DOCUMENT_RO
     $appRJ->response['result'].= "<img src='/site/siteHeader/img/site-logo.png' alt='RJ-logo'>";
 }
 $appRJ->response['result'].= "</div>"
-    ."<div class='hlText'><span class='sad'>Сад</span><span class='primorya'>приморья</span></div>"
+    .F_NAME_TITLE
     ."</div>"
 
     ."<div class='hDescr'>Саженцы плодовых деревьев и кустарников из питомника</div>"
