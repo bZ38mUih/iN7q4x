@@ -111,6 +111,9 @@
     border: transparent;
 
 }
+#prodBucket:hover{
+    background: yellow;
+}
 #byOneClick{
     display: inline-block;
     background: #98cf68;

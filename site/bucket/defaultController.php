@@ -39,7 +39,16 @@ if($_POST['bucket'] == 'addBucket'){
     $appRJ->response['result']['content'] = $bucket_txt;
     $appRJ->response['result']['amount'] = $bucket_amount;
     $appRJ->response['result']['count'] = $prod_count;
-}else{
+}elseif ($_POST['bucket'] == "clearBucket"){
+    unset($_SESSION['bucket']);
+
+    require_once ($_SERVER["DOCUMENT_ROOT"]."/site/bucket/views/bucket.php");
+    $appRJ->response['format']='json';
+    $appRJ->response['result']['content'] = $bucket_txt;
+    $appRJ->response['result']['amount'] = $bucket_amount;
+    $appRJ->response['result']['count'] = $prod_count;
+}
+else{
     $appRJ->errors['stab']['description']="Для оформления заказа позвоните по телефону. Идет отладка и заказ из корзины пока недоступен.";
     //echo "xxx";
 }

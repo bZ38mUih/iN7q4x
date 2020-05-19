@@ -204,7 +204,7 @@ header .headerCenter{
 }
 
 
-.hb-view-frame {
+.headerCenter .hb-view-frame {
     display: none;
     z-index: 2;
     position: absolute;
@@ -215,6 +215,7 @@ header .headerCenter{
     background: white;
     border: 1px solid lightblue;
 }
+
 .hb-view{
 width: 100%;
 
@@ -389,7 +390,7 @@ width: 100%;
 .hbvf-order a {
     display: inline-block;
     vertical-align: bottom;
-    color: red;
+    color: green;
     padding: 0.2em;
     font-weight: bold;
 }
@@ -436,7 +437,6 @@ width: 100%;
         font-size: 1.2em;
         display: none;
         z-index: 2;
-        position: absolute;
         width: 180%;
         margin-left: 10%;
         left: -100%;

@@ -40,8 +40,8 @@ $appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
     "<div class='hb-view-frame'><div class='hbv-title'><div class='hbvt-text'><img src='/site/siteHeader/img/bucket.png'>Корзина<span class='hbvCount'>0</span><span class='hbvAmount'>0</span></div>".
     "<div class='bm-close'><img src='/site/siteHeader/img/closeModal.png' onclick='bucketClose()'></div></div><div class='hb-view'></div>".
     "<div class='hbvf-buttons'>".
-    "<div class='hbvf-clear'><span><img src='/source/img/clear-icon.png'> - Очистить корзину</span></div>".
-    "<div class='hbvf-order'><a href='/bucket'><img src='/source/img/handsShake-color.png'> - Оформить заказ</a></div>".
+    "<div class='hbvf-clear'><span onclick='bucketClear()'><img src='/source/img/clear-icon.png'> - Очистить корзину</span></div>".
+    "<div class='hbvf-order'><a href='/order'><img src='/source/img/handsShake-color.png'> - Оформить заказ</a></div>".
     "</div></div>".
     "<div class='hbImg'><img src='/site/siteHeader/img/bucket.png'></div>"
     ."<div class = 'hbVolume'>"
