@@ -14,12 +14,12 @@ if(isset($_GET['cat_id']) and $_GET['cat_id']!=null){
         $catErr['catAlias']='недопустимый alias';
     }
 
-    $Cat_rd->result['catDescr']=htmlspecialchars($_POST['catDescr']);
+    $Cat_rd->result['catDescr']=$_POST['catDescr'];
     if(empty($_POST['catDescr'])){
         $catErr['catDescr']='недопустимый заголовок';
     }
 
-    $Cat_rd->result['catMeta']=htmlspecialchars($_POST['content']);
+    $Cat_rd->result['catMeta']=$_POST['content'];
 
     if(isset($_POST['prodCat_parId'])){
         if($_POST['prodCat_parId'] == 'none'){
