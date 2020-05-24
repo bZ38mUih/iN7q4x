@@ -24,7 +24,8 @@ $appRJ->response['result'].= "<!DOCTYPE html>".
     "<script src='/site/landing/js/slider.js'></script>".
     "<link rel='stylesheet' href='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/css/preloader.css'/>".
     "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>".
-    "<script src='/site/bucket/js/bucket.js'></script>";
+    "<script src='/site/bucket/js/bucket.js'></script>".
+    "<script src='/site/landing/js/newProd.js'></script>";
 if($App['views']['social-block']){
     $appRJ->response['result'].= "<script src='/site/js/social-block.js'></script>";
 }
@@ -76,10 +77,10 @@ $appRJ->response['result'].= "<div class='lOffer'>".
     "<div class='lo-txt'>Все саженцы полностью морозостойкие и безболезненно приживаются</div></div>";
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/landing/views/newProducts.php");
-$appRJ->response['result'].= "<div class='catView'><h2><hr><span>Новые поступления</span></h2>".
+$appRJ->response['result'].= "<div class='catView'><h2><hr><span>Новые поступления</span></h2><div class='newProd-view'>".
     $newProd_txt.
 
-    "</div>".
+    "</div></div>".
     "</div>";
 
 $appRJ->response['result'].= "<div class='pv-descr'><p>Дорогие садоводы, для того чтобы провести заказ в нашем интернет-магазине 

@@ -249,7 +249,9 @@ p.lgColor{
     font-weight: bold;
     padding: 1em;
 }
-
+p.pd1em {
+    padding: 0em 1em;
+}
 .pgn{
     display: inline-block;
     width: 100%;

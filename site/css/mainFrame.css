@@ -152,7 +152,88 @@
 .leftMenu .lm-title .lmt-close img {
     cursor: pointer;
 }
+.leftMenu .lastView {
+    margin-top: 2em;
+    width: 100%;
+}
+.leftMenu .lastView .lv-line{
+    width: 100%;
+    margin: 0.5em 0;
+}
+.leftMenu .lastView .lv-line .lv-line-img{
+    display: inline-block;
+    width: 30%;
+}
+.leftMenu .lastView .lv-line .lv-line-img img{
+    width: 100%;
+}
+.leftMenu .lastView .lv-line .pv-text {
+    display: inline-block;
+    width: 60%;
+    margin: 0 5%;
+    vertical-align: top;
+}
+.leftMenu .lastView .lv-line .pv-text a {
+    color: darkgreen;
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.leftMenu .lastView span.lv-title{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #ffdd3e;
+    color: #ffdd3e;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px darkgreen;
 
+}
+.leftMenu .grovAdvice{
+    margin-top: 2em;
+    display: inline-block;
+    width: 100%;
+    color: white;
+}
+.leftMenu .grovAdvice .ga-title{
+    display: inline-block;
+    width: 100%;
+    background-color: firebrick;
+}
+.leftMenu .grovAdvice a{
+    width: 85%;
+    display: inline-block;
+    color: firebrick;
+    margin: 0em 5% 0.3em 10%;
+    padding: 0.5em 0 0.5em 5%;
+}
+.leftMenu .grovAdvice a:before{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.2em;
+    content: "> ";
+}
+.leftMenu .grovAdvice span.ga-title{
+    margin-top: 0.4em;
+    margin-left: 5%;
+    vertical-align: middle;
+    display: inline-block;
+    width: auto;
+}
+.leftMenu .grovAdvice span.after{
+    float: right;
+    vertical-align: middle;
+    border-bottom: 1em solid transparent;
+    border-top: 1em solid transparent;
+    border-left: 1em solid transparent;
+    border-right: 1em solid white;
+    display: inline-block;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    content: "";
+}
 @media only screen and (max-width : 980px) and (orientation : portrait){
 
     .leftMenu{
@@ -232,6 +313,13 @@
     }
     .ft-right{
         vertical-align: middle;
+    }
+    .leftMenu .lastView .lv-line {
+        width: 10em;
+        display: inline-block;
+    }
+    .leftMenu .lastView{
+
     }
 
 }

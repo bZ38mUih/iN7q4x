@@ -56,6 +56,58 @@ if(mysql_num_rows($leftMenu_res)>0){
     $leftMenu_txt = "не создано ни одной категории";
 }
 
-$leftMenu_txt .= "</ul></div>";
+$leftMenu_txt .= "</ul>";
+
+$viewCount = 0;
+if($appRJ->server['reqUri_expl'][1] == 'product'){
+    $viewCount_limit = 4;
+}else{
+    $viewCount_limit = 3;
+}
+
+$grovAdvices = "<div class='grovAdvice'>".
+    "<div class='ga-title'><span class='ga-title'>Советы садоводам</span><span class='after'></span></div>".
+    "<a href='/memo/pravila-posadki-sazhencev'>Правила посадки саженцев</a>".
+    "</div>";
+$leftMenu_txt .= $grovAdvices;
+$lastView = null;
+$lastView_flag = false;
+
+$lastView .= "<div class='lastView'>".
+"<span class='lv-title'>ПОСЛЕДНИЕ ПРОСМОТРЫ</span>";
+if($_SESSION['lastView']){
+    foreach (array_reverse($_SESSION['lastView']) as $prodAlias=>$prodData){
+        $viewCount++;
+        if($viewCount==1 and $viewCount_limit == 4){
+
+        }elseif (($viewCount==1 and $viewCount_limit == 3) or ($viewCount!= 1 and $viewCount<=$viewCount_limit)){
+            $lastView_flag = true;
+            $lastView .= "<div class='lv-line'>";
+            $lastView .= "<div class='lv-line-img'><a href='/product/".$prodAlias."'>";
+            if($prodData['prodImg']){
+                $lastView.="<img src='".GL_PROD_IMG_PAPH."/".$prodData['prod_id'].
+                    "/preview/".$prodData['prodImg']."'>";
+            }else{
+                $lastView.="<img src='/data/default-img.png'>";
+            }
+            $lastView .= "</a></div>";
+            $lastView .= "<div class='pv-text'>";
+            $lastView .= "<a href='/product/".$prodAlias."'>".$prodData['prodName']."</a>";
+            $lastView .=  "<span class='minPrice'>".$prodData['prodPrice']."</span>";
+            $lastView .= "</div>";
+            $lastView .= "</div>";
+        }elseif($viewCount>5){
+            unset($_SESSION['lastView'][$prodAlias]);
+        }
+    }
+}
+
+$lastView .= "</div>";
+
+if($lastView_flag){
+    $leftMenu_txt .= $lastView;
+}
+
+$leftMenu_txt .= "</div>";
 
 $appRJ->response['result'].= $leftMenu_txt;

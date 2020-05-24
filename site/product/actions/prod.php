@@ -1,28 +1,27 @@
 <?php
 if($appRJ->server['reqUri_expl'][2]){
-    $find_qry = "select prodList_dt.*, prodCat_dt.catName, prodCat_dt.catAlias, prodCat_dt.catActive from prodList_dt ".
+    $find_qry = "select prodList_dt.*, prodCat_dt.catName, prodCat_dt.catAlias, prodCat_dt.catActive, catTable.catName as parCatName, ".
+        "catTable.catAlias as parCatAlias from prodList_dt ".
         "left join prodCat_dt on prodCat_dt.prodCat_id = prodList_dt.prodCat_id ".
+        "left join prodCat_dt catTable on prodCat_dt.prodCat_parId = catTable.prodCat_id ".
         "where prodList_dt.activeFlag is true and prodList_dt.prodAlias = '".$appRJ->server['reqUri_expl'][2]."'";
     $find_res = $DB->doQuery($find_qry);
     if($find_row = $DB->doFetchRow($find_res)){
         if($find_row['prodCat_id']){
             $navPanel = "<ul><li><a href='/'>Главная</a></li><li><a href='/catalog/'>Каталог</a></li>".
-                "<li><a href='/catalog/".$find_row['catAlias']."'>".$find_row['catName']."</a></li>".
-                "<li><a href='/product/".$find_row['prodAlias']."'>".$find_row['prodName']."</a></li>".
+                "<li><a href='/catalog/".$find_row['parCatAlias']."'>".$find_row['parCatName']."</a></li>";
+            if($find_row['parCatAlias']){
+                $navPanel .="<li><a href='/catalog/".$find_row['catAlias']."'>".$find_row['catName']."</a></li>";
+            }
+            $navPanel .="<li><a href='/product/".$find_row['prodAlias']."'>".$find_row['prodName']."</a></li>".
                 "</ul>";
-
             $price_qry = "select prod_id, prodPrice, prodAge from prodPrice_dt where prod_id = ".$find_row['prod_id']." and prodPrice is not null ".
                 "and activeFlag is true ".
                 "order by prodAge";
-            //echo $price_qry;
             $price_res = $DB->doQuery($price_qry);
-            //$tRes = $price_res;
             $minProdPrice = 0;
             $prodPrice_text = null;
-
             if(mysql_num_rows($price_res)>0){
-
-
                 $tCounter = 0;
                 $tPrice = 0;
                 while ($price_row = $DB->doFetchRow($price_res)){
@@ -46,10 +45,8 @@ if($appRJ->server['reqUri_expl'][2]){
                     " group by prodList_dt.prod_id";
 
                 $findSub_res = $DB->doQuery($findSub_qry);
-
                 $sub_text = null;
                 if(mysql_num_rows($findSub_res)>0){
-                    //echo "yyy";
                     while($findSub_row = $DB->doFetchRow($findSub_res)){
                         $sub_text .= "<div class='catItem'><a href='/product/".$findSub_row['prodAlias']."'><img src='";
                         if($findSub_row['prodImg']){
@@ -65,6 +62,13 @@ if($appRJ->server['reqUri_expl'][2]){
                         }
                         $sub_text.="</div>";
                     }
+                    if($_SESSION['lastView'][$find_row['prodAlias']]){
+                        unset($_SESSION['lastView'][$find_row['prodAlias']]);
+                    }
+                    $_SESSION['lastView'][$find_row['prodAlias']]['prodName'] = $find_row['prodName'];
+                    $_SESSION['lastView'][$find_row['prodAlias']]['prodPrice'] = $minProdPrice;
+                    $_SESSION['lastView'][$find_row['prodAlias']]['prod_id'] = $find_row['prod_id'];
+                    $_SESSION['lastView'][$find_row['prodAlias']]['prodImg'] = $find_row['prodImg'];
                 }else{
                     //$sub_text = "не введено никаких данных";
                 }

@@ -39,13 +39,13 @@ $pages_text = null;
 if($newProd_count>0){
     $tPage = 1;
     $pages_text.="<div class='pgn'><div class='pgn-num'>Стр. ";
-    while ($newProd_count - $prodOnPage*($tPage-1) >=0){
+    while ($newProd_count - $prodOnPage*($tPage-1) >=1){
 
         $pages_text .= "<a href='?newPodPage=".$tPage."&prodOnPage=".$prodOnPage."' ";
         if($tPage == $curPage){
             $pages_text.="class='active'";
         }
-        $pages_text.=">".$tPage."</a>, ";
+        $pages_text.=" onclick='event.preventDefault(); showNew(".$tPage.", ".$prodOnPage.")'>".$tPage."</a>, ";
         $tPage++;
     }
 

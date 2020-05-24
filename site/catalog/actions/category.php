@@ -1,12 +1,17 @@
 <?php
-$find_qry = "select * from prodCat_dt where catAlias = '".$appRJ->server['reqUri_expl'][2]."' and catActive is true";
+$find_qry = "select prodCat_dt.*,  catTable.catName as parCatName, catTable.catAlias as parCatAlias from prodCat_dt ".
+    "left join prodCat_dt catTable on prodCat_dt.prodCat_parId = catTable.prodCat_id ".
+    "where prodCat_dt.catAlias = '".$appRJ->server['reqUri_expl'][2]."' and prodCat_dt.catActive is true";
 $find_res = $DB->doQuery($find_qry);
 if(mysql_num_rows($find_res)>0){
     $find_row = $DB->doFetchRow($find_res);
     $navPanel = "<ul>".
         "<li><a href='/'>Главная</a></li>".
-        "<li><a href='/catalog'>Каталог</a></li>".
-        "<li><a href='/catalog/".$find_row['catAlias']."'>".$find_row['catName']."</a></li>".
+        "<li><a href='/catalog'>Каталог</a></li>";
+    if($find_row['parCatAlias']){
+        $navPanel.="<li><a href='/catalog/".$find_row['parCatAlias']."'>".$find_row['parCatName']."</a></li>";
+    }
+    $navPanel.="<li><a href='/catalog/".$find_row['catAlias']."'>".$find_row['catName']."</a></li>".
         "</ul>";
     if(!$find_row['prodCat_parId']){
         $findSub_qry = "select * from prodCat_dt where catActive is true and prodCat_parId = ".$find_row['prodCat_id'];
