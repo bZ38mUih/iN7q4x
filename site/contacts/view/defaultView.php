@@ -14,8 +14,10 @@ $appRJ->response['result'] .= "<!DOCTYPE html>" .
     "<link rel='stylesheet' href='/site/contacts/css/default.css' type='text/css' media='screen, projection'/>" .
     "<script src='/site/siteHeader/js/modalHeader.js'></script>".
     "<script src='/site/bucket/js/bucket.js'></script>".
+    "<script src='/site/contacts/js/yMap.js'></script>".
     "<link rel='stylesheet' href='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/css/preloader.css'/>".
-    "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>";
+    "<script src='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/js/jquery.preloader.min.js'></script>".
+"<script></script>";
 if ($App['views']['social-block']) {
     $appRJ->response['result'] .= "<script src='/site/js/social-block.js'></script>";
 }
