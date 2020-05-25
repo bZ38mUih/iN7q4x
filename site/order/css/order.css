@@ -100,3 +100,7 @@ form.form-order label.err[for='clientPhone']:after{
         box-shadow: none;
     }
 }
+.oNote{
+    font-style: italic;
+    text-align: left;
+}

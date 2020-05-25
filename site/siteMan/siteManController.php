@@ -97,6 +97,10 @@ elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['re
 
 
     require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-avatar.php");
+}elseif(isset($appRJ->server['reqUri_expl'][2]) and strtolower($appRJ->server['reqUri_expl'][2])=="orders"){
+
+
+    require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteMan/views/siteMan-orders.php");
 }
 else{
     require_once($_SERVER['DOCUMENT_ROOT'] . "/site/siteMan/views/siteMan-defView.php");

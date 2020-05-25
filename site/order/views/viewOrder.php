@@ -51,7 +51,7 @@ if($pErr['clientPhone'] != null){
 }
 $appRJ->response['result'] .="><input type='text' name='clientPhone' value='".$oFind_row['clientPhone']."'></label>".
     "<label for='clientMail'><input type='email' name='clientMail' value='".$oFind_row['clientMail']."'></label>".
-    "<label for='comment'><textarea name='comment'>".$oFind_row['comment']."</textarea></label>".
+    "<label for='comment'><textarea name='comment'>".$oFind_row['comment']."</textarea></label>"."<p>Дата заказа: ".$oFind_row['oDate']."</p>".
     "</form>";
 $appRJ->response['result'] .="</div>";
 $appRJ->response['result'] .= "</div></div></div>";

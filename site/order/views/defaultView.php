@@ -42,6 +42,8 @@ $appRJ->response['result'] .= $bucket_txt."</div>".
 "<div class='hbvf-clear'><span onclick='bucketClear()'><img src='/source/img/clear-icon.png'> - Очистить корзину</span></div>".
 "<div class='hbvf-order'><a href='/catalog' title='Каталог'><img src='/site/siteHeader/img/site-logo.png'> - Продолжить покупки</a></div>".
 "</div></div>";
+$appRJ->response['result'] .= "<p class='oNote'>Введите ваше имя и телефон для обратной связи, eMail и коментарий по желанию. 
+Далее будете переадресованы на страницу на которой всегда сможете проверить ваш заказ</p>";
 if($_SESSION['count']){
     $appRJ->response['result'] .="<form class='form-order' method='post'>".
         //"<div class='input-line'>".

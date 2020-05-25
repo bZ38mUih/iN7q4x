@@ -471,5 +471,11 @@ width: 100%;
     .navPanel{
         font-size: 1.5em;
     }
+    .headerCenter .hContacts span.hcPhone{
+        font-size: 1.5em;
+    }
+    .headerCenter .hContacts span.hcMail:before{
+        font-size: 1.5em;
+    }
 
 }

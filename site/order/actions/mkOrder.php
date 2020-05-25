@@ -25,7 +25,7 @@ if($pErr==null){
     $E_rd->result['activeFlag'] = true;
     $new_order_id = uniqid();
     $E_rd->result['oTag'] = $new_order_id;
-    $E_rd->result['oDate'] = date( "Y-m-d H:i:s", $appRJ->date['curDate']);
+    $E_rd->result['oDate'] = date_format( $appRJ->date['curDate'], "Y-m-d H:i:s");
 
     $prod_count = null;
     $bucket_amount = null;
@@ -67,6 +67,15 @@ if($pErr==null){
     $E_rd->result['oAmount'] = $bucket_amount;
     if($pErr['transaction'] != true){
         if($E_rd->putOne()){
+
+            if( $E_rd->result['clientMail']){
+                $sendMailMessage = "ссылка для просмотра: ".$_SERVER["HTTP_HOST"]."/order?viewOrder=".$new_order_id." " ;
+                mail($E_rd->result['clientMail'], "Ваш заказ на ".$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: '.F_NAME);
+            }
+
+            $sendMailMessage = "ссылка для просмотра: ".$_SERVER["HTTP_HOST"]."/order?viewOrder=".$new_order_id." " ;
+            mail(CONT_MAIL_1, "Новый заказ на ".$_SERVER["HTTP_HOST"], $sendMailMessage, 'From: '.F_NAME);
+
             unset($_SESSION['bucket']);
             unset($_SESSION['count']);
             unset($_SESSION['amount']);

@@ -21,4 +21,10 @@ $appRJ->response['result'].= "<a href='/siteMan/avatar/' ";
 if(isset($appRJ->server['reqUri_expl'][2]) and $appRJ->server['reqUri_expl'][2] === 'avatar'){
     $appRJ->response['result'].= "class='active'";
 }
-$appRJ->response['result'].= " title='Настройки учетной записи'>Уч. запись</a></div>";
+$appRJ->response['result'].= " title='Настройки учетной записи'>Уч. запись</a>";
+$appRJ->response['result'].= "<a href='/siteMan/orders/' ";
+if(isset($appRJ->server['reqUri_expl'][2]) and $appRJ->server['reqUri_expl'][2] === 'orders'){
+    $appRJ->response['result'].= "class='active'";
+}
+$appRJ->response['result'].= " title='Заказы с сайта'>Заказы</a>".
+"</div>";
