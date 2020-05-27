@@ -26,7 +26,7 @@ if(mysql_num_rows($find_res)>0){
     if(mysql_num_rows($findSub_res)>0){
         while($findSub_row = $DB->doFetchRow($findSub_res)){
             if(!$find_row['prodCat_parId']){
-                $sub_text .= "<div class='catItem'><a href='/catalog/".$findSub_row['catAlias']."'><img src='";
+                $sub_text .= "<div class='catItem big2'><a href='/catalog/".$findSub_row['catAlias']."'><img src='";
                 if($findSub_row['catImg']){
                     $sub_text.=GL_CATEG_IMG_PAPH."/".$findSub_row['prodCat_id'].
                         "/preview/".$findSub_row['catImg'];

@@ -12,6 +12,11 @@
     display: inline-block;
     width: 25%;
 }
+.catPresent .catItem img{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 .catPresent .cp-list a{
     vertical-align: middle;
     font-size: 1.2em;

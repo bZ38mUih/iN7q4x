@@ -12,14 +12,14 @@ $catView = null;
 if(mysql_num_rows($find_res)>0){
     while ($find_row = $DB->doFetchRow($find_res)){
         $catView.="<div class='catPresent'>";
-        $catView .= "<div class='catItem'><img src='";
+        $catView .= "<div class='catItem'><a href='/catalog/".$find_row['catAlias']."'><img src='";
         if($find_row['catImg']){
             $catView.=GL_CATEG_IMG_PAPH."/".$find_row['prodCat_id'].
                 "/preview/".$find_row['catImg'];
         }else{
             $catView.="/data/default-img.png";
         }
-        $catView.="'>".
+        $catView.="'></a>".
             "<a href='/catalog/".$find_row['catAlias']."' title='перейти к описанию категории ".$find_row['catName']."'>".$find_row['catName']."</a></div>";
         $catView.="<div class='cp-list'>";
         $sub_qry = "select * from prodCat_dt where prodCat_parId = ".$find_row['prodCat_id']." and catActive is true";

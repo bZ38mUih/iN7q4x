@@ -41,7 +41,7 @@ if(mysql_num_rows($leftMenu_res)>0){
 
 
                 if($parCat_row['popFlag'])
-                    $popCats_text .= "<div class='catItem'><a href='/catalog/".$parCat_row['catAlias']."'><img src='".GL_CATEG_IMG_PAPH."/".$parCat_row['prodCat_id'].
+                    $popCats_text .= "<div class='catItem big2'><a href='/catalog/".$parCat_row['catAlias']."'><img src='".GL_CATEG_IMG_PAPH."/".$parCat_row['prodCat_id'].
                     "/preview/".$parCat_row['catImg']."'></a>".
                     "<a href='/catalog/".$parCat_row['catAlias']."'>".$parCat_row['catName']."</a></div>";
 
