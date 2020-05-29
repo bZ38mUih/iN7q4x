@@ -65,7 +65,7 @@ $appRJ->response['result'].="<p>Все цены на сайте актуальн
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/search/views/defaultView.php");
 
 
-$appRJ->response['result'].="<div class='catView'>".
+$appRJ->response['result'].="<div class='catView' style='text-align: center'>".
     "<h2><hr><span>Разделы каталога</span></h2>".
     $categories_txt."</div>".
     "<div class='catView'>".
