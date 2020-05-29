@@ -8,11 +8,13 @@ if($appRJ->server['reqUri_expl'][2]){
     $find_res = $DB->doQuery($find_qry);
     if($find_row = $DB->doFetchRow($find_res)){
         if($find_row['prodCat_id']){
-            $navPanel = "<ul><li><a href='/'>Главная</a></li><li><a href='/catalog/'>Каталог</a></li>".
-                "<li><a href='/catalog/".$find_row['parCatAlias']."'>".$find_row['parCatName']."</a></li>";
+            $navPanel = "<ul><li><a href='/'>Главная</a></li><li><a href='/catalog/'>Каталог</a></li>";
             if($find_row['parCatAlias']){
-                $navPanel .="<li><a href='/catalog/".$find_row['catAlias']."'>".$find_row['catName']."</a></li>";
+                $navPanel .="<li><a href='/catalog/".$find_row['parCatAlias']."'>".$find_row['parCatName']."</a></li>";
+            }else{
+
             }
+            $navPanel .="<li><a href='/catalog/".$find_row['catAlias']."'>".$find_row['catName']."</a></li>";
             $navPanel .="<li><a href='/product/".$find_row['prodAlias']."'>".$find_row['prodName']."</a></li>".
                 "</ul>";
             $price_qry = "select prod_id, prodPrice, prodAge from prodPrice_dt where prod_id = ".$find_row['prod_id']." and prodPrice is not null ".

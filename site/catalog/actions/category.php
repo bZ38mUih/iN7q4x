@@ -13,9 +13,20 @@ if(mysql_num_rows($find_res)>0){
     }
     $navPanel.="<li><a href='/catalog/".$find_row['catAlias']."'>".$find_row['catName']."</a></li>".
         "</ul>";
-    if(!$find_row['prodCat_parId']){
+
+    $print_prod = false;
+
+    $check_par_qry = "select * from prodCat_dt where catActive is true and prodCat_parId = ".$find_row['prodCat_id'];
+    $check_par_res = $DB->doQuery($check_par_qry);
+
+    if(mysql_num_rows($check_par_res) == 0){
+        $print_prod = true;
+    }
+
+    if(!$print_prod){
         $findSub_qry = "select * from prodCat_dt where catActive is true and prodCat_parId = ".$find_row['prodCat_id'];
     }else{
+        //$print_prod = true;
         $findSub_qry = "select prodList_dt.*, min(prodPrice_dt.prodPrice) as minPrice from prodList_dt ".
             "left join prodPrice_dt on prodList_dt.prod_id = prodPrice_dt.prod_id and prodPrice_dt.activeFlag is true and prodPrice_dt.prodPrice is not null ".
             " where prodList_dt.prodCat_id = '".$find_row['prodCat_id']."' and prodList_dt.activeFlag is true group by prodList_dt.prod_id";
@@ -25,7 +36,7 @@ if(mysql_num_rows($find_res)>0){
     $sub_text = null;
     if(mysql_num_rows($findSub_res)>0){
         while($findSub_row = $DB->doFetchRow($findSub_res)){
-            if(!$find_row['prodCat_parId']){
+            if(!$print_prod){
                 $sub_text .= "<div class='catItem big2'><a href='/catalog/".$findSub_row['catAlias']."'><img src='";
                 if($findSub_row['catImg']){
                     $sub_text.=GL_CATEG_IMG_PAPH."/".$findSub_row['prodCat_id'].
