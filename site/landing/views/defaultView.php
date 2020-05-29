@@ -85,7 +85,7 @@ $appRJ->response['result'].= "<div class='catView'><h2><hr><span>Новые по
 
 $appRJ->response['result'].= "<div class='pv-descr'><p>Дорогие садоводы, для того чтобы провести заказ в нашем интернет-магазине 
 саженцев «Сады Приморья», необходимо под желаемым товаром нажать кнопку «Добавить в корзину» или связаться по телефону.</p>
-<p>Питомник «".F_NAME."» осуществляет доставку саженцев по всей России.</p></div>";
+<p>Питомник «".F_NAME."» осуществляет доставку саженцев по всей России. Доставка по Владивостоку - БЕСПЛАТНО!</p></div>";
 
 
 $appRJ->response['result'].="</div></div></div><span id='shareImg' src='http://sad-primorya.ru/site/siteHeader/img/site-logo.png'></span>";

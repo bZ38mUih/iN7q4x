@@ -45,7 +45,7 @@ $appRJ->response['result'].= "<span class='hcMail'>".CONT_MAIL_1."</span>".
     "<span class='hcAddr'>".F_ADDRESS."</span>"
     ."</div>";
     $appRJ->response['result'].= "<div class='c-delivery'>
-<p>Питомник «".F_NAME."» осуществляет доставку саженцев по всей России.</p></div>";
+<p>Питомник «".F_NAME."» осуществляет доставку саженцев по всей России. Доставка по Владивостоку - БЕСПЛАТНО!</p></div>";
 
 $appRJ->response['result'] .=@file_get_contents($_SERVER["DOCUMENT_ROOT"]."/source/_conf/yMap.html");
 $appRJ->response['result'] .="<strong>По всем вопросам Вы можете получить консультацию, позвонив нам по телефону  
