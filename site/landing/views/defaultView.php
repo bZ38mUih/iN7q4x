@@ -43,7 +43,10 @@ $appRJ->response['result'].= "<div class='centerBlock ta-left'>".
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/siteHeader/views/leftMenu.php");
 $appRJ->response['result'].= "<div class='top-frame'>";
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/landing/views/banner.php");
-
+$appRJ->response['result'].="<div class='campaing'>
+                <img data-u='image' src='/site/landing/img/campaing.jpg' />
+            </div>
+            ";
 $appRJ->response['result'].= "<div class='h1Box'><h1>Питомник саженцев, растений и деревьев <span class='fName'>«".F_NAME."»</span></h1></div>".
 "<div class='lc-block'>Уточняйте наличие саженцев и возможность доставки по телефону ".
         "<span class='hcPhone'><a href='tel:".str_replace(")", "", str_replace("(", "", CONT_PHONE_1))."' title='Получить консультацию по телефону'>".CONT_PHONE_1."</a></span>";
@@ -59,7 +62,8 @@ $appRJ->response['result'].="или по <a class='lc-viber' title='Получи
     str_replace("+", "", str_replace(" ", "", str_replace(")", "", str_replace("(", "", CONT_PHONE_1))))."'>Viber.</a>";
 
 
-$appRJ->response['result'].="<p>Все цены на сайте актуальны</p></div>";
+$appRJ->response['result'].="<p>Все цены на сайте актуальны</p><p>Во Владивостоке яблони и груши в полцены можно приобрести на выставке - распродаже: Партизанский проспект, 62 «А», 
+            у Дворца культуры Железнодорожников и возле кинотеатра «Нептун», на Русской до 31 мая</p></div>";
 
 
 require_once($_SERVER["DOCUMENT_ROOT"] . "/site/search/views/defaultView.php");

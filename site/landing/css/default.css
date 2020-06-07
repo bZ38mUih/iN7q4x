@@ -275,3 +275,14 @@ a.lc-whatsapp::before{
     margin-right: 1%;
 }
 
+.campaing{
+    width: 100%;
+}
+.campaing img{
+    width: 100%;
+}
+.sAddr{
+    display: inline-block;
+    width: 100%;
+
+}

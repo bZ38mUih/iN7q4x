@@ -8,9 +8,6 @@ $appRJ->response['result'].= "
         </div>
         <div data-u='slides' style='cursor:default;position:relative;top:0px;left:0px;width:1150px;height:400px;overflow:hidden;'>
             <div>
-                <img data-u='image' src='/site/landing/img/campaing2.jpg' />
-            </div>
-            <div>
                 <img data-u='image' src='/site/landing/img/garden.jpg' />
                 <span class='sText' style='background-color: rgba(104,104,100, 0.6);'>Саженцы плодовых деревьев и кустарников из питомника</span>
             </div>
