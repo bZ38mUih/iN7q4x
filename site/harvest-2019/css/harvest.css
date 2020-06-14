@@ -30,7 +30,7 @@
 }
 @media only screen and (max-width : 980px) and (orientation : portrait) {
     .alb-block img {
-        height: 20em;
+        height: 30em;
         border: 2px solid darkgreen;
         border-radius: 1em;
     }
