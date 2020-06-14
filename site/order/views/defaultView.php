@@ -1,5 +1,5 @@
 <?php
-$App['views']['social-block'] = true;
+$App['views']['social-block'] = false;
 $appRJ->response['result'] .= "<!DOCTYPE html>" .
     "<html lang='en-Us'>" .
     "<head>" .

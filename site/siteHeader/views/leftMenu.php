@@ -65,11 +65,19 @@ if($appRJ->server['reqUri_expl'][1] == 'product'){
     $viewCount_limit = 3;
 }
 
+$harvest2019 = "<div class='harvest2019'>".
+    "<div class='ga-title'><span class='ga-title'><a href='/harvest-2019'>Наш урожай 2019</a></span><span class='after'></span></div>".
+    //"<a href='/memo/pravila-posadki-sazhencev'>Правила посадки саженцев</a>".
+    "</div>";
+$leftMenu_txt .= $harvest2019;
+
 $grovAdvices = "<div class='grovAdvice'>".
     "<div class='ga-title'><span class='ga-title'>Советы садоводам</span><span class='after'></span></div>".
     "<a href='/memo/pravila-posadki-sazhencev'>Правила посадки саженцев</a>".
     "</div>";
 $leftMenu_txt .= $grovAdvices;
+
+
 $lastView = null;
 $lastView_flag = false;
 

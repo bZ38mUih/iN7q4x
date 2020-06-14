@@ -16,6 +16,7 @@ $appRJ->response['result'] .= "<!DOCTYPE html>" .
     "<link rel='stylesheet' href='/site/css/mainFrame.css' type='text/css' media='screen, projection'/>" .
     "<link rel='stylesheet' href='/site/contacts/css/default.css' type='text/css' media='screen, projection'/>" .
     "<link rel='stylesheet' href='/site/pay-and-delivery/css/payStyle.css' type='text/css' media='screen, projection'/>".
+    "<link rel='stylesheet' href='/site/about/css/about.css' type='text/css' media='screen, projection'/>".
     "<script src='/site/siteHeader/js/modalHeader.js'></script>".
     "<script src='/site/bucket/js/bucket.js'></script>".
     "<link rel='stylesheet' href='/source/js/Elegant-Loading-Indicator-jQuery-Preloader/src/css/preloader.css'/>".
