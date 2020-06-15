@@ -59,5 +59,26 @@ if($App['views']['social-block']){
         "</div>";
 }
 */
+$appRJ->response['result'].= "
+<style>
+.dev-refer{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    font-size: 8px;
+    padding: 0;
+    margin: 0;
+}
+.dev-refer a{
+    padding-right: 1em;
+}
+
+.dev-refer img{
+    height: 8px;
+    width: 8px;
+}
+</style>
+<div class='dev-refer'>".
+    "<a href='https://rightjoint.ru' target='_blank' title='developed by Right Joint'><img src='https://rightjoint.ru/site/landing/img/favicon-32.png'>developed by Right Joint</a></div>";
 $appRJ->response['result'].= "</footer></div></div></div></div>";
 ?>

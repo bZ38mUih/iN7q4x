@@ -67,7 +67,7 @@ h1 hr{
 footer{
     background-color: lightblue;
     color: #ffffff;
-    padding: 0 0 1em 0;
+    padding: 0 0 0 0;
 }
 footer div, footer a, footer img{
     display: inline-block;
@@ -88,7 +88,8 @@ footer div, footer a, footer img{
     display: inline-block;
     vertical-align: top;
     width: 67%;
-    margin: 1em 0;
+    margin-top: 1em;
+    /*margin-bottom: 0.m;*/
 }
 .ft-nav, .ft-cont{
     display: inline-block;
@@ -100,7 +101,7 @@ footer div, footer a, footer img{
     display: inline-block;
     width: 27%;
     padding: 0 3%;
-    margin: 1em 0;
+    margin-top: 1em;
     vertical-align: middle;
 
 }
